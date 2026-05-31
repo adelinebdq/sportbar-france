@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Compositions -->
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/compositions.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Pages villes -->
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/courseulles-sur-mer.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/luc-sur-mer.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/saint-aubin-sur-mer.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/langrune-sur-mer.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/douvres-la-delivrande.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/caen.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/lille.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/marquette-lez-lille.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Compositions équipes -->
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/compositions/france.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Pages matchs -->
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-senegal.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-irak.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-norvege.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-32e-de-finale.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-quart-de-finale.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-demi-finale.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/matchs/finale-coupe-du-monde-2026.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Pages bars -->
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/bars/aux-enfants-terribles.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/bars/le-comptoir-des-copains.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/bars/la-guinguette-de-la-marine.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/bars/chez-oit.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/bars/den-artiest.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/bars/au-bar-bu.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/bars/kanaal-cafe.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/bars/brasserie-fives-cail.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Bars Côte de Nacre (source : Office de Tourisme Cœur de Nacre) -->
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/la-maison-bleue.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/la-spiaggia.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/coffee-and-tea.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-bowling-de-la-mer.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/chez-celia.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/la-causerie.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/l-imprevu.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/l-hyppocampe.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/les-terrasses-du-mini-golf.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/casino-tranchant.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/o-little-luc.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-week-end.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-longchamp.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Fan-zone dans le sitemap avec priorité 0.8 -->
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/fan-zone-hippodrome-caen.html</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+</urlset>

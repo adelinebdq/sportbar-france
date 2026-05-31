@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Compositions des équipes — Coupe du Monde 2026 | SportBar France</title>
+  <meta name="description" content="Compositions et effectifs des équipes de la Coupe du Monde 2026. Retrouvez les 26 joueurs de l'équipe de France sélectionnés par Didier Deschamps, leurs clubs, leurs postes et la dernière composition sur le terrain." />
+
+  <link rel="canonical" href="https://adelinebdq.github.io/sportbar-france/compositions.html" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Compositions équipes — Coupe du Monde 2026" />
+  <meta property="og:description" content="Effectifs complets et compositions tactiques des équipes de la Coupe du Monde 2026 : France, États-Unis, Uruguay, Maroc." />
+  <meta property="og:url"         content="https://adelinebdq.github.io/sportbar-france/compositions.html" />
+  <meta property="og:image"       content="https://adelinebdq.github.io/sportbar-france/og-default.svg" />
+  <meta property="og:site_name"   content="SportBar France" />
+  <meta property="og:locale"      content="fr_FR" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Compositions des équipes — Coupe du Monde 2026",
+    "description": "Effectifs et compositions tactiques des équipes de la Coupe du Monde 2026",
+    "url": "https://adelinebdq.github.io/sportbar-france/compositions.html",
+    "hasPart": [
+      {
+        "@type": "WebPage",
+        "name": "Composition Équipe de France — Coupe du Monde 2026",
+        "url": "https://adelinebdq.github.io/sportbar-france/compositions/france.html"
+      },
+      {
+        "@type": "WebPage",
+        "name": "Composition États-Unis — Coupe du Monde 2026",
+        "url": "https://adelinebdq.github.io/sportbar-france/compositions/etats-unis.html"
+      },
+      {
+        "@type": "WebPage",
+        "name": "Composition Uruguay — Coupe du Monde 2026",
+        "url": "https://adelinebdq.github.io/sportbar-france/compositions/uruguay.html"
+      },
+      {
+        "@type": "WebPage",
+        "name": "Composition Maroc — Coupe du Monde 2026",
+        "url": "https://adelinebdq.github.io/sportbar-france/compositions/maroc.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --darker: #12121f; --blue: #1971c2; --wc: #1565c0;
+      --text: #1a1a1a; --muted: #555; --border: #e0e0e0;
+      --bg: #f5f7fa; --card: #ffffff; --radius: 10px;
+      --accent: #e63946;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    /* ── Header ── */
+    header {
+      background: var(--darker); color: #fff;
+      padding: 0 24px; height: 58px;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
+    .logo-icon { width: 36px; height: 36px; background: #c62828; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .logo-text strong { font-size: 17px; font-weight: 700; display: block; line-height: 1.1; }
+    .logo-text span { font-size: 10px; color: #aaa; letter-spacing: .4px; text-transform: uppercase; }
+    .header-nav { margin-left: auto; display: flex; align-items: center; gap: 20px; font-size: 13px; }
+    .header-nav a { color: rgba(255,255,255,.7); text-decoration: none; font-weight: 600; transition: color .15s; }
+    .header-nav a:hover, .header-nav a.active { color: #fff; }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      background: var(--card); border-bottom: 1px solid var(--border);
+      padding: 10px 24px; font-size: 13px; color: var(--muted);
+      display: flex; gap: 6px; align-items: center;
+    }
+    .breadcrumb a { color: var(--blue); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    /* ── Main ── */
+    main { max-width: 900px; margin: 0 auto; padding: 36px 24px 60px; }
+
+    h1 { font-size: 30px; font-weight: 800; line-height: 1.2; margin-bottom: 6px; }
+    .page-subtitle { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+
+    .intro {
+      font-size: 15px; line-height: 1.75; color: #444;
+      margin-bottom: 40px; max-width: 720px;
+      border-left: 3px solid var(--wc); padding-left: 16px;
+    }
+
+    /* ── Comparaison banner (affiché si ?equipes= param) ── */
+    .compare-banner {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+      color: #fff; border-radius: 12px; padding: 16px 20px;
+      margin-bottom: 32px; display: flex; align-items: center; gap: 14px;
+      display: none; /* affiché par JS si param équipes */
+    }
+    .compare-banner.visible { display: flex; }
+    .compare-banner-text { flex: 1; font-size: 15px; font-weight: 600; }
+    .compare-banner-sub { font-size: 13px; opacity: .8; margin-top: 3px; }
+    .compare-btn {
+      background: rgba(255,255,255,.2); border: 1.5px solid rgba(255,255,255,.4);
+      color: #fff; padding: 8px 16px; border-radius: 7px; font-size: 13px;
+      font-weight: 700; text-decoration: none; white-space: nowrap; flex-shrink: 0;
+      transition: background .15s;
+    }
+    .compare-btn:hover { background: rgba(255,255,255,.35); }
+
+    /* ── Grille équipes ── */
+    h2 { font-size: 20px; font-weight: 700; margin-bottom: 20px; }
+    .teams-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .team-card {
+      background: var(--card); border-radius: 14px;
+      border: 2px solid var(--border); padding: 28px 24px;
+      text-decoration: none; color: var(--text);
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; gap: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.06);
+      transition: border-color .15s, box-shadow .15s, transform .15s;
+      position: relative;
+    }
+    .team-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 6px 24px rgba(25,113,194,.18);
+      transform: translateY(-2px);
+    }
+    .team-card.highlighted {
+      border-color: var(--wc);
+      box-shadow: 0 4px 20px rgba(21,101,192,.2);
+    }
+    .team-card.highlighted::before {
+      content: '⚽ Match en cours';
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--wc); color: #fff; font-size: 11px; font-weight: 700;
+      padding: 3px 12px; border-radius: 20px; white-space: nowrap;
+    }
+    .team-card.skeleton { opacity: .65; cursor: default; }
+    .team-card.skeleton:hover { border-color: var(--border); box-shadow: 0 2px 10px rgba(0,0,0,.06); transform: none; }
+
+    .team-flag { font-size: 56px; line-height: 1; }
+    .team-name { font-size: 20px; font-weight: 800; margin-top: 4px; }
+    .team-coach { font-size: 13px; color: var(--muted); }
+    .team-formation {
+      background: #e8f0fe; color: var(--wc);
+      border: 1.5px solid #c5d3f0; border-radius: 6px;
+      font-size: 12px; font-weight: 700; padding: 3px 12px;
+      margin-top: 2px;
+    }
+    .team-count { font-size: 12px; color: var(--muted); }
+
+    .team-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 10px;
+      background: var(--wc); color: #fff;
+      padding: 10px 20px; border-radius: 8px;
+      font-size: 13px; font-weight: 700;
+      transition: background .15s;
+    }
+    .team-card:hover .team-cta { background: #0d47a1; }
+    .team-card.skeleton .team-cta {
+      background: var(--border); color: var(--muted); cursor: default;
+    }
+
+    .skeleton-badge {
+      font-size: 11px; color: var(--muted);
+      background: #f0f0f0; border-radius: 6px; padding: 3px 10px; margin-top: 4px;
+    }
+
+    /* ── Match context (affiché si ?equipes= param) ── */
+    .match-context {
+      margin-top: 40px; padding: 20px 24px;
+      background: var(--card); border-radius: var(--radius);
+      border: 1.5px solid var(--border);
+      display: none;
+    }
+    .match-context.visible { display: block; }
+    .match-context h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+    .match-quick-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .match-quick-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 14px; border-radius: 7px; font-size: 13px; font-weight: 600;
+      text-decoration: none; border: 1.5px solid;
+      color: var(--blue); border-color: #bee3f8; background: #ebf8ff;
+      transition: background .12s, color .12s;
+    }
+    .match-quick-link:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--darker); color: rgba(255,255,255,.55);
+      text-align: center; padding: 22px 24px; font-size: 13px; margin-top: 60px;
+    }
+    footer a { color: rgba(255,255,255,.8); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 24px; }
+      main { padding: 24px 16px 48px; }
+      header { padding: 0 16px; }
+      .header-nav { gap: 12px; font-size: 12px; }
+      .team-flag { font-size: 44px; }
+      .team-name { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="./">
+    <div class="logo-icon">⚽</div>
+    <div class="logo-text">
+      <strong>SportBar France</strong>
+      <span>Trouvez où regarder vos matchs</span>
+    </div>
+  </a>
+  <nav class="header-nav">
+    <a href="./">🗺️ Carte</a>
+    <a href="compositions.html" class="active">📋 Compositions</a>
+  </nav>
+</header>
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="./">Accueil</a> <span>›</span> <strong>Compositions</strong>
+</nav>
+
+<main>
+  <h1>Compositions des équipes — Coupe du Monde 2026</h1>
+  <p class="page-subtitle">🏆 Groupe E · France, États-Unis, Uruguay, Maroc</p>
+
+  <p class="intro">
+    Connaître la composition d'une équipe avant un match, c'est apprécier le jeu à un autre niveau :
+    identifier le système tactique de Deschamps, suivre qui joue titulaire ce soir-là, repérer les
+    absences ou les surprises de dernière minute. Cette page regroupe les effectifs complets des
+    équipes du Groupe E pour la Coupe du Monde 2026, ainsi que la dernière composition alignée
+    par chaque sélectionneur. Les données sont mises à jour avant chaque rencontre. Pour chaque
+    équipe : liste des 26 joueurs (poste, club, âge, sélections) et vue tactique du terrain
+    avec les 11 titulaires positionnés selon la formation annoncée.
+  </p>
+
+  <!-- Banner contextuel (visible si ?equipes= dans l'URL) -->
+  <div class="compare-banner" id="compareBanner">
+    <div>
+      <div class="compare-banner-text" id="compareText"></div>
+      <div class="compare-banner-sub">Consultez les effectifs des deux équipes avant le match</div>
+    </div>
+    <a class="compare-btn" id="compareMatchLink" href="#">Voir le match →</a>
+  </div>
+
+  <h2>Équipes du Groupe E</h2>
+  <div class="teams-grid" id="teamsGrid">
+
+    <a class="team-card" href="compositions/france.html" data-slug="france">
+      <div class="team-flag">🇫🇷</div>
+      <div class="team-name">France</div>
+      <div class="team-coach">Sél. : Didier Deschamps</div>
+      <div class="team-formation">4-3-3</div>
+      <div class="team-count">26 joueurs · Effectif complet</div>
+      <div class="team-cta">Voir l'effectif →</div>
+    </a>
+
+    <a class="team-card skeleton" href="compositions/senegal.html" data-slug="senegal">
+      <div class="team-flag">🇸🇳</div>
+      <div class="team-name">Sénégal</div>
+      <div class="team-coach">Sél. : À venir</div>
+      <div class="skeleton-badge">Données à compléter</div>
+      <div class="team-count">Effectif non renseigné</div>
+      <div class="team-cta">Voir la fiche →</div>
+    </a>
+
+    <a class="team-card skeleton" href="compositions/irak.html" data-slug="irak">
+      <div class="team-flag">🇮🇶</div>
+      <div class="team-name">Irak</div>
+      <div class="team-coach">Sél. : À venir</div>
+      <div class="skeleton-badge">Données à compléter</div>
+      <div class="team-count">Effectif non renseigné</div>
+      <div class="team-cta">Voir la fiche →</div>
+    </a>
+
+    <a class="team-card skeleton" href="compositions/norvege.html" data-slug="norvege">
+      <div class="team-flag">🇳🇴</div>
+      <div class="team-name">Norvège</div>
+      <div class="team-coach">Sél. : À venir</div>
+      <div class="skeleton-badge">Données à compléter</div>
+      <div class="team-count">Effectif non renseigné</div>
+      <div class="team-cta">Voir la fiche →</div>
+    </a>
+
+  </div>
+
+  <!-- Section contextuelle match (visible si ?equipes= param) -->
+  <div class="match-context" id="matchContext">
+    <h3 id="matchContextTitle"></h3>
+    <div class="match-quick-links" id="matchContextLinks"></div>
+  </div>
+
+</main>
+
+<footer>
+  <p>
+    <a href="./">SportBar France</a> — Trouvez où regarder vos matchs ·
+    <a href="villes/lille.html">Bars à Lille</a> ·
+    <a href="matchs/france-etats-unis.html">France — États-Unis</a>
+  </p>
+</footer>
+
+<script src="compositions.js"></script>
+<script>
+// ── Correspondance slug équipe → page match ──────────────────────────────────
+const MATCH_LINKS = {
+  'france,senegal':  { label: 'France — Sénégal', url: 'matchs/france-senegal.html', date: '16 juin · 21h' },
+  'senegal,france':  { label: 'France — Sénégal', url: 'matchs/france-senegal.html', date: '16 juin · 21h' },
+  'france,irak':     { label: 'France — Irak',    url: 'matchs/france-irak.html',    date: '22 juin · 23h' },
+  'irak,france':     { label: 'France — Irak',    url: 'matchs/france-irak.html',    date: '22 juin · 23h' },
+  'france,norvege':  { label: 'France — Norvège', url: 'matchs/france-norvege.html', date: '26 juin · 21h' },
+  'norvege,france':  { label: 'France — Norvège', url: 'matchs/france-norvege.html', date: '26 juin · 21h' },
+};
+
+// ── Lecture des paramètres URL ────────────────────────────────────────────────
+(function applyParams() {
+  const params    = new URLSearchParams(window.location.search);
+  const equipesParam = params.get('equipes');
+  if (!equipesParam) return;
+
+  const slugs = equipesParam.toLowerCase().split(',').map(s => s.trim());
+
+  // Mettre en évidence les cartes d'équipes concernées
+  document.querySelectorAll('.team-card').forEach(card => {
+    if (slugs.includes(card.dataset.slug)) {
+      card.classList.add('highlighted');
+    }
+  });
+
+  // Banner contextuel
+  const matchKey  = slugs.join(',');
+  const matchInfo = MATCH_LINKS[matchKey];
+  const banner    = document.getElementById('compareBanner');
+  const context   = document.getElementById('matchContext');
+
+  // Noms d'affichage des équipes
+  const names = slugs.map(s => COMPOSITIONS[s]?.nom || s).join(' vs ');
+
+  document.getElementById('compareText').textContent =
+    `Compositions pour : ${names}`;
+
+  if (matchInfo) {
+    document.getElementById('compareMatchLink').href = matchInfo.url;
+    document.getElementById('compareMatchLink').textContent = `Voir le match →`;
+
+    document.getElementById('matchContextTitle').textContent =
+      `Liens rapides — ${matchInfo.label}`;
+
+    const linksEl = document.getElementById('matchContextLinks');
+    slugs.forEach(slug => {
+      const team = COMPOSITIONS[slug];
+      if (!team) return;
+      const a = document.createElement('a');
+      a.className = 'match-quick-link';
+      a.href = `compositions/${slug}.html`;
+      a.textContent = `${team.drapeau} Effectif ${team.nom}`;
+      linksEl.appendChild(a);
+    });
+
+    // Lien vers la page match
+    const matchA = document.createElement('a');
+    matchA.className = 'match-quick-link';
+    matchA.href = matchInfo.url;
+    matchA.textContent = `⚽ ${matchInfo.label} · ${matchInfo.date}`;
+    linksEl.appendChild(matchA);
+
+    context.classList.add('visible');
+  }
+
+  banner.classList.add('visible');
+})();
+</script>
+
+</body>
+</html>

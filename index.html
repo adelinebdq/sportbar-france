@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SportBar France — Trouvez où regarder vos matchs en France</title>
+  <meta name="description" content="Carte interactive des bars sport en France pour la Coupe du Monde 2026. Trouvez où regarder les matchs de l'équipe de France en direct, avec adresses et navigation GPS." />
+
+  <!-- CONFIG: mettre à jour l'URL ci-dessous quand vous changez de domaine (voir /config.js) -->
+  <link rel="canonical" href="https://adelinebdq.github.io/sportbar-france/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="SportBar France — Trouvez où regarder vos matchs" />
+  <meta property="og:description" content="Carte interactive des bars sport en France pour la Coupe du Monde 2026. Adresses, GPS et ambiance garantie." />
+  <meta property="og:url"         content="https://adelinebdq.github.io/sportbar-france/" />
+  <meta property="og:image"       content="https://adelinebdq.github.io/sportbar-france/og-default.svg" />
+  <meta property="og:site_name"   content="SportBar France" />
+  <meta property="og:locale"      content="fr_FR" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── TRANSITIONS GLOBALES (actives sauf au premier chargement) ── */
+    body, body * {
+      transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+    }
+    .no-transition, .no-transition * { transition: none !important; }
+
+    /* ── THÈME CLAIR (défaut) ── */
+    :root {
+      --bg-primary:    #ffffff;
+      --bg-secondary:  #f5f7fa;
+      --bg-card:       #ffffff;
+      --text-primary:  #1a1a1a;
+      --text-secondary:#555555;
+      --accent:        #e63946;
+      --border-color:  #e0e0e0;
+      --shadow-val:    rgba(0,0,0,.08);
+
+      /* Éléments spécifiques */
+      --header-bg:       #12121f;
+      --match-bar-bg:    #f0f4ff;
+      --match-bar-bdr:   #c5d3f0;
+      --active-bg:       #e8f0fe;
+      --active-bg-hover: #f0f4ff;
+      --dropdown-bg:     #ffffff;
+      --group-bg:        #fafafa;
+      --link-color:      #1971c2;
+      --nav-gmaps-bg:    #e8f0fe;
+      --nav-waze-bg:     #e0f7fa;
+      --knob-color:      #cccccc;
+      --match-active-bg: #e8eeff;
+      --fab-bg:          #12121f;
+
+      /* Badges countdown */
+      --badge-soon-bg:    #fff3bf; --badge-soon-text:  #e67700;
+      --badge-near-bg:    #d3f9d8; --badge-near-text:  #2b8a3e;
+      --badge-reg-bg:     #e7f5ff; --badge-reg-text:   #1864ab;
+      --badge-today-bg:   #ffe3e3; --badge-today-text: #c92a2a;
+
+      /* Alias → noms historiques utilisés partout dans le CSS */
+      --darker: var(--header-bg);
+      --card:   var(--bg-card);
+      --bg:     var(--bg-secondary);
+      --text:   var(--text-primary);
+      --muted:  var(--text-secondary);
+      --border: var(--border-color);
+      --shadow: 0 2px 10px var(--shadow-val);
+
+      /* Inchangés */
+      --radius: 10px;
+      --blue:   #1971c2;
+      --wc:     #1565c0;
+      --f1:     #c62828;
+      --green:  #2e7d32;
+    }
+
+    /* ── THÈME SOMBRE ── */
+    [data-theme="dark"] {
+      --bg-primary:    #0f1419;
+      --bg-secondary:  #1a1f2e;
+      --bg-card:       #1e2535;
+      --text-primary:  #e8eaed;
+      --text-secondary:#9aa0a6;
+      --accent:        #ff5a67;
+      --border-color:  #2d3548;
+      --shadow-val:    rgba(0,0,0,.4);
+
+      --header-bg:       #080c14;
+      --match-bar-bg:    #141a2e;
+      --match-bar-bdr:   #2a3555;
+      --active-bg:       #1a2745;
+      --active-bg-hover: #141c30;
+      --dropdown-bg:     #1e2535;
+      --group-bg:        #161c2b;
+      --link-color:      #74c0fc;
+      --nav-gmaps-bg:    #1a2540;
+      --nav-waze-bg:     #0d2535;
+      --knob-color:      #3d4558;
+      --match-active-bg: #1a2845;
+      --fab-bg:          #1e2535;
+
+      --badge-soon-bg:    #2d2200; --badge-soon-text:  #ffa94d;
+      --badge-near-bg:    #1a3320; --badge-near-text:  #69db7c;
+      --badge-reg-bg:     #0d2040; --badge-reg-text:   #74c0fc;
+      --badge-today-bg:   #2d1515; --badge-today-text: #ff8787;
+    }
+
+    /* ── SPORT TAGS MODE SOMBRE ── */
+    [data-theme="dark"] .sport-tag.football { background: #1a3320; color: #69db7c; }
+    [data-theme="dark"] .sport-tag.rugby    { background: #2d2200; color: #ffa94d; }
+    [data-theme="dark"] .sport-tag.tennis   { background: #2d1515; color: #ff8787; }
+    [data-theme="dark"] .sport-tag.basket   { background: #2d1a00; color: #ffa94d; }
+    [data-theme="dark"] .sport-tag.cyclisme { background: #25103a; color: #da77f2; }
+    [data-theme="dark"] .sport-tag.formule1 { background: #2d1515; color: #ff6b6b; }
+
+    /* ── POPUP LEAFLET MODE SOMBRE ── */
+    [data-theme="dark"] .leaflet-popup-content-wrapper {
+      background: var(--bg-card) !important;
+      color: var(--text-primary) !important;
+    }
+    [data-theme="dark"] .leaflet-popup-tip { background: var(--bg-card) !important; }
+    [data-theme="dark"] .leaflet-popup-content a { color: var(--link-color); }
+
+    /* ── BOUTON THÈME ── */
+    .theme-toggle {
+      background: rgba(255,255,255,.12);
+      border: 1.5px solid rgba(255,255,255,.25);
+      border-radius: 8px;
+      width: 34px; height: 34px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      color: #fff;
+      transition: background .2s !important;
+    }
+    .theme-toggle:hover { background: rgba(255,255,255,.24); }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--darker);
+      color: #fff;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 58px;
+      flex-shrink: 0;
+      z-index: 1000;
+    }
+
+    .logo { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: #c62828;
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .logo-text strong { font-size: 17px; font-weight: 700; display: block; line-height: 1.1; }
+    .logo-text span   { font-size: 10px; color: #aaa; letter-spacing: .4px; text-transform: uppercase; }
+
+    .search-wrap {
+      flex: 1; max-width: 380px;
+      position: relative;
+    }
+    .search-wrap input {
+      width: 100%;
+      padding: 8px 14px 8px 36px;
+      border: none; border-radius: 7px;
+      background: rgba(255,255,255,.13);
+      color: #fff; font-size: 13px; outline: none;
+    }
+    .search-wrap input::placeholder { color: rgba(255,255,255,.45); }
+    .search-wrap input:focus { background: rgba(255,255,255,.2); }
+    .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; opacity: .55; }
+
+    .header-right {
+      margin-left: auto;
+      display: flex; gap: 18px;
+      font-size: 12px; color: rgba(255,255,255,.65);
+    }
+    .header-right strong { display: block; font-size: 15px; color: #fff; }
+
+    /* ── MAIN ── */
+    .main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: 390px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-right: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    /* ── EVENTS SECTION ── */
+    .events-section {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--card);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .events-section-head {
+      padding: 10px 14px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .events-section-title { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+
+    .comp-tabs {
+      display: flex;
+      gap: 4px;
+    }
+    .comp-tab {
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1.5px solid var(--border);
+      font-size: 12px; font-weight: 600;
+      cursor: pointer;
+      background: transparent;
+      color: var(--muted);
+      transition: all .15s;
+    }
+    .comp-tab:hover { border-color: var(--blue); color: var(--blue); }
+    .comp-tab.wc.active  { background: var(--wc);  border-color: var(--wc);  color: #fff; }
+    .comp-tab.f1.active  { background: var(--f1);  border-color: var(--f1);  color: #fff; }
+
+    .events-list {
+      overflow-y: auto;
+      max-height: 238px;
+      padding: 8px 10px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    /* ── EVENT CARD ── */
+    .event-card {
+      border: 1.5px solid var(--border);
+      border-left-width: 4px;
+      border-radius: 8px;
+      padding: 9px 10px;
+      cursor: pointer;
+      background: var(--bg-card);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .event-card.wc { border-left-color: var(--wc); }
+    .event-card.f1 { border-left-color: var(--f1); }
+    .event-card:hover  { background: var(--active-bg-hover); }
+    .event-card.active { background: var(--active-bg); border-color: var(--blue); border-left-color: var(--blue); }
+
+    .ec-row1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .ec-title { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.2; }
+    .ec-countdown {
+      font-size: 10px; font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .ec-countdown.soon    { background: var(--badge-soon-bg);  color: var(--badge-soon-text); }
+    .ec-countdown.near    { background: var(--badge-near-bg);  color: var(--badge-near-text); }
+    .ec-countdown.regular { background: var(--badge-reg-bg);   color: var(--badge-reg-text);  }
+    .ec-countdown.today   { background: var(--badge-today-bg); color: var(--badge-today-text);}
+
+    .ec-row2 { font-size: 11px; color: var(--muted); }
+    .ec-row3 { font-size: 11px; color: var(--muted); }
+
+    /* ── BARS SECTION ── */
+    .bars-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Selected event banner */
+    .sel-banner {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+      color: #fff;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .sel-banner.f1-banner {
+      background: linear-gradient(135deg, #b71c1c 0%, #c62828 100%);
+    }
+    .sel-banner-icon { font-size: 22px; flex-shrink: 0; }
+    .sel-banner-info { flex: 1; min-width: 0; }
+    .sel-banner-title {
+      font-size: 13px; font-weight: 700;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sel-banner-date { font-size: 11px; opacity: .8; }
+    .sel-banner-clear {
+      background: rgba(255,255,255,.2);
+      border: 1px solid rgba(255,255,255,.35);
+      color: #fff;
+      border-radius: 6px;
+      padding: 4px 9px;
+      font-size: 12px;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .sel-banner-clear:hover { background: rgba(255,255,255,.35); }
+
+    /* Sport chips */
+    .bars-controls {
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+      background: var(--card);
+      flex-shrink: 0;
+    }
+    .chip {
+      padding: 4px 12px;
+      border-radius: 16px;
+      border: 1.5px solid var(--border);
+      font-size: 12px; font-weight: 600;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text);
+      transition: all .12s;
+    }
+    .chip:hover                { border-color: var(--blue); color: var(--blue); }
+    .chip.active               { background: var(--blue); border-color: var(--blue); color: #fff; }
+    .chip.football.active      { background: #2e7d32; border-color: #2e7d32; }
+    .chip.rugby.active         { background: #e65100; border-color: #e65100; }
+    .chip.tennis.active        { background: #b71c1c; border-color: #b71c1c; }
+    .chip.basket.active        { background: #bf360c; border-color: #bf360c; }
+    .chip.cyclisme.active      { background: #6a1b9a; border-color: #6a1b9a; }
+    .chip.formule1.active      { background: #c62828; border-color: #c62828; }
+
+    .sort-select {
+      margin-left: auto;
+      padding: 4px 10px;
+      border: 1.5px solid var(--border);
+      border-radius: 7px;
+      font-size: 12px;
+      background: var(--bg-card);
+      color: var(--text);
+      cursor: pointer;
+      outline: none;
+    }
+
+    .bars-count-row {
+      padding: 7px 14px;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      background: var(--card);
+      flex-shrink: 0;
+    }
+
+    .bars-list {
+      overflow-y: auto;
+      flex: 1;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .bars-list::-webkit-scrollbar { width: 5px; }
+    .bars-list::-webkit-scrollbar-thumb { background: var(--knob-color); border-radius: 3px; }
+
+    /* ── BAR CARD ── */
+    .bar-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 13px 14px;
+      box-shadow: var(--shadow);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .bar-card:hover  { border-color: var(--blue); box-shadow: 0 3px 16px rgba(25,113,194,.15); }
+    .bar-card.active { border-color: var(--blue); box-shadow: 0 3px 16px rgba(25,113,194,.2); }
+
+    .bc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 5px; }
+    .bc-name { font-size: 14px; font-weight: 700; line-height: 1.2; }
+    .bc-rating {
+      display: flex; align-items: center; gap: 3px;
+      background: #fff8e1; border: 1px solid #ffe066;
+      border-radius: 5px; padding: 2px 7px; flex-shrink: 0;
+    }
+    .bc-rating .star  { color: #f59f00; font-size: 12px; }
+    .bc-rating .score { font-size: 12px; font-weight: 700; color: #e67700; }
+
+    .bc-location { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+
+    .bc-sports { display: flex; flex-wrap: wrap; gap: 5px; }
+    .sport-tag {
+      font-size: 10px; font-weight: 700;
+      padding: 2px 9px; border-radius: 12px;
+      text-transform: uppercase; letter-spacing: .3px;
+    }
+    .sport-tag.football  { background: #d3f9d8; color: #2b8a3e; }
+    .sport-tag.rugby     { background: #fff3bf; color: #e67700; }
+    .sport-tag.tennis    { background: #ffe3e3; color: #c92a2a; }
+    .sport-tag.basket    { background: #ffe8cc; color: #c2560c; }
+    .sport-tag.cyclisme  { background: #f3d9fa; color: #862e9c; }
+    .sport-tag.formule1  { background: #ffe3e3; color: #e03131; }
+
+    .bc-badge-new {
+      font-size: 10px; font-weight: 700;
+      background: #e8f5e9; color: #2e7d32;
+      border: 1px solid #a5d6a7;
+      border-radius: 5px; padding: 2px 8px;
+      flex-shrink: 0;
+    }
+
+    .bc-footer {
+      margin-top: 9px; padding-top: 8px;
+      border-top: 1px solid var(--border);
+      font-size: 11px; color: var(--muted);
+      display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+    }
+
+    .bc-link {
+      color: var(--link-color); text-decoration: none; font-weight: 600;
+      font-size: 11px;
+    }
+    .bc-link:hover { text-decoration: underline; }
+
+    .bc-nav-btns {
+      display: flex; gap: 6px;
+      margin-top: 9px; padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+    .bc-nav-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 11px;
+      border-radius: 6px;
+      font-size: 12px; font-weight: 600;
+      text-decoration: none;
+      border: 1.5px solid;
+      transition: background .15s, color .15s;
+      cursor: pointer;
+    }
+    .bc-nav-btn.gmaps {
+      color: #1a73e8; border-color: #bbdefb; background: var(--nav-gmaps-bg);
+    }
+    .bc-nav-btn.gmaps:hover  { background: #1a73e8; color: #fff; border-color: #1a73e8; }
+    .bc-nav-btn.waze {
+      color: #00c0de; border-color: #b2ebf2; background: var(--nav-waze-bg);
+    }
+    .bc-nav-btn.waze:hover   { background: #00c0de; color: #fff; border-color: #00c0de; }
+
+    /* ── EMPTY STATE ── */
+    .empty-state {
+      text-align: center; padding: 30px 20px;
+      color: var(--muted);
+    }
+    .empty-state .ei { font-size: 36px; margin-bottom: 8px; }
+    .empty-state p   { font-size: 13px; }
+
+    /* ── MAP ── */
+    #map { flex: 1; z-index: 1; }
+
+    /* ── POPUP ── */
+    .leaflet-popup-content-wrapper { border-radius: 10px !important; box-shadow: 0 6px 28px rgba(0,0,0,.15) !important; }
+    .popup-name  { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+    .popup-city  { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .popup-sports { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+    .popup-meta  { font-size: 12px; color: var(--muted); display: flex; gap: 12px; }
+
+    /* ── MATCH BAR ── */
+    .match-bar {
+      background: var(--match-bar-bg);
+      border-bottom: 1px solid var(--match-bar-bdr);
+      padding: 9px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      z-index: 490;
+    }
+    .match-bar-label {
+      font-size: 12px; font-weight: 700;
+      color: var(--wc); white-space: nowrap;
+      flex-shrink: 0;
+    }
+    #matchField {
+      flex: 1;
+      max-width: 560px;
+      border-color: var(--match-bar-bdr);
+      background: var(--bg-card);
+    }
+    #matchField:focus-within { border-color: var(--wc); box-shadow: 0 0 0 3px rgba(21,101,192,.12); }
+    #matchField.has-match { border-color: var(--wc); background: var(--match-active-bg); }
+    #matchField.has-match #matchInput { font-weight: 600; color: var(--wc); }
+
+    #matchInput {
+      flex: 1; border: none; background: transparent;
+      font-size: 14px; color: var(--text); outline: none; min-width: 0;
+    }
+    #matchInput::placeholder { color: var(--muted); }
+
+    /* Match dropdown items */
+    .md-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 14px; cursor: pointer;
+      border-bottom: 1px solid var(--border);
+    }
+    .md-item:last-child { border-bottom: none; }
+    .md-item:hover { background: var(--active-bg-hover); }
+    .md-item.selected { background: var(--active-bg); }
+    .md-emoji { font-size: 17px; flex-shrink: 0; width: 32px; text-align: center; }
+    .md-info { flex: 1; min-width: 0; }
+    .md-title { font-size: 13px; font-weight: 700; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .md-meta  { font-size: 11px; color: var(--muted); margin-top: 1px; }
+    .lb-dropdown .md-group {
+      padding: 6px 14px 3px;
+      font-size: 10px; font-weight: 700;
+      color: var(--muted); text-transform: uppercase; letter-spacing: .5px;
+      background: var(--group-bg); border-bottom: 1px solid var(--border);
+      cursor: default;
+    }
+    .md-no-result { padding: 12px 14px; font-size: 13px; color: var(--muted); font-style: italic; }
+
+    /* ── LOCATION BAR ── */
+    .location-bar {
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border);
+      padding: 9px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      z-index: 500;
+    }
+
+    .lb-field {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      max-width: 380px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 12px;
+      position: relative;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .lb-field:focus-within {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(25,113,194,.1);
+    }
+    .lb-field.has-city { border-color: var(--blue); background: var(--active-bg); }
+
+    .lb-pin { font-size: 15px; flex-shrink: 0; }
+
+    #cityInput {
+      flex: 1;
+      border: none;
+      background: transparent;
+      font-size: 14px;
+      color: var(--text);
+      outline: none;
+      min-width: 0;
+    }
+    #cityInput::placeholder { color: var(--muted); }
+    .lb-field.has-city #cityInput { font-weight: 600; color: var(--blue); }
+
+    .lb-clear {
+      background: none; border: none;
+      font-size: 13px; color: var(--muted);
+      cursor: pointer; padding: 0 2px; flex-shrink: 0;
+      line-height: 1;
+    }
+    .lb-clear:hover { color: var(--text); }
+
+    /* Dropdown */
+    .lb-dropdown {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: -1px;
+      right: -1px;
+      background: var(--dropdown-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.12);
+      list-style: none;
+      z-index: 600;
+      overflow: hidden;
+      display: none;
+    }
+    .lb-dropdown.open { display: block; }
+    .lb-dropdown li {
+      padding: 9px 14px;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background .1s;
+    }
+    .lb-dropdown li:hover { background: var(--active-bg-hover); }
+    .lb-dropdown li.selected { background: var(--active-bg); font-weight: 600; color: var(--blue); }
+    .lb-dropdown li .city-count {
+      margin-left: auto;
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+    .lb-dropdown .lb-no-result {
+      padding: 10px 14px;
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* Geo button */
+    .lb-geo-btn {
+      display: flex; align-items: center; gap: 7px;
+      padding: 8px 15px;
+      border-radius: 8px;
+      border: 1.5px solid var(--blue);
+      background: transparent;
+      color: var(--blue);
+      font-size: 13px; font-weight: 600;
+      cursor: pointer;
+      transition: all .15s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .lb-geo-btn:hover  { background: var(--blue); color: #fff; }
+    .lb-geo-btn.active { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .lb-geo-btn.loading { opacity: .6; cursor: not-allowed; pointer-events: none; }
+
+    .lb-sep { margin-left: auto; font-size: 13px; color: var(--muted); }
+
+    /* ── BOTTOM SHEET HANDLE (mobile only, hidden on desktop) ── */
+    .bs-handle { display: none; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 680px) {
+      /* Header compact */
+      header { height: 50px; padding: 0 12px; gap: 10px; }
+      .logo-text span { display: none; }
+      .logo-text strong { font-size: 15px; }
+      .logo-icon { width: 30px; height: 30px; font-size: 15px; border-radius: 7px; }
+      .header-right { display: none; }
+      .search-wrap { max-width: none; }
+
+      /* Bars compact */
+      .match-bar { padding: 7px 12px; gap: 8px; }
+      .match-bar-label { display: none; }
+      .location-bar { padding: 7px 12px; gap: 8px; }
+      .lb-geo-btn span:last-child { display: none; }
+      .lb-geo-btn { padding: 7px 12px; }
+      .lb-sep { display: none; }
+
+      /* Map fills the main area */
+      .main { position: relative; overflow: hidden; }
+      #map { position: absolute; inset: 0; z-index: 1; }
+
+      /* Bottom sheet */
+      .sidebar {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        width: 100%;
+        height: 78vh;
+        border-right: none;
+        border-top: none;
+        border-radius: 18px 18px 0 0;
+        z-index: 400;
+        transform: translateY(calc(100% - 54px));
+        transition: transform .35s cubic-bezier(.4, 0, .2, 1);
+        box-shadow: 0 -6px 28px rgba(0,0,0,.2);
+        overflow: hidden;
+      }
+      .sidebar.bs-open { transform: translateY(0); }
+
+      /* Handle */
+      .bs-handle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px 6px;
+        cursor: pointer;
+        flex-shrink: 0;
+        background: var(--card);
+        border-radius: 18px 18px 0 0;
+        gap: 4px;
+        user-select: none;
+        border-bottom: 1px solid var(--border);
+      }
+      .bs-handle-knob {
+        width: 38px; height: 4px;
+        background: var(--knob-color); border-radius: 2px;
+        margin-bottom: 2px;
+      }
+      .bs-handle-row {
+        display: flex; align-items: center; gap: 8px;
+        font-size: 13px; font-weight: 700; color: var(--text);
+        width: 100%; justify-content: space-between;
+      }
+      .bs-handle-count { font-size: 13px; color: var(--muted); font-weight: 500; }
+      .bs-chevron { font-size: 14px; color: var(--muted); transition: transform .3s; }
+      .sidebar.bs-open .bs-chevron { transform: rotate(180deg); }
+
+      /* Events section more compact on mobile */
+      .events-list { max-height: 170px; }
+      .events-section-head { padding: 8px 12px 0; }
+
+      /* Bars list shorter on mobile */
+      .bars-list { padding: 8px; gap: 6px; }
+      .bar-card { padding: 11px 12px; }
+
+      /* Floating geo button (map overlay, visible when sheet is collapsed) */
+      .mobile-fab {
+        display: flex;
+        position: absolute;
+        bottom: 68px; right: 14px;
+        z-index: 500;
+        gap: 8px;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      .fab-btn {
+        background: var(--fab-bg);
+        color: var(--text-primary);
+        border: none;
+        border-radius: 50px;
+        padding: 10px 16px;
+        font-size: 13px; font-weight: 600;
+        box-shadow: 0 3px 12px rgba(0,0,0,.3);
+        cursor: pointer;
+        display: flex; align-items: center; gap: 7px;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">
+    <div class="logo-icon">⚽</div>
+    <div class="logo-text">
+      <strong>SportBar France</strong>
+      <span>Trouvez où regarder vos matchs</span>
+    </div>
+  </a>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Rechercher un bar ou une ville…" />
+  </div>
+  <div class="header-right">
+    <a href="compositions.html" style="color:rgba(255,255,255,.75);text-decoration:none;font-size:13px;font-weight:600;display:flex;align-items:center;gap:5px;transition:color .15s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.75)'">📋 Compos</a>
+    <div><strong id="statTotal">0</strong>bars</div>
+    <div><strong id="statCities">0</strong>villes</div>
+    <button class="theme-toggle" id="themeToggle"
+            aria-label="Activer le mode sombre"
+            title="Changer de thème">
+      <span id="themeIcon">🌙</span>
+    </button>
+  </div>
+</header>
+
+<!-- MATCH BAR -->
+<div class="match-bar">
+  <span class="match-bar-label">⚽ Match :</span>
+  <div class="lb-field" id="matchField">
+    <span class="lb-pin">🏆</span>
+    <input type="text" id="matchInput" placeholder="Rechercher un match…" autocomplete="off" spellcheck="false" />
+    <button class="lb-clear" id="matchClear" style="display:none" title="Effacer">✕</button>
+    <ul class="lb-dropdown" id="matchDropdown"></ul>
+  </div>
+</div>
+
+<!-- LOCATION BAR -->
+<div class="location-bar">
+  <div class="lb-field" id="lbField">
+    <span class="lb-pin">📍</span>
+    <input type="text" id="cityInput" placeholder="Toutes les villes" autocomplete="off" spellcheck="false" />
+    <button class="lb-clear" id="lbClear" style="display:none" title="Effacer">✕</button>
+    <ul class="lb-dropdown" id="cityDropdown"></ul>
+  </div>
+  <button class="lb-geo-btn" id="geoBtn">
+    <span>🎯</span><span id="geoBtnLabel">Me géolocaliser</span>
+  </button>
+  <span class="lb-sep" id="lbSep"></span>
+</div>
+
+<div class="main">
+  <!-- FAB mobile (floating button sur la carte) -->
+  <div class="mobile-fab" id="mobileFab" style="display:none">
+    <button class="fab-btn" id="fabGeo">🎯 Me localiser</button>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <!-- Handle bottom sheet (mobile uniquement) -->
+    <div class="bs-handle" id="bsHandle">
+      <div class="bs-handle-knob"></div>
+      <div class="bs-handle-row">
+        <span>📍 Bars &amp; Événements</span>
+        <span class="bs-handle-count" id="bsCount"></span>
+        <span class="bs-chevron">▲</span>
+      </div>
+    </div>
+
+    <!-- ═══ EVENTS SECTION ═══ -->
+    <div class="events-section">
+      <div class="events-section-head">
+        <span class="events-section-title">📅 Événements à venir</span>
+        <div class="comp-tabs">
+          <button class="comp-tab wc active" data-comp="wc">🏆 Coupe du Monde 2026</button>
+        </div>
+      </div>
+      <div class="events-list" id="eventsList"></div>
+    </div>
+
+    <!-- ═══ BARS SECTION ═══ -->
+    <div class="bars-section">
+
+      <!-- Selected event banner (hidden by default) -->
+      <div id="selBanner" style="display:none" class="sel-banner">
+        <div class="sel-banner-icon" id="selIcon">🏆</div>
+        <div class="sel-banner-info">
+          <div class="sel-banner-title" id="selTitle"></div>
+          <div class="sel-banner-date"  id="selDate"></div>
+        </div>
+        <button class="sel-banner-clear" id="selClear">✕ Effacer</button>
+      </div>
+
+      <!-- Contrôles (tri) -->
+      <div class="bars-controls" id="barsControls">
+        <span style="font-size:13px;color:var(--muted)">⚽ Diffusion Coupe du Monde</span>
+        <select class="sort-select" id="sortSelect" style="margin-left:auto">
+          <option value="nom">Nom A–Z</option>
+          <option value="ville">Ville A–Z</option>
+        </select>
+      </div>
+
+      <div class="bars-count-row" id="barsCountRow">Chargement…</div>
+      <div class="bars-list" id="barsList"></div>
+    </div>
+  </div>
+
+  <div id="map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="config.js"></script>
+<script>
+// ─────────────────────────────────────────────
+// EVENTS DATA
+// ─────────────────────────────────────────────
+const EVENTS = [
+  // ── COUPE DU MONDE 2026 (Équipe de France) ──
+  {
+    id: 'wc1', comp: 'wc', sport: 'Football',
+    title: 'France — Sénégal',
+    emoji: '🇫🇷 🆚 🇸🇳',
+    date: '2026-06-16', time: '21:00',
+    venue: 'Stade à confirmer',
+    phase: 'Phase de groupes'
+  },
+  {
+    id: 'wc2', comp: 'wc', sport: 'Football',
+    title: 'France — Irak',
+    emoji: '🇫🇷 🆚 🇮🇶',
+    date: '2026-06-22', time: '23:00',
+    venue: 'Stade à confirmer',
+    phase: 'Phase de groupes'
+  },
+  {
+    id: 'wc3', comp: 'wc', sport: 'Football',
+    title: 'France — Norvège',
+    emoji: '🇫🇷 🆚 🇳🇴',
+    date: '2026-06-26', time: '21:00',
+    venue: 'Stade à confirmer',
+    phase: 'Phase de groupes'
+  },
+  {
+    id: 'wc4', comp: 'wc', sport: 'Football',
+    title: 'France — 32e de finale',
+    emoji: '🇫🇷 🆚 ❓',
+    date: '2026-07-02', time: '21:00',
+    venue: 'SoFi Stadium, Los Angeles',
+    phase: '32es de finale'
+  },
+  {
+    id: 'wc5', comp: 'wc', sport: 'Football',
+    title: 'France — Quart de finale',
+    emoji: '🇫🇷 🆚 ❓',
+    date: '2026-07-07', time: '21:00',
+    venue: 'Hard Rock Stadium, Miami',
+    phase: 'Quarts de finale'
+  },
+  {
+    id: 'wc6', comp: 'wc', sport: 'Football',
+    title: 'France — Demi-finale',
+    emoji: '🇫🇷 🆚 ❓',
+    date: '2026-07-14', time: '21:00',
+    venue: 'AT&T Stadium, Dallas',
+    phase: 'Demi-finales'
+  },
+  {
+    id: 'wc7', comp: 'wc', sport: 'Football',
+    title: 'Finale — Coupe du Monde 2026',
+    emoji: '🏆',
+    date: '2026-07-19', time: '21:00',
+    venue: 'MetLife Stadium, New Jersey',
+    phase: 'Finale'
+  },
+  // ── FORMULE 1 2026 ──
+  {
+    id: 'f1_mon', comp: 'f1', sport: 'Formule 1',
+    title: 'Grand Prix de Monaco',
+    emoji: '🇲🇨',
+    date: '2026-05-31', time: '15:00',
+    venue: 'Circuit de Monaco, Monte-Carlo',
+    phase: 'Manche 8 / 24'
+  },
+  {
+    id: 'f1_can', comp: 'f1', sport: 'Formule 1',
+    title: 'Grand Prix du Canada',
+    emoji: '🇨🇦',
+    date: '2026-06-07', time: '20:00',
+    venue: 'Circuit Gilles-Villeneuve, Montréal',
+    phase: 'Manche 9 / 24'
+  },
+  {
+    id: 'f1_esp', comp: 'f1', sport: 'Formule 1',
+    title: "Grand Prix d'Espagne",
+    emoji: '🇪🇸',
+    date: '2026-06-21', time: '15:00',
+    venue: 'Circuit de Barcelona-Catalunya',
+    phase: 'Manche 10 / 24'
+  },
+  {
+    id: 'f1_aut', comp: 'f1', sport: 'Formule 1',
+    title: "Grand Prix d'Autriche",
+    emoji: '🇦🇹',
+    date: '2026-07-05', time: '15:00',
+    venue: 'Red Bull Ring, Spielberg',
+    phase: 'Manche 11 / 24'
+  },
+  {
+    id: 'f1_gbr', comp: 'f1', sport: 'Formule 1',
+    title: 'Grand Prix de Grande-Bretagne',
+    emoji: '🇬🇧',
+    date: '2026-07-12', time: '16:00',
+    venue: 'Silverstone Circuit',
+    phase: 'Manche 12 / 24'
+  },
+  {
+    id: 'f1_hun', comp: 'f1', sport: 'Formule 1',
+    title: 'Grand Prix de Hongrie',
+    emoji: '🇭🇺',
+    date: '2026-07-26', time: '15:00',
+    venue: 'Hungaroring, Budapest',
+    phase: 'Manche 13 / 24'
+  },
+  {
+    id: 'f1_bel', comp: 'f1', sport: 'Formule 1',
+    title: 'Grand Prix de Belgique',
+    emoji: '🇧🇪',
+    date: '2026-08-02', time: '15:00',
+    venue: 'Circuit de Spa-Francorchamps',
+    phase: 'Manche 14 / 24'
+  },
+  {
+    id: 'f1_ned', comp: 'f1', sport: 'Formule 1',
+    title: 'Grand Prix des Pays-Bas',
+    emoji: '🇳🇱',
+    date: '2026-08-30', time: '15:00',
+    venue: 'Circuit de Zandvoort',
+    phase: 'Manche 15 / 24'
+  },
+  {
+    id: 'f1_ita', comp: 'f1', sport: 'Formule 1',
+    title: "Grand Prix d'Italie",
+    emoji: '🇮🇹',
+    date: '2026-09-06', time: '15:00',
+    venue: 'Autodromo Nazionale di Monza',
+    phase: 'Manche 16 / 24'
+  },
+];
+
+// ─────────────────────────────────────────────
+// BARS DATA (with events coverage)
+// ─────────────────────────────────────────────
+const BARS = [
+  {
+    id: 1,
+    nom: "Le Stade Républicain",
+    ville: "Paris",
+    adresse: "12 Rue de Rivoli, 75001 Paris",
+    sports: ["Football", "Rugby", "Formule 1"],
+    note: 4.7, avis: 318, ecrans: 12,
+    horaires: "Lun–Dim 11h–2h",
+    lat: 48.8566, lng: 2.3522,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7','f1_mon','f1_can','f1_gbr','f1_ita']
+  },
+  {
+    id: 2,
+    nom: "Bar du Vieux Port Sport",
+    ville: "Marseille",
+    adresse: "5 Quai du Port, 13002 Marseille",
+    sports: ["Football", "Rugby", "Cyclisme"],
+    note: 4.5, avis: 214, ecrans: 8,
+    horaires: "Mar–Dim 12h–1h",
+    lat: 43.2965, lng: 5.3698,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7','f1_bel']
+  },
+  {
+    id: 3,
+    nom: "L'Arène des Sports",
+    ville: "Lyon",
+    adresse: "7 Place Bellecour, 69002 Lyon",
+    sports: ["Football", "Basket", "Tennis"],
+    note: 4.6, avis: 187, ecrans: 10,
+    horaires: "Lun–Sam 15h–2h",
+    lat: 45.7580, lng: 4.8320,
+    events: ['wc1','wc2','wc3','wc7','f1_aut']
+  },
+  {
+    id: 4,
+    nom: "Le Rugby Club Bar",
+    ville: "Toulouse",
+    adresse: "18 Rue Alsace-Lorraine, 31000 Toulouse",
+    sports: ["Rugby", "Football", "Formule 1"],
+    note: 4.8, avis: 402, ecrans: 15,
+    horaires: "Lun–Dim 11h–3h",
+    lat: 43.6047, lng: 1.4442,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7','f1_mon','f1_esp']
+  },
+  {
+    id: 5,
+    nom: "Bordeaux Sports Café",
+    ville: "Bordeaux",
+    adresse: "3 Cours de l'Intendance, 33000 Bordeaux",
+    sports: ["Football", "Rugby", "Cyclisme", "Tennis"],
+    note: 4.4, avis: 156, ecrans: 9,
+    horaires: "Mer–Dim 14h–1h",
+    lat: 44.8378, lng: -0.5792,
+    events: ['wc1','wc2','wc3','wc7','f1_gbr']
+  },
+  {
+    id: 6,
+    nom: "Côte d'Azur Sport Lounge",
+    ville: "Nice",
+    adresse: "28 Promenade des Anglais, 06000 Nice",
+    sports: ["Tennis", "Football", "Formule 1"],
+    note: 4.3, avis: 98, ecrans: 6,
+    horaires: "Lun–Dim 10h–0h",
+    lat: 43.7102, lng: 7.2620,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7','f1_mon','f1_esp','f1_gbr']
+  },
+  {
+    id: 7,
+    nom: "L'Arène Nantaise",
+    ville: "Nantes",
+    adresse: "11 Rue Crébillon, 44000 Nantes",
+    sports: ["Football", "Basket", "Rugby"],
+    note: 4.5, avis: 173, ecrans: 8,
+    horaires: "Mar–Dim 12h–2h",
+    lat: 47.2184, lng: -1.5536,
+    events: ['wc1','wc2','wc3','wc7']
+  },
+  {
+    id: 8,
+    nom: "Le Comptoir des Copains",
+    ville: "Lille",
+    adresse: "Rue des Fossés, 59000 Lille",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir Instagram",
+    website: "https://www.instagram.com/comptoir_des_copains/?hl=fr",
+    websiteLabel: "📸 Instagram",
+    lat: 50.6407, lng: 3.0572,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 9,
+    nom: "Le Grand Écran Sportif",
+    ville: "Strasbourg",
+    adresse: "15 Place Kléber, 67000 Strasbourg",
+    sports: ["Football", "Formule 1", "Tennis"],
+    note: 4.2, avis: 88, ecrans: 7,
+    horaires: "Mer–Dim 15h–1h",
+    lat: 48.5734, lng: 7.7521,
+    events: ['wc1','wc2','wc3','wc7','f1_aut','f1_hun']
+  },
+  {
+    id: 10,
+    nom: "Montpellier Sport Bar",
+    ville: "Montpellier",
+    adresse: "6 Place de la Comédie, 34000 Montpellier",
+    sports: ["Rugby", "Football", "Basket", "Formule 1"],
+    note: 4.9, avis: 512, ecrans: 18,
+    horaires: "Lun–Dim 10h–3h",
+    lat: 43.6108, lng: 3.8767,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7','f1_mon','f1_can','f1_esp','f1_aut','f1_gbr','f1_hun','f1_bel','f1_ned','f1_ita']
+  },
+  {
+    id: 11,
+    nom: "Vélodrome Fan Zone",
+    ville: "Rennes",
+    adresse: "9 Rue de la Monnaie, 35000 Rennes",
+    sports: ["Cyclisme", "Football", "Rugby"],
+    note: 4.4, avis: 132, ecrans: 6,
+    horaires: "Mar–Sam 14h–1h",
+    lat: 48.1173, lng: -1.6778,
+    events: ['wc1','wc2','wc3','wc7','f1_gbr','f1_ned']
+  },
+  {
+    id: 12,
+    nom: "Le Paddock — Bar F1",
+    ville: "Paris",
+    adresse: "47 Rue du Fbg Saint-Antoine, 75011 Paris",
+    sports: ["Formule 1", "Football"],
+    note: 4.8, avis: 289, ecrans: 10,
+    horaires: "Jeu–Dim 10h–2h",
+    lat: 48.8530, lng: 2.3729,
+    events: ['f1_mon','f1_can','f1_esp','f1_aut','f1_gbr','f1_hun','f1_bel','f1_ned','f1_ita','wc7']
+  },
+  {
+    id: 13,
+    nom: "La Guinguette de la Marine",
+    ville: "Lille",
+    adresse: "8 Avenue Léon Jouhaux, 59000 Lille",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir site web",
+    website: "https://www.privateaser.com/lieu/58612-la-guinguette-de-la-marine",
+    websiteLabel: "🌐 Site web",
+    lat: 50.636837, lng: 3.046812,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 14,
+    nom: "Aux Enfants Terribles",
+    ville: "Marquette-lez-Lille",
+    adresse: "14 Chemin de Wervicq, 59520 Marquette-lez-Lille",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir site web",
+    website: "https://auxenfantsterribles.fr/",
+    websiteLabel: "🌐 Site web",
+    lat: 50.679861, lng: 3.074677,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 15,
+    nom: "Chez Oit",
+    ville: "Lille",
+    adresse: "119 Boulevard de la Liberté, 59000 Lille",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir Google Maps",
+    website: "https://lilleaddict.fr/adresse/chez-oit",
+    websiteLabel: "🔗 Lille Addict",
+    lat: 50.633296, lng: 3.059342,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 16,
+    nom: "Den Artiest",
+    ville: "Lille",
+    adresse: "26 Place Rihour, 59000 Lille",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir Google Maps",
+    website: "https://lilleaddict.fr/adresse/den-artiest",
+    websiteLabel: "🔗 Lille Addict",
+    lat: 50.636050, lng: 3.062851,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 17,
+    nom: "Au Bar Bu",
+    ville: "Lille",
+    adresse: "105 Rue des Sarrazins, 59000 Lille",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir Google Maps",
+    website: "https://lilleaddict.fr/adresse/au-bar-bu",
+    websiteLabel: "🔗 Lille Addict",
+    lat: 50.624680, lng: 3.045302,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 18,
+    nom: "Kanaal Café",
+    ville: "Lille",
+    adresse: "63 Avenue du Peuple Belge, 59000 Lille",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir Google Maps",
+    website: "https://lilleaddict.fr/adresse/kanaal-cafe",
+    websiteLabel: "🔗 Lille Addict",
+    lat: 50.646275, lng: 3.061137,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 19,
+    nom: "Brasserie Fives Cail",
+    ville: "Lille",
+    adresse: "22 Place des Ouvriers, 59800 Lille",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir Google Maps",
+    website: "https://lilleaddict.fr/adresse/brasserie-fives-cail",
+    websiteLabel: "🔗 Lille Addict",
+    lat: 50.627598, lng: 3.091885,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 20,
+    nom: "La Maison Bleue",
+    ville: "Courseulles-sur-Mer",
+    adresse: "6 Rue de Marine Dunkerque, 14470 Courseulles-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3364, lng: -0.4650,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 21,
+    nom: "La Spiaggia",
+    ville: "Courseulles-sur-Mer",
+    adresse: "18 Place du 6 Juin, 14470 Courseulles-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Diffusion sur demande",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3355, lng: -0.4573,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 22,
+    nom: "Coffee and Tea",
+    ville: "Courseulles-sur-Mer",
+    adresse: "12 Quai Ouest, 14470 Courseulles-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3335, lng: -0.4633,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 23,
+    nom: "Le Bowling de la Mer",
+    ville: "Courseulles-sur-Mer",
+    adresse: "Place du 6 Juin, 14470 Courseulles-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3348, lng: -0.4575,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 24,
+    nom: "Chez Célia",
+    ville: "Courseulles-sur-Mer",
+    adresse: "4 Quai Ouest, 14470 Courseulles-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3338, lng: -0.4625,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 25,
+    nom: "La Causerie",
+    ville: "Courseulles-sur-Mer",
+    adresse: "8 bis Rue de la Mer, 14470 Courseulles-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3307, lng: -0.4574,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 26,
+    nom: "L'Imprévu",
+    ville: "Saint-Aubin-sur-Mer",
+    adresse: "7 Rue du Maréchal Foch, 14750 Saint-Aubin-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3294, lng: -0.3919,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 27,
+    nom: "L'Hyppocampe",
+    ville: "Langrune-sur-Mer",
+    adresse: "33 Rue de la Mer, 14830 Langrune-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3246, lng: -0.3712,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 28,
+    nom: "Les Terrasses du mini-golf",
+    ville: "Luc-sur-Mer",
+    adresse: "Rue du Docteur Charcot, 14530 Luc-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3193, lng: -0.3528,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 29,
+    nom: "Casino Tranchant",
+    ville: "Luc-sur-Mer",
+    adresse: "20 Rue Guynemer, 14530 Luc-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3211, lng: -0.3568,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 30,
+    nom: "O' Little Luc",
+    ville: "Luc-sur-Mer",
+    adresse: "26 Rue de la Mer, 14530 Luc-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3191, lng: -0.3546,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 31,
+    nom: "Le Week-end",
+    ville: "Luc-sur-Mer",
+    adresse: "20 Rue de la Mer, 14530 Luc-sur-Mer",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.3192, lng: -0.3545,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 32,
+    nom: "Le Longchamp",
+    ville: "Douvres-la-Délivrande",
+    adresse: "76 Rue du Général de Gaulle, 14440 Douvres-la-Délivrande",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.2984, lng: -0.3731,
+    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
+  },
+  {
+    id: 33,
+    nom: "Fan-Zone Coupe du Monde 2026 — Hippodrome de Caen",
+    ville: "Caen",
+    adresse: "Boulevard Yves Guillou, 14000 Caen",
+    sports: ["Football"],
+    type: "fan-zone",
+    note: null, avis: null, ecrans: null,
+    horaires: "16 juin 21h · 22 juin 23h · 26 juin 21h",
+    source: "Source : Office de Tourisme Cœur de Nacre (coeurdenacretourisme.com)",
+    lat: 49.1746, lng: -0.3717,
+    events: ['wc1','wc2','wc3']
+  }
+];
+
+// ─────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────
+let activeComp    = 'wc';
+let activeEventId = null;
+let activeSport   = 'all';
+let activeSort    = 'nom';
+let searchQuery   = '';
+let activeBarId   = null;
+let activeCity    = null;
+let markers       = {};
+let userMarker    = null;
+
+// ─────────────────────────────────────────────
+// GEO HELPERS
+// ─────────────────────────────────────────────
+function haversine(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat/2)**2
+    + Math.cos(lat1 * Math.PI/180) * Math.cos(lat2 * Math.PI/180) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function getCities() {
+  return [...new Set(BARS.map(b => b.ville))].sort((a, b) => a.localeCompare(b));
+}
+
+function nearestCity(lat, lng) {
+  let best = null, bestDist = Infinity;
+  getCities().forEach(city => {
+    const bars = BARS.filter(b => b.ville === city);
+    const avgLat = bars.reduce((s, b) => s + b.lat, 0) / bars.length;
+    const avgLng = bars.reduce((s, b) => s + b.lng, 0) / bars.length;
+    const dist = haversine(lat, lng, avgLat, avgLng);
+    if (dist < bestDist) { bestDist = dist; best = { city, dist }; }
+  });
+  return best;
+}
+
+// ─────────────────────────────────────────────
+// CITY SEARCH
+// ─────────────────────────────────────────────
+function buildDropdown(query = '') {
+  const dropdown = document.getElementById('cityDropdown');
+  const q = query.toLowerCase();
+  const cities = getCities().filter(c => !q || c.toLowerCase().includes(q));
+
+  if (cities.length === 0) {
+    dropdown.innerHTML = `<li class="lb-no-result">Aucune ville trouvée</li>`;
+  } else {
+    dropdown.innerHTML = cities.map(city => {
+      const n = BARS.filter(b => b.ville === city).length;
+      return `<li data-city="${city}" class="${city === activeCity ? 'selected' : ''}">
+        📍 ${city}<span class="city-count">${n} bar${n > 1 ? 's' : ''}</span>
+      </li>`;
+    }).join('');
+    dropdown.querySelectorAll('li[data-city]').forEach(li =>
+      li.addEventListener('mousedown', e => { e.preventDefault(); selectCity(li.dataset.city); }));
+  }
+  dropdown.classList.add('open');
+}
+
+function selectCity(city) {
+  activeCity = city;
+  const input = document.getElementById('cityInput');
+  input.value = city;
+  input.blur();
+  document.getElementById('lbClear').style.display = '';
+  document.getElementById('lbField').classList.add('has-city');
+  document.getElementById('cityDropdown').classList.remove('open');
+  document.getElementById('lbSep').textContent = '';
+  render();
+  zoomToCity(city);
+}
+
+function clearCity() {
+  activeCity = null;
+  document.getElementById('cityInput').value = '';
+  document.getElementById('lbClear').style.display = 'none';
+  document.getElementById('lbField').classList.remove('has-city');
+  document.getElementById('cityDropdown').classList.remove('open');
+  document.getElementById('lbSep').textContent = '';
+  const geoBtn = document.getElementById('geoBtn');
+  geoBtn.classList.remove('active');
+  document.getElementById('geoBtnLabel').textContent = 'Me géolocaliser';
+  if (userMarker) { map.removeLayer(userMarker); userMarker = null; }
+  render();
+  map.flyTo([46.8, 2.3], 6, { duration: 1 });
+}
+
+function zoomToCity(city) {
+  const bars = BARS.filter(b => b.ville === city);
+  if (!bars.length) return;
+  if (bars.length === 1) {
+    map.flyTo([bars[0].lat, bars[0].lng], 15, { duration: 1 });
+  } else {
+    map.flyToBounds(L.latLngBounds(bars.map(b => [b.lat, b.lng])).pad(0.4), { duration: 1, maxZoom: 15 });
+  }
+}
+
+// ─────────────────────────────────────────────
+// HELPERS
+// ─────────────────────────────────────────────
+function daysUntil(dateStr) {
+  const today = new Date('2026-05-30');
+  today.setHours(0,0,0,0);
+  const d = new Date(dateStr);
+  d.setHours(0,0,0,0);
+  return Math.ceil((d - today) / 86400000);
+}
+
+function countdownLabel(days) {
+  if (days === 0) return ['Aujourd\'hui', 'today'];
+  if (days === 1) return ['Demain', 'soon'];
+  if (days <= 7)  return [`Dans ${days} j`, 'soon'];
+  if (days <= 21) return [`Dans ${days} j`, 'near'];
+  return [`Dans ${days} j`, 'regular'];
+}
+
+function formatDate(dateStr, time) {
+  const d = new Date(dateStr);
+  const opts = { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' };
+  return d.toLocaleDateString('fr-FR', opts) + ` · ${time}`;
+}
+
+function slugSport(s) {
+  return s.toLowerCase().replace(/\s+/g, '').replace('é','e').replace('è','e');
+}
+
+// ─────────────────────────────────────────────
+// THÈME (dark / light)
+// ─────────────────────────────────────────────
+const THEME_KEY = 'sportbar-theme';
+
+function getInitialTheme() {
+  const saved = localStorage.getItem(THEME_KEY);
+  if (saved === 'dark' || saved === 'light') return saved;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme, animate = true) {
+  const html = document.documentElement;
+  if (!animate) html.classList.add('no-transition');
+  html.setAttribute('data-theme', theme);
+  const icon  = document.getElementById('themeIcon');
+  const btn   = document.getElementById('themeToggle');
+  if (theme === 'dark') {
+    icon.textContent = '☀️';
+    btn.setAttribute('aria-label', 'Activer le mode clair');
+  } else {
+    icon.textContent = '🌙';
+    btn.setAttribute('aria-label', 'Activer le mode sombre');
+  }
+  if (tileLayer) switchMapTiles(theme);
+  if (!animate) requestAnimationFrame(() => html.classList.remove('no-transition'));
+}
+
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  localStorage.setItem(THEME_KEY, next);
+  applyTheme(next, true);
+});
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  if (!localStorage.getItem(THEME_KEY)) applyTheme(e.matches ? 'dark' : 'light', true);
+});
+
+// ─────────────────────────────────────────────
+// MAP
+// ─────────────────────────────────────────────
+const map = L.map('map').setView([46.8, 2.3], 6);
+let tileLayer = null;
+
+const TILES = {
+  light: ['https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+          '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'],
+  dark:  ['https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+          '© OpenStreetMap © <a href="https://carto.com/">CartoDB</a>'],
+};
+
+function switchMapTiles(theme) {
+  if (tileLayer) map.removeLayer(tileLayer);
+  const [url, attr] = TILES[theme] || TILES.light;
+  tileLayer = L.tileLayer(url, { attribution: attr, maxZoom: 19 }).addTo(map);
+}
+
+// Init tuiles selon le thème initial (avant applyTheme)
+switchMapTiles(getInitialTheme());
+
+const SPORT_COLORS = {
+  Football:   '#2e7d32',
+  Rugby:      '#e65100',
+  Tennis:     '#b71c1c',
+  Basket:     '#bf360c',
+  Cyclisme:   '#6a1b9a',
+  'Formule 1':'#c62828',
+};
+
+function makeIcon(bar) {
+  const color = bar.type === 'fan-zone' ? '#7b1fa2' : (SPORT_COLORS[bar.sports[0]] || '#1971c2');
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="34" height="40" viewBox="0 0 34 40">
+    <ellipse cx="17" cy="37" rx="5" ry="2.5" fill="rgba(0,0,0,.2)"/>
+    <path d="M17 1C9.8 1 4 6.8 4 14c0 9.5 13 25 13 25S30 23.5 30 14C30 6.8 24.2 1 17 1z"
+          fill="${color}" stroke="#fff" stroke-width="1.8"/>
+    <circle cx="17" cy="14" r="7.5" fill="rgba(255,255,255,.92)"/>
+    <text x="17" y="18" text-anchor="middle" font-size="11" fill="${color}">⚽</text>
+  </svg>`;
+  return L.divIcon({ html: svg, iconSize: [34,40], iconAnchor: [17,40], popupAnchor: [0,-42], className: '' });
+}
+
+function buildPopup(bar) {
+  const metaItems = [];
+  if (bar.ecrans) metaItems.push(`<span>🖥 ${bar.ecrans} écrans</span>`);
+  metaItems.push(`<span>⏰ ${bar.horaires}</span>`);
+  const linkHtml = bar.website
+    ? `<a href="${bar.website}" target="_blank" rel="noopener"
+         style="font-size:12px;color:#1971c2;text-decoration:none;font-weight:600">${bar.websiteLabel}</a>`
+    : '';
+  const gmapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${bar.lat},${bar.lng}`;
+  const wazeUrl  = `https://waze.com/ul?ll=${bar.lat},${bar.lng}&navigate=yes`;
+  return `<div style="min-width:210px">
+    <div class="popup-name">${bar.nom}</div>
+    <div class="popup-city">📍 ${bar.adresse}</div>
+    <div class="popup-meta" style="margin-bottom:6px">${metaItems.join(' · ')}</div>
+    ${linkHtml ? `<div style="margin-bottom:8px">${linkHtml}</div>` : ''}
+    <div style="display:flex;gap:6px;padding-top:8px;border-top:1px solid #dee2e6">
+      <a href="${gmapsUrl}" target="_blank" rel="noopener" class="bc-nav-btn gmaps">🗺️ Google Maps</a>
+      <a href="${wazeUrl}"  target="_blank" rel="noopener" class="bc-nav-btn waze">🚗 Waze</a>
+    </div>
+  </div>`;
+}
+
+// ─────────────────────────────────────────────
+// FILTER
+// ─────────────────────────────────────────────
+function getFilteredBars() {
+  let list = BARS.slice();
+
+  if (activeCity) {
+    list = list.filter(b => b.ville === activeCity);
+  }
+
+  if (activeEventId) {
+    list = list.filter(b => b.events.includes(activeEventId));
+  } else {
+    if (activeSport !== 'all') list = list.filter(b => b.sports.includes(activeSport));
+  }
+
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    list = list.filter(b =>
+      b.nom.toLowerCase().includes(q) ||
+      b.ville.toLowerCase().includes(q) ||
+      b.sports.some(s => s.toLowerCase().includes(q))
+    );
+  }
+
+  list.sort((a, b) => {
+    if (activeSort === 'note') return b.note - a.note;
+    if (activeSort === 'nom')  return a.nom.localeCompare(b.nom);
+    return a.ville.localeCompare(b.ville);
+  });
+
+  return list;
+}
+
+// ─────────────────────────────────────────────
+// MATCH SEARCH BAR
+// ─────────────────────────────────────────────
+function buildMatchDropdown(query = '') {
+  const dropdown = document.getElementById('matchDropdown');
+  const q = query.toLowerCase().trim();
+
+  const wcEvents = EVENTS.filter(e => e.comp === 'wc' && (!q ||
+    e.title.toLowerCase().includes(q) ||
+    e.phase.toLowerCase().includes(q) ||
+    e.venue.toLowerCase().includes(q) ||
+    formatDate(e.date, e.time).toLowerCase().includes(q)
+  ));
+
+  if (wcEvents.length === 0) {
+    dropdown.innerHTML = `<li class="md-no-result">Aucun match trouvé</li>`;
+    dropdown.classList.add('open');
+    return;
+  }
+
+  dropdown.innerHTML = `<li class="md-group">🏆 Coupe du Monde 2026</li>`;
+  wcEvents.forEach(ev => {
+    const days = daysUntil(ev.date);
+    const [label, cls] = countdownLabel(days);
+    const d = new Date(ev.date);
+    const dateFmt = d.toLocaleDateString('fr-FR', { weekday:'short', day:'numeric', month:'long' });
+    const li = document.createElement('li');
+    li.className = 'md-item' + (ev.id === activeEventId ? ' selected' : '');
+    li.dataset.eventId = ev.id;
+    li.innerHTML = `
+      <div class="md-emoji">${ev.emoji}</div>
+      <div class="md-info">
+        <div class="md-title">${ev.title}</div>
+        <div class="md-meta">${ev.phase} · ${dateFmt} · ${ev.time} CEST</div>
+      </div>
+      <span class="ec-countdown ${cls}">${label}</span>`;
+    li.addEventListener('mousedown', e => { e.preventDefault(); selectMatchFromBar(ev.id); });
+    dropdown.appendChild(li);
+  });
+  dropdown.classList.add('open');
+}
+
+function selectMatchFromBar(id) {
+  const ev = EVENTS.find(e => e.id === id);
+  activeEventId = id;
+  document.getElementById('matchInput').value = ev.title;
+  document.getElementById('matchClear').style.display = '';
+  document.getElementById('matchField').classList.add('has-match');
+  document.getElementById('matchDropdown').classList.remove('open');
+  syncMatchBarFromState();
+  updateSelectedBanner();
+  renderEvents();
+  render();
+}
+
+function clearMatchBar() {
+  activeEventId = null;
+  document.getElementById('matchInput').value = '';
+  document.getElementById('matchClear').style.display = 'none';
+  document.getElementById('matchField').classList.remove('has-match');
+  document.getElementById('matchDropdown').classList.remove('open');
+  updateSelectedBanner();
+  renderEvents();
+  render();
+}
+
+function syncMatchBarFromState() {
+  const input = document.getElementById('matchInput');
+  const field = document.getElementById('matchField');
+  const btn   = document.getElementById('matchClear');
+  if (activeEventId) {
+    const ev = EVENTS.find(e => e.id === activeEventId);
+    input.value = ev ? ev.title : '';
+    field.classList.add('has-match');
+    btn.style.display = '';
+  } else {
+    input.value = '';
+    field.classList.remove('has-match');
+    btn.style.display = 'none';
+  }
+}
+
+// Match bar event listeners
+const matchInput  = document.getElementById('matchInput');
+const matchClear  = document.getElementById('matchClear');
+
+matchInput.addEventListener('focus', () => buildMatchDropdown(matchInput.value));
+matchInput.addEventListener('input', () => buildMatchDropdown(matchInput.value));
+matchInput.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.getElementById('matchDropdown').classList.remove('open');
+});
+matchClear.addEventListener('click', clearMatchBar);
+document.addEventListener('click', e => {
+  if (!e.target.closest('#matchField')) document.getElementById('matchDropdown').classList.remove('open');
+});
+
+// ─────────────────────────────────────────────
+// RENDER EVENTS
+// ─────────────────────────────────────────────
+function renderEvents() {
+  const list = document.getElementById('eventsList');
+  list.innerHTML = '';
+
+  const filtered = EVENTS.filter(e => e.comp === activeComp);
+
+  filtered.forEach(ev => {
+    const days = daysUntil(ev.date);
+    const [label, cls] = countdownLabel(days);
+
+    const card = document.createElement('div');
+    card.className = `event-card ${ev.comp}${ev.id === activeEventId ? ' active' : ''}`;
+    card.dataset.id = ev.id;
+
+    card.innerHTML = `
+      <div class="ec-row1">
+        <span class="ec-title">${ev.emoji} ${ev.title}</span>
+        <span class="ec-countdown ${cls}">${label}</span>
+      </div>
+      <div class="ec-row2">${ev.phase} · ${ev.time} CEST</div>
+      <div class="ec-row3">${ev.venue}</div>`;
+
+    card.addEventListener('click', () => selectEvent(ev.id));
+    list.appendChild(card);
+  });
+}
+
+// ─────────────────────────────────────────────
+// SELECT EVENT
+// ─────────────────────────────────────────────
+function selectEvent(id) {
+  activeEventId = activeEventId === id ? null : id;
+  syncMatchBarFromState();
+  renderEvents();
+  updateSelectedBanner();
+  render();
+}
+
+function updateSelectedBanner() {
+  const banner   = document.getElementById('selBanner');
+  const controls = document.getElementById('barsControls');
+
+  if (!activeEventId) {
+    banner.style.display = 'none';
+    controls.style.display = '';
+    return;
+  }
+
+  const ev = EVENTS.find(e => e.id === activeEventId);
+  banner.style.display = 'flex';
+  banner.className = 'sel-banner' + (ev.comp === 'f1' ? ' f1-banner' : '');
+  controls.style.display = 'none';
+  document.getElementById('selIcon').textContent  = ev.comp === 'f1' ? '🏎️' : '🏆';
+  document.getElementById('selTitle').textContent = ev.title;
+  document.getElementById('selDate').textContent  = formatDate(ev.date, ev.time) + ' CEST';
+}
+
+// ─────────────────────────────────────────────
+// RENDER BARS + MAP
+// ─────────────────────────────────────────────
+function render() {
+  const bars = getFilteredBars();
+
+  // Count row
+  const total = activeEventId
+    ? `📺 ${bars.length} bar${bars.length > 1 ? 's' : ''} diffuse${bars.length > 1 ? 'nt' : ''} cet événement`
+    : `${bars.length} bar${bars.length > 1 ? 's' : ''} trouvé${bars.length > 1 ? 's' : ''}`;
+  document.getElementById('barsCountRow').textContent = total;
+  const bsCount = document.getElementById('bsCount');
+  if (bsCount) bsCount.textContent = total;
+
+  // Bars list
+  const list = document.getElementById('barsList');
+  list.innerHTML = '';
+
+  if (bars.length === 0) {
+    list.innerHTML = `<div class="empty-state"><div class="ei">🔍</div><p>Aucun bar ne correspond.</p></div>`;
+  }
+
+  bars.forEach(bar => {
+    const card = document.createElement('div');
+    card.className = 'bar-card' + (bar.id === activeBarId ? ' active' : '');
+    card.dataset.id = bar.id;
+    const footerItems = [`<span>⏰ ${bar.horaires}</span>`];
+    if (bar.ecrans)  footerItems.push(`<span>🖥 ${bar.ecrans} écrans</span>`);
+    if (bar.website) footerItems.push(
+      `<a href="${bar.website}" target="_blank" rel="noopener" class="bc-link" onclick="event.stopPropagation()">${bar.websiteLabel}</a>`);
+    const gmapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${bar.lat},${bar.lng}`;
+    const wazeUrl  = `https://waze.com/ul?ll=${bar.lat},${bar.lng}&navigate=yes`;
+    card.innerHTML = `
+      <div class="bc-top">
+        <div class="bc-name">${bar.nom}</div>
+      </div>
+      <div class="bc-location">📍 ${bar.adresse}</div>
+      <div class="bc-footer">${footerItems.join('')}</div>
+      <div class="bc-nav-btns">
+        <a class="bc-nav-btn gmaps" href="${gmapsUrl}" target="_blank" rel="noopener"
+           onclick="event.stopPropagation()">🗺️ Google Maps</a>
+        <a class="bc-nav-btn waze"  href="${wazeUrl}"  target="_blank" rel="noopener"
+           onclick="event.stopPropagation()">🚗 Waze</a>
+      </div>`;
+    card.addEventListener('click', () => selectBar(bar.id));
+    list.appendChild(card);
+  });
+
+  // Markers
+  Object.values(markers).forEach(m => map.removeLayer(m));
+  markers = {};
+  bars.forEach(bar => {
+    const m = L.marker([bar.lat, bar.lng], { icon: makeIcon(bar) })
+      .addTo(map)
+      .bindPopup(buildPopup(bar), { maxWidth: 260 });
+    m.on('click', () => selectBar(bar.id, false));
+    markers[bar.id] = m;
+  });
+}
+
+// ─────────────────────────────────────────────
+// SELECT BAR
+// ─────────────────────────────────────────────
+function selectBar(id, panMap = true) {
+  activeBarId = id;
+  document.querySelectorAll('.bar-card').forEach(c =>
+    c.classList.toggle('active', Number(c.dataset.id) === id));
+  const card = document.querySelector(`.bar-card[data-id="${id}"]`);
+  if (card) card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  if (markers[id]) {
+    const bar = BARS.find(b => b.id === id);
+    if (panMap && bar) map.flyTo([bar.lat, bar.lng], 14, { duration: 1.2 });
+    setTimeout(() => markers[id].openPopup(), panMap ? 1200 : 0);
+  }
+}
+
+// ─────────────────────────────────────────────
+// EVENTS
+// ─────────────────────────────────────────────
+document.getElementById('selClear').addEventListener('click', () => {
+  activeEventId = null;
+  syncMatchBarFromState();
+  renderEvents();
+  updateSelectedBanner();
+  render();
+});
+
+document.querySelectorAll('.comp-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.comp-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeComp = btn.dataset.comp;
+    renderEvents();
+  });
+});
+
+document.getElementById('barsControls').addEventListener('click', e => {
+  const chip = e.target.closest('.chip');
+  if (!chip) return;
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  chip.classList.add('active');
+  activeSport = chip.dataset.sport;
+  render();
+});
+
+document.getElementById('sortSelect').addEventListener('change', e => {
+  activeSort = e.target.value;
+  render();
+});
+
+let st;
+document.getElementById('searchInput').addEventListener('input', e => {
+  clearTimeout(st);
+  st = setTimeout(() => { searchQuery = e.target.value.trim(); render(); }, 200);
+});
+
+// ─────────────────────────────────────────────
+// CITY INPUT EVENTS
+// ─────────────────────────────────────────────
+const cityInput  = document.getElementById('cityInput');
+const lbClear    = document.getElementById('lbClear');
+const geoBtn     = document.getElementById('geoBtn');
+
+cityInput.addEventListener('focus', () => buildDropdown(cityInput.value));
+cityInput.addEventListener('input', () => buildDropdown(cityInput.value));
+cityInput.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.getElementById('cityDropdown').classList.remove('open');
+});
+
+lbClear.addEventListener('click', clearCity);
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('#lbField')) document.getElementById('cityDropdown').classList.remove('open');
+});
+
+geoBtn.addEventListener('click', () => {
+  if (!navigator.geolocation) {
+    alert("La géolocalisation n'est pas disponible sur votre navigateur.");
+    return;
+  }
+  geoBtn.classList.add('loading');
+  document.getElementById('geoBtnLabel').textContent = 'Localisation…';
+
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      const { latitude: lat, longitude: lng } = pos.coords;
+
+      if (userMarker) map.removeLayer(userMarker);
+      userMarker = L.circleMarker([lat, lng], {
+        radius: 9, color: '#1971c2', fillColor: '#74c0fc',
+        fillOpacity: .85, weight: 3
+      }).addTo(map).bindPopup('📍 Votre position');
+
+      geoBtn.classList.remove('loading');
+      geoBtn.classList.add('active');
+
+      const nearest = nearestCity(lat, lng);
+      if (nearest && nearest.dist <= 80) {
+        selectCity(nearest.city);
+        document.getElementById('geoBtnLabel').textContent = `📍 ${nearest.city}`;
+      } else {
+        document.getElementById('geoBtnLabel').textContent = '📍 Près de moi';
+        document.getElementById('lbSep').textContent = 'Aucun bar référencé à proximité';
+        map.flyTo([lat, lng], 10, { duration: 1.2 });
+      }
+    },
+    err => {
+      geoBtn.classList.remove('loading');
+      document.getElementById('geoBtnLabel').textContent = 'Me géolocaliser';
+      const msg = err.code === 1
+        ? "Autorisation de géolocalisation refusée."
+        : "Impossible d'obtenir votre position.";
+      alert(msg);
+    },
+    { timeout: 10000, enableHighAccuracy: false }
+  );
+});
+
+// ─────────────────────────────────────────────
+// MOBILE BOTTOM SHEET
+// ─────────────────────────────────────────────
+const sidebar   = document.getElementById('sidebar');
+const bsHandle  = document.getElementById('bsHandle');
+const mobileFab = document.getElementById('mobileFab');
+
+function isMobile() { return window.innerWidth <= 680; }
+
+function updateMobileUI() {
+  if (!isMobile()) {
+    mobileFab.style.display = 'none';
+    sidebar.classList.remove('bs-open');
+    return;
+  }
+  mobileFab.style.display = 'flex';
+  // Sync bs count badge
+  const n = document.getElementById('barsCountRow').textContent;
+  document.getElementById('bsCount').textContent = n;
+}
+
+bsHandle.addEventListener('click', () => {
+  if (!isMobile()) return;
+  sidebar.classList.toggle('bs-open');
+  document.getElementById('bsCount').textContent =
+    document.getElementById('barsCountRow').textContent;
+});
+
+// Close sheet when tapping the map
+map.on('click', () => {
+  if (isMobile()) sidebar.classList.remove('bs-open');
+});
+
+// FAB geo button (duplicates desktop geo button on mobile)
+document.getElementById('fabGeo').addEventListener('click', () => {
+  document.getElementById('geoBtn').click();
+  sidebar.classList.add('bs-open');
+});
+
+window.addEventListener('resize', updateMobileUI);
+
+// ─────────────────────────────────────────────
+// SLUG HELPER
+// ─────────────────────────────────────────────
+function slugify(str) {
+  return str.toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+// ─────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────
+document.getElementById('statTotal').textContent  = BARS.length;
+document.getElementById('statCities').textContent = new Set(BARS.map(b => b.ville)).size;
+
+// Appliquer le thème sans animation (avant tout rendu, évite le flash)
+applyTheme(getInitialTheme(), false);
+
+renderEvents();
+render();
+updateMobileUI();
+
+// ─────────────────────────────────────────────
+// URL PARAMS (?ville=lille · ?match=france-etats-unis · ?bar=aux-enfants-terribles)
+// ─────────────────────────────────────────────
+(function applyUrlParams() {
+  const params = new URLSearchParams(window.location.search);
+
+  const villeParam = params.get('ville');
+  if (villeParam) {
+    const city = getCities().find(c => slugify(c) === villeParam.toLowerCase());
+    if (city) { selectCity(city); return; }
+  }
+
+  const matchParam = params.get('match');
+  if (matchParam && typeof CONFIG !== 'undefined') {
+    const eventId = CONFIG.matchSlugs[matchParam.toLowerCase()];
+    if (eventId) { selectEvent(eventId); }
+  }
+
+  const barParam = params.get('bar');
+  if (barParam) {
+    const bar = BARS.find(b => slugify(b.nom) === barParam.toLowerCase());
+    if (bar) { selectBar(bar.id, true); }
+  }
+})();
+</script>
+</body>
+</html>

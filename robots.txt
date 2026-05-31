@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adelinebdq.github.io/sportbar-france/sitemap.xml
