@@ -31,4 +31,5 @@ CONFIG.citySlugs = {
   'douvres-la-delivrande':   'Douvres-la-Délivrande',
   'caen':                    'Caen',
   'brest':                   'Brest',
+  'rouen':                   'Rouen',
 };

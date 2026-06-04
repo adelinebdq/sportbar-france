@@ -224,6 +224,19 @@
   <url><loc>https://adelinebdq.github.io/sportbar-france/bars/mr-foggs-pub.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-five-reims.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <!-- Rouen / Normandie (CDM 2026) -->
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/rouen.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-novicks-stadium.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-rouen.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/okallaghans.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/obrother-rouen.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-five-rouen.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
   <!-- Brest / Bretagne (CDM 2026) -->
   <url>
     <loc>https://adelinebdq.github.io/sportbar-france/villes/brest.html</loc>

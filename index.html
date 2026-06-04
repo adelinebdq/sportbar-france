@@ -1030,83 +1030,6 @@ const EVENTS = [
 // ─────────────────────────────────────────────
 const BARS = [
   {
-    id: 1,
-    nom: "Le Stade Républicain",
-    ville: "Paris",
-    adresse: "12 Rue de Rivoli, 75001 Paris",
-    sports: ["Football", "Rugby", "Formule 1"],
-    note: 4.7, avis: 318, ecrans: 12,
-    horaires: "Lun–Dim 11h–2h",
-    lat: 48.8566, lng: 2.3522,
-    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7','f1_mon','f1_can','f1_gbr','f1_ita']
-  },
-  {
-    id: 2,
-    nom: "Bar du Vieux Port Sport",
-    ville: "Marseille",
-    adresse: "5 Quai du Port, 13002 Marseille",
-    sports: ["Football", "Rugby", "Cyclisme"],
-    note: 4.5, avis: 214, ecrans: 8,
-    horaires: "Mar–Dim 12h–1h",
-    lat: 43.2965, lng: 5.3698,
-    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7','f1_bel']
-  },
-  {
-    id: 3,
-    nom: "L'Arène des Sports",
-    ville: "Lyon",
-    adresse: "7 Place Bellecour, 69002 Lyon",
-    sports: ["Football", "Basket", "Tennis"],
-    note: 4.6, avis: 187, ecrans: 10,
-    horaires: "Lun–Sam 15h–2h",
-    lat: 45.7580, lng: 4.8320,
-    events: ['wc1','wc2','wc3','wc7','f1_aut']
-  },
-  {
-    id: 4,
-    nom: "Le Rugby Club Bar",
-    ville: "Toulouse",
-    adresse: "18 Rue Alsace-Lorraine, 31000 Toulouse",
-    sports: ["Rugby", "Football", "Formule 1"],
-    note: 4.8, avis: 402, ecrans: 15,
-    horaires: "Lun–Dim 11h–3h",
-    lat: 43.6047, lng: 1.4442,
-    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7','f1_mon','f1_esp']
-  },
-  {
-    id: 5,
-    nom: "Bordeaux Sports Café",
-    ville: "Bordeaux",
-    adresse: "3 Cours de l'Intendance, 33000 Bordeaux",
-    sports: ["Football", "Rugby", "Cyclisme", "Tennis"],
-    note: 4.4, avis: 156, ecrans: 9,
-    horaires: "Mer–Dim 14h–1h",
-    lat: 44.8378, lng: -0.5792,
-    events: ['wc1','wc2','wc3','wc7','f1_gbr']
-  },
-  {
-    id: 6,
-    nom: "Côte d'Azur Sport Lounge",
-    ville: "Nice",
-    adresse: "28 Promenade des Anglais, 06000 Nice",
-    sports: ["Tennis", "Football", "Formule 1"],
-    note: 4.3, avis: 98, ecrans: 6,
-    horaires: "Lun–Dim 10h–0h",
-    lat: 43.7102, lng: 7.2620,
-    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7','f1_mon','f1_esp','f1_gbr']
-  },
-  {
-    id: 7,
-    nom: "L'Arène Nantaise",
-    ville: "Nantes",
-    adresse: "11 Rue Crébillon, 44000 Nantes",
-    sports: ["Football", "Basket", "Rugby"],
-    note: 4.5, avis: 173, ecrans: 8,
-    horaires: "Mar–Dim 12h–2h",
-    lat: 47.2184, lng: -1.5536,
-    events: ['wc1','wc2','wc3','wc7']
-  },
-  {
     id: 8,
     nom: "Le Comptoir des Copains",
     ville: "Lille",
@@ -1118,50 +1041,6 @@ const BARS = [
     websiteLabel: "📸 Instagram",
     lat: 50.6407, lng: 3.0572,
     events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7']
-  },
-  {
-    id: 9,
-    nom: "Le Grand Écran Sportif",
-    ville: "Strasbourg",
-    adresse: "15 Place Kléber, 67000 Strasbourg",
-    sports: ["Football", "Formule 1", "Tennis"],
-    note: 4.2, avis: 88, ecrans: 7,
-    horaires: "Mer–Dim 15h–1h",
-    lat: 48.5734, lng: 7.7521,
-    events: ['wc1','wc2','wc3','wc7','f1_aut','f1_hun']
-  },
-  {
-    id: 10,
-    nom: "Montpellier Sport Bar",
-    ville: "Montpellier",
-    adresse: "6 Place de la Comédie, 34000 Montpellier",
-    sports: ["Rugby", "Football", "Basket", "Formule 1"],
-    note: 4.9, avis: 512, ecrans: 18,
-    horaires: "Lun–Dim 10h–3h",
-    lat: 43.6108, lng: 3.8767,
-    events: ['wc1','wc2','wc3','wc4','wc5','wc6','wc7','f1_mon','f1_can','f1_esp','f1_aut','f1_gbr','f1_hun','f1_bel','f1_ned','f1_ita']
-  },
-  {
-    id: 11,
-    nom: "Vélodrome Fan Zone",
-    ville: "Rennes",
-    adresse: "9 Rue de la Monnaie, 35000 Rennes",
-    sports: ["Cyclisme", "Football", "Rugby"],
-    note: 4.4, avis: 132, ecrans: 6,
-    horaires: "Mar–Sam 14h–1h",
-    lat: 48.1173, lng: -1.6778,
-    events: ['wc1','wc2','wc3','wc7','f1_gbr','f1_ned']
-  },
-  {
-    id: 12,
-    nom: "Le Paddock — Bar F1",
-    ville: "Paris",
-    adresse: "47 Rue du Fbg Saint-Antoine, 75011 Paris",
-    sports: ["Formule 1", "Football"],
-    note: 4.8, avis: 289, ecrans: 10,
-    horaires: "Jeu–Dim 10h–2h",
-    lat: 48.8530, lng: 2.3729,
-    events: ['f1_mon','f1_can','f1_esp','f1_aut','f1_gbr','f1_hun','f1_bel','f1_ned','f1_ita','wc7']
   },
   {
     id: 13,
@@ -1679,6 +1558,80 @@ const BARS = [
     horaires: "Voir établissement",
     source: "Source : sources locales Brest",
     lat: 48.3840, lng: -4.4982,
+    events: ['wc1','wc2','wc3']
+  },
+
+  // ── Rouen / Normandie (CDM 2026) ──────────────
+  {
+    id: 53,
+    nom: "The Novick's Stadium",
+    ville: "Rouen",
+    adresse: "27 rue de la République, 76000 Rouen",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    website: "https://bar-the-novicks-stadium.fr/rouen/",
+    websiteLabel: "🌐 Site web",
+    source: "Source : bar-the-novicks-stadium.fr (site officiel)",
+    lat: 49.4394, lng: 1.0969,
+    events: ['wc1','wc2','wc3']
+  },
+  {
+    id: 54,
+    nom: "Au Bureau Rouen",
+    ville: "Rouen",
+    adresse: "Quai de Boisguilbert, 76000 Rouen",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: 51,
+    horaires: "Voir site web",
+    website: "https://www.aubureau.fr/rouen/",
+    websiteLabel: "🌐 Site web",
+    source: "Source : aubureau.fr/rouen (site officiel)",
+    lat: 49.4443, lng: 1.0710,
+    events: ['wc1','wc2','wc3']
+  },
+  {
+    id: 55,
+    nom: "O'Kallaghan's",
+    ville: "Rouen",
+    adresse: "Place du Général de Gaulle, 76000 Rouen",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Lun–Sam 15h–2h",
+    website: "https://www.instagram.com/okallaghans/",
+    websiteLabel: "📸 Instagram",
+    source: "Source : sources locales Rouen",
+    lat: 49.4437, lng: 1.0985,
+    events: ['wc1','wc2','wc3']
+  },
+  {
+    id: 56,
+    nom: "O'Brother Rouen",
+    ville: "Rouen",
+    adresse: "22 avenue de la Porte des Champs, 76000 Rouen",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    tel: "06 28 28 47 69",
+    website: "https://www.facebook.com/p/OBrother-Rouen-100080681740542/",
+    websiteLabel: "📘 Facebook",
+    source: "Source : sources locales Rouen",
+    lat: 49.4428, lng: 1.1042,
+    events: ['wc1','wc2','wc3']
+  },
+  {
+    id: 57,
+    nom: "LE FIVE Rouen",
+    ville: "Rouen",
+    adresse: "181 avenue du Grand Cours, 76000 Rouen",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "7j/7 — Voir site web",
+    tel: "02 35 36 58 48",
+    website: "https://www.lefive.fr/rouen/",
+    websiteLabel: "🌐 Site web",
+    source: "Source : lefive.fr/rouen (site officiel LE FIVE)",
+    lat: 49.4282, lng: 1.1034,
     events: ['wc1','wc2','wc3']
   }
 ];
