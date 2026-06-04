@@ -66,7 +66,7 @@ Les données sont indicatives (coupure connaissance août 2025) — toujours vé
 
 ### Ajouter un bar
 
-Prochain ID disponible : **58**
+Prochain ID disponible : **61**
 
 Dans le tableau `BARS` de `index.html` :
 
@@ -105,10 +105,9 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 ## État du projet — 4 juin 2026
 
-### Dernier commit : `9de6145`
-Nettoyage 11 bars fictifs + ajout 5 bars Rouen (CDM 2026) — Consolidation Normandie
+### Dernier commit : Ajout 3 bars Bayeux (CDM 2026) — Densification Normandie
 
-### Inventaire actuel : 46 bars · 13 villes couvertes
+### Inventaire actuel : 49 bars · 14 villes couvertes
 
 | Ville | Bars | Page `/villes/` |
 |-------|------|-----------------|
@@ -120,13 +119,14 @@ Nettoyage 11 bars fictifs + ajout 5 bars Rouen (CDM 2026) — Consolidation Norm
 | Luc-sur-Mer | 4 | ✅ `luc-sur-mer.html` |
 | Le Havre | 4 | ✅ `le-havre.html` |
 | Cherbourg-en-Cotentin | 4 | ✅ `cherbourg-en-cotentin.html` |
+| Bayeux | 3 | ✅ `bayeux.html` |
 | Caen | 1 | ✅ `caen.html` |
 | Douvres-la-Délivrande | 1 | ✅ `douvres-la-delivrande.html` |
 | Langrune-sur-Mer | 1 | ✅ `langrune-sur-mer.html` |
 | Marquette-lez-Lille | 1 | ✅ `marquette-lez-lille.html` |
 | Saint-Aubin-sur-Mer | 1 | ✅ `saint-aubin-sur-mer.html` |
 
-**IDs utilisés** : 8, 13–57 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
+**IDs utilisés** : 8, 13–60 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
 
 ### Matchs France CDM 2026 configurés
 - `wc1` France — Sénégal · 16 juin 21h
@@ -138,6 +138,5 @@ Nettoyage 11 bars fictifs + ajout 5 bars Rouen (CDM 2026) — Consolidation Norm
 - `wc7` Finale · 19 juillet
 
 ### Prochaines étapes prévues
-1. **Bayeux** — ville normande à ajouter (prochaine session)
-2. **La Rochelle** — ville à ajouter
-3. **Google Search Console** — soumettre le sitemap après les ajouts Normandie/Atlantique
+1. **La Rochelle** — ville à ajouter
+2. **Google Search Console** — soumettre le sitemap après les ajouts Normandie/Atlantique
