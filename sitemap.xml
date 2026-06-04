@@ -224,4 +224,17 @@
   <url><loc>https://adelinebdq.github.io/sportbar-france/bars/mr-foggs-pub.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-five-reims.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <!-- Brest / Bretagne (CDM 2026) -->
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/brest.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/klub-house-brest.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-dubliners.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-blind-piper.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/offside-bay.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/ty-kall.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
 </urlset>

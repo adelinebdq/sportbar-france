@@ -30,4 +30,5 @@ CONFIG.citySlugs = {
   'luc-sur-mer':             'Luc-sur-Mer',
   'douvres-la-delivrande':   'Douvres-la-Délivrande',
   'caen':                    'Caen',
+  'brest':                   'Brest',
 };
