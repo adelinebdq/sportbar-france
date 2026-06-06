@@ -33,4 +33,5 @@ CONFIG.citySlugs = {
   'brest':                   'Brest',
   'rouen':                   'Rouen',
   'bayeux':                  'Bayeux',
+  'la-rochelle':             'La Rochelle',
 };

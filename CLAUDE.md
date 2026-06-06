@@ -66,7 +66,7 @@ Les données sont indicatives (coupure connaissance août 2025) — toujours vé
 
 ### Ajouter un bar
 
-Prochain ID disponible : **61**
+Prochain ID disponible : **67**
 
 Dans le tableau `BARS` de `index.html` :
 
@@ -105,13 +105,14 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 ## État du projet — 4 juin 2026
 
-### Dernier commit : Ajout 3 bars Bayeux (CDM 2026) — Densification Normandie
+### Dernier commit : Ajout 6 bars La Rochelle (CDM 2026) — Ouverture Nouvelle-Aquitaine Atlantique
 
-### Inventaire actuel : 49 bars · 14 villes couvertes
+### Inventaire actuel : 55 bars · 15 villes couvertes
 
 | Ville | Bars | Page `/villes/` |
 |-------|------|-----------------|
 | Lille | 7 | ✅ `lille.html` |
+| La Rochelle | 6 | ✅ `la-rochelle.html` |
 | Reims | 6 | ✅ `reims.html` |
 | Courseulles-sur-Mer | 6 | ✅ `courseulles-sur-mer.html` |
 | Brest | 5 | ✅ `brest.html` |
@@ -126,7 +127,7 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 | Marquette-lez-Lille | 1 | ✅ `marquette-lez-lille.html` |
 | Saint-Aubin-sur-Mer | 1 | ✅ `saint-aubin-sur-mer.html` |
 
-**IDs utilisés** : 8, 13–60 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
+**IDs utilisés** : 8, 13–66 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
 
 ### Matchs France CDM 2026 configurés
 - `wc1` France — Sénégal · 16 juin 21h
@@ -138,5 +139,4 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 - `wc7` Finale · 19 juillet
 
 ### Prochaines étapes prévues
-1. **La Rochelle** — ville à ajouter
-2. **Google Search Console** — soumettre le sitemap après les ajouts Normandie/Atlantique
+1. **Google Search Console** — soumettre le sitemap après les ajouts Normandie/Atlantique
