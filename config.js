@@ -38,4 +38,8 @@ CONFIG.citySlugs = {
   'boulogne-sur-mer':        'Boulogne-sur-Mer',
   'dunkerque':               'Dunkerque',
   'valenciennes':            'Valenciennes',
+  'arcachon':                'Arcachon',
+  'biarritz':                'Biarritz',
+  'saint-jean-de-luz':       'Saint-Jean-de-Luz',
+  'soorts-hossegor':         'Soorts-Hossegor',
 };
