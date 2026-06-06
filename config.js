@@ -34,4 +34,8 @@ CONFIG.citySlugs = {
   'rouen':                   'Rouen',
   'bayeux':                  'Bayeux',
   'la-rochelle':             'La Rochelle',
+  'arras':                   'Arras',
+  'boulogne-sur-mer':        'Boulogne-sur-Mer',
+  'dunkerque':               'Dunkerque',
+  'valenciennes':            'Valenciennes',
 };

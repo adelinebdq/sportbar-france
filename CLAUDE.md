@@ -66,7 +66,7 @@ Les données sont indicatives (coupure connaissance août 2025) — toujours vé
 
 ### Ajouter un bar
 
-Prochain ID disponible : **67**
+Prochain ID disponible : **76**
 
 Dans le tableau `BARS` de `index.html` :
 
@@ -105,9 +105,9 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 ## État du projet — 4 juin 2026
 
-### Dernier commit : Ajout 6 bars La Rochelle (CDM 2026) — Ouverture Nouvelle-Aquitaine Atlantique
+### Dernier commit : Ajout 9 bars Nord (CDM 2026) — Arras + Boulogne + Dunkerque + Valenciennes — Densification Hauts-de-France
 
-### Inventaire actuel : 55 bars · 15 villes couvertes
+### Inventaire actuel : 64 bars · 19 villes couvertes
 
 | Ville | Bars | Page `/villes/` |
 |-------|------|-----------------|
@@ -120,14 +120,20 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 | Luc-sur-Mer | 4 | ✅ `luc-sur-mer.html` |
 | Le Havre | 4 | ✅ `le-havre.html` |
 | Cherbourg-en-Cotentin | 4 | ✅ `cherbourg-en-cotentin.html` |
+| Arras | 3 | ✅ `arras.html` |
 | Bayeux | 3 | ✅ `bayeux.html` |
+| Boulogne-sur-Mer | 3 | ✅ `boulogne-sur-mer.html` |
 | Caen | 1 | ✅ `caen.html` |
 | Douvres-la-Délivrande | 1 | ✅ `douvres-la-delivrande.html` |
+| Dunkerque | 1 | ✅ `dunkerque.html` |
 | Langrune-sur-Mer | 1 | ✅ `langrune-sur-mer.html` |
 | Marquette-lez-Lille | 1 | ✅ `marquette-lez-lille.html` |
 | Saint-Aubin-sur-Mer | 1 | ✅ `saint-aubin-sur-mer.html` |
+| Valenciennes | 2 | ✅ `valenciennes.html` |
 
-**IDs utilisés** : 8, 13–66 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
+**Hauts-de-France : 6 villes** — Lille · Marquette-lez-Lille · Arras · Boulogne-sur-Mer · Dunkerque · Valenciennes
+
+**IDs utilisés** : 8, 13–75 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
 
 ### Matchs France CDM 2026 configurés
 - `wc1` France — Sénégal · 16 juin 21h
