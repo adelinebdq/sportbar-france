@@ -367,4 +367,25 @@
   <url><loc>https://adelinebdq.github.io/sportbar-france/bars/west-indies-kfe.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://adelinebdq.github.io/sportbar-france/bars/larbitre.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <!-- Tours + Orléans / Centre-Val de Loire (CDM 2026) — 1ère région CVL -->
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/tours.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-pale-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/mc-cools-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/irish-company.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-tours-nord.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/orleans.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/walls-end-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-orleans.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/lintermede.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
 </urlset>

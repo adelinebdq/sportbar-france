@@ -47,6 +47,8 @@ CONFIG.citySlugs = {
   'le-mans':                 'Le Mans',
   'sable-sur-sarthe':        'Sablé-sur-Sarthe',
   'angers':                  'Angers',
+  'tours':                   'Tours',
+  'orleans':                 'Orléans',
   'marseille':               'Marseille',
   'nice':                    'Nice',
   'toulon':                  'Toulon',

@@ -66,7 +66,7 @@ Les données sont indicatives (coupure connaissance août 2025) — toujours vé
 
 ### Ajouter un bar
 
-Prochain ID disponible : **112**
+Prochain ID disponible : **119**
 
 Dans le tableau `BARS` de `index.html` :
 
@@ -103,11 +103,11 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 ---
 
-## État du projet — 4 juin 2026
+## État du projet — 7 juin 2026
 
-### Dernier commit : Ajout 6 bars Angers (CDM 2026) — Densification Pays de la Loire
+### Dernier commit : Ajout 7 bars Tours + Orléans (CDM 2026) — Ouverture Centre-Val de Loire ⭐ 1ère région CVL
 
-### Inventaire actuel : 100 bars · 32 villes couvertes
+### Inventaire actuel : 107 bars · 34 villes couvertes
 
 | Ville | Bars | Page `/villes/` |
 |-------|------|-----------------|
@@ -126,6 +126,8 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 | Le Mans | 4 | ✅ `le-mans.html` |
 | Sablé-sur-Sarthe | 1 | ✅ `sable-sur-sarthe.html` |
 | Angers | 6 | ✅ `angers.html` |
+| Tours | 4 | ✅ `tours.html` |
+| Orléans | 3 | ✅ `orleans.html` |
 | Marseille | 4 | ✅ `marseille.html` |
 | Nice | 3 | ✅ `nice.html` |
 | Toulon | 3 | ✅ `toulon.html` |
@@ -148,8 +150,9 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 **Nouvelle-Aquitaine : 6 villes** — Arcachon · Biarritz · Saint-Jean-de-Luz · Soorts-Hossegor · Pau · Bayonne
 **PACA : 4 villes** — Marseille · Nice · Toulon · Avignon
 **Pays de la Loire : 3 villes** — Le Mans · Sablé-sur-Sarthe · Angers
+**Centre-Val de Loire : 2 villes** ⭐ NOUVELLE RÉGION — Tours · Orléans
 
-**IDs utilisés** : 8, 13–111 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
+**IDs utilisés** : 8, 13–118 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
 
 ### Matchs France CDM 2026 configurés
 - `wc1` France — Sénégal · 16 juin 21h
@@ -161,4 +164,5 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 - `wc7` Finale · 19 juillet
 
 ### Prochaines étapes prévues
-1. **Google Search Console** — soumettre le sitemap après les ajouts Normandie/Atlantique
+1. **Google Search Console** — soumettre le sitemap (ajouts Normandie/Atlantique/Centre-Val de Loire)
+2. **Centre-Val de Loire** — densifier Tours (adresse exacte Mc Cool's, Au Bureau Tours Nord) et Orléans (adresse L'Intermède)
