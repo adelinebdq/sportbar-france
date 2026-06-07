@@ -66,7 +66,7 @@ Les données sont indicatives (coupure connaissance août 2025) — toujours vé
 
 ### Ajouter un bar
 
-Prochain ID disponible : **88**
+Prochain ID disponible : **101**
 
 Dans le tableau `BARS` de `index.html` :
 
@@ -105,9 +105,9 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 ## État du projet — 4 juin 2026
 
-### Dernier commit : Ajout 6 bars Pau + Bayonne (CDM 2026) — Ouverture Sud-Ouest rugby
+### Dernier commit : Ajout 13 bars PACA (CDM 2026) — Marseille + Nice + Toulon + Avignon
 
-### Inventaire actuel : 76 bars · 25 villes couvertes
+### Inventaire actuel : 89 bars · 29 villes couvertes
 
 | Ville | Bars | Page `/villes/` |
 |-------|------|-----------------|
@@ -123,6 +123,10 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 | Arras | 3 | ✅ `arras.html` |
 | Bayeux | 3 | ✅ `bayeux.html` |
 | Boulogne-sur-Mer | 3 | ✅ `boulogne-sur-mer.html` |
+| Marseille | 4 | ✅ `marseille.html` |
+| Nice | 3 | ✅ `nice.html` |
+| Toulon | 3 | ✅ `toulon.html` |
+| Avignon | 3 | ✅ `avignon.html` |
 | Pau | 3 | ✅ `pau.html` |
 | Bayonne | 3 | ✅ `bayonne.html` |
 | Biarritz | 2 | ✅ `biarritz.html` |
@@ -139,8 +143,9 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 **Hauts-de-France : 6 villes** — Lille · Marquette-lez-Lille · Arras · Boulogne-sur-Mer · Dunkerque · Valenciennes
 **Nouvelle-Aquitaine : 6 villes** — Arcachon · Biarritz · Saint-Jean-de-Luz · Soorts-Hossegor · Pau · Bayonne
+**PACA : 4 villes** — Marseille · Nice · Toulon · Avignon
 
-**IDs utilisés** : 8, 13–87 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
+**IDs utilisés** : 8, 13–100 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
 
 ### Matchs France CDM 2026 configurés
 - `wc1` France — Sénégal · 16 juin 21h

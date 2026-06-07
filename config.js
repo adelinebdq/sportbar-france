@@ -44,4 +44,8 @@ CONFIG.citySlugs = {
   'soorts-hossegor':         'Soorts-Hossegor',
   'pau':                     'Pau',
   'bayonne':                 'Bayonne',
+  'marseille':               'Marseille',
+  'nice':                    'Nice',
+  'toulon':                  'Toulon',
+  'avignon':                 'Avignon',
 };
