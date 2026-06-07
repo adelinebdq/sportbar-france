@@ -42,4 +42,6 @@ CONFIG.citySlugs = {
   'biarritz':                'Biarritz',
   'saint-jean-de-luz':       'Saint-Jean-de-Luz',
   'soorts-hossegor':         'Soorts-Hossegor',
+  'pau':                     'Pau',
+  'bayonne':                 'Bayonne',
 };

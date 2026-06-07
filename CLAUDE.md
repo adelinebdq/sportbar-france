@@ -66,7 +66,7 @@ Les données sont indicatives (coupure connaissance août 2025) — toujours vé
 
 ### Ajouter un bar
 
-Prochain ID disponible : **82**
+Prochain ID disponible : **88**
 
 Dans le tableau `BARS` de `index.html` :
 
@@ -105,9 +105,9 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 ## État du projet — 4 juin 2026
 
-### Dernier commit : Ajout 6 bars Côte Atlantique (CDM 2026) — Arcachon + Biarritz + Saint-Jean-de-Luz + Hossegor
+### Dernier commit : Ajout 6 bars Pau + Bayonne (CDM 2026) — Ouverture Sud-Ouest rugby
 
-### Inventaire actuel : 70 bars · 23 villes couvertes
+### Inventaire actuel : 76 bars · 25 villes couvertes
 
 | Ville | Bars | Page `/villes/` |
 |-------|------|-----------------|
@@ -123,6 +123,8 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 | Arras | 3 | ✅ `arras.html` |
 | Bayeux | 3 | ✅ `bayeux.html` |
 | Boulogne-sur-Mer | 3 | ✅ `boulogne-sur-mer.html` |
+| Pau | 3 | ✅ `pau.html` |
+| Bayonne | 3 | ✅ `bayonne.html` |
 | Biarritz | 2 | ✅ `biarritz.html` |
 | Valenciennes | 2 | ✅ `valenciennes.html` |
 | Arcachon | 2 | ✅ `arcachon.html` |
@@ -136,9 +138,9 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 | Soorts-Hossegor | 1 | ✅ `soorts-hossegor.html` |
 
 **Hauts-de-France : 6 villes** — Lille · Marquette-lez-Lille · Arras · Boulogne-sur-Mer · Dunkerque · Valenciennes
-**Nouvelle-Aquitaine : 4 villes** — Arcachon · Biarritz · Saint-Jean-de-Luz · Soorts-Hossegor
+**Nouvelle-Aquitaine : 6 villes** — Arcachon · Biarritz · Saint-Jean-de-Luz · Soorts-Hossegor · Pau · Bayonne
 
-**IDs utilisés** : 8, 13–81 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
+**IDs utilisés** : 8, 13–87 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
 
 ### Matchs France CDM 2026 configurés
 - `wc1` France — Sénégal · 16 juin 21h
