@@ -388,4 +388,31 @@
   <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-orleans.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://adelinebdq.github.io/sportbar-france/bars/lintermede.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <!-- Mulhouse + Colmar / Alsace Sud + Belfort / Bourgogne-Franche-Comté (CDM 2026) -->
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/mulhouse.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-shamrock-pub.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/pub-murphys-mulhouse.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-marco-polo.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-mulhouse.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/colmar.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-murphys-colmar.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://adelinebdq.github.io/sportbar-france/villes/belfort.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-finnegans-irish-pub.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-belfort.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
 </urlset>

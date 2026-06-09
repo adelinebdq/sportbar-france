@@ -66,7 +66,7 @@ Les données sont indicatives (coupure connaissance août 2025) — toujours vé
 
 ### Ajouter un bar
 
-Prochain ID disponible : **119**
+Prochain ID disponible : **126**
 
 Dans le tableau `BARS` de `index.html` :
 
@@ -103,11 +103,11 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 ---
 
-## État du projet — 7 juin 2026
+## État du projet — 9 juin 2026
 
-### Dernier commit : Ajout 7 bars Tours + Orléans (CDM 2026) — Ouverture Centre-Val de Loire ⭐ 1ère région CVL
+### Dernier commit : Ajout 7 bars Mulhouse + Colmar + Belfort (CDM 2026) — Alsace Sud + Bourgogne-Franche-Comté
 
-### Inventaire actuel : 107 bars · 34 villes couvertes
+### Inventaire actuel : 114 bars · 37 villes couvertes
 
 | Ville | Bars | Page `/villes/` |
 |-------|------|-----------------|
@@ -128,6 +128,9 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 | Angers | 6 | ✅ `angers.html` |
 | Tours | 4 | ✅ `tours.html` |
 | Orléans | 3 | ✅ `orleans.html` |
+| Mulhouse | 4 | ✅ `mulhouse.html` |
+| Colmar | 1 | ✅ `colmar.html` |
+| Belfort | 2 | ✅ `belfort.html` |
 | Marseille | 4 | ✅ `marseille.html` |
 | Nice | 3 | ✅ `nice.html` |
 | Toulon | 3 | ✅ `toulon.html` |
@@ -150,9 +153,11 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 **Nouvelle-Aquitaine : 6 villes** — Arcachon · Biarritz · Saint-Jean-de-Luz · Soorts-Hossegor · Pau · Bayonne
 **PACA : 4 villes** — Marseille · Nice · Toulon · Avignon
 **Pays de la Loire : 3 villes** — Le Mans · Sablé-sur-Sarthe · Angers
-**Centre-Val de Loire : 2 villes** ⭐ NOUVELLE RÉGION — Tours · Orléans
+**Centre-Val de Loire : 2 villes** ⭐ Ouverture juin 2026 — Tours · Orléans
+**Grand Est (Alsace Sud) : 2 villes** — Mulhouse · Colmar
+**Bourgogne-Franche-Comté : 1 ville** ⭐ Ouverture juin 2026 — Belfort
 
-**IDs utilisés** : 8, 13–118 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
+**IDs utilisés** : 8, 13–125 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
 
 ### Matchs France CDM 2026 configurés
 - `wc1` France — Sénégal · 16 juin 21h
@@ -164,5 +169,6 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 - `wc7` Finale · 19 juillet
 
 ### Prochaines étapes prévues
-1. **Google Search Console** — soumettre le sitemap (ajouts Normandie/Atlantique/Centre-Val de Loire)
-2. **Centre-Val de Loire** — densifier Tours (adresse exacte Mc Cool's, Au Bureau Tours Nord) et Orléans (adresse L'Intermède)
+1. **Google Search Console** — soumettre le sitemap (ajouts Normandie/Atlantique/CVL/Alsace/BFC)
+2. **Centre-Val de Loire** — préciser adresses : Mc Cool's Tours, Au Bureau Tours Nord, L'Intermède Orléans
+3. **Alsace Sud** — préciser adresses : Le Shamrock Mulhouse, Le Marco Polo Mulhouse, Au Bureau Mulhouse
