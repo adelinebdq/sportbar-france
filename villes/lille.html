@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Bars sport à Lille — Coupe du Monde 2026 | SportBar France</title>
-  <meta name="description" content="7 bars sport vérifiés à Lille pour regarder la Coupe du Monde 2026 en direct. Adresses, horaires, navigation GPS et ambiance garantie pour chaque match des Bleus." />
+  <title>Où regarder un match à Lille ? — OùMater</title>
+  <meta name="description" content="Trouvez le bar idéal à Lille pour la Coupe du Monde 2026, la F1, le rugby ou le foot. 7 bars sélectionnés avec écrans, ambiance et horaires." />
 
   <!-- CONFIG: mettre à jour l'URL ci-dessous quand vous changez de domaine (voir /config.js) -->
-  <link rel="canonical" href="https://adelinebdq.github.io/sportbar-france/villes/lille.html" />
+  <link rel="canonical" href="https://oumater.fr/villes/lille.html" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:title"       content="Bars sport à Lille — Coupe du Monde 2026" />
   <meta property="og:description" content="7 bars sport vérifiés à Lille pour regarder les matchs de l'équipe de France en direct." />
-  <meta property="og:url"         content="https://adelinebdq.github.io/sportbar-france/villes/lille.html" />
-  <meta property="og:image"       content="https://adelinebdq.github.io/sportbar-france/og-default.svg" />
-  <meta property="og:site_name"   content="SportBar France" />
+  <meta property="og:url"         content="https://oumater.fr/villes/lille.html" />
+  <meta property="og:image"       content="https://oumater.fr/og-default.svg" />
+  <meta property="og:site_name"   content="OùMater" />
   <meta property="og:locale"      content="fr_FR" />
   <meta name="twitter:card"       content="summary_large_image" />
 
@@ -27,7 +27,7 @@
     "@type": "ItemList",
     "name": "Bars sport à Lille pour la Coupe du Monde 2026",
     "description": "Sélection de bars sport vérifiés à Lille diffusant les matchs de la Coupe du Monde 2026",
-    "url": "https://adelinebdq.github.io/sportbar-france/villes/lille.html",
+    "url": "https://oumater.fr/villes/lille.html",
     "numberOfItems": 7,
     "itemListElement": [
       {
@@ -98,13 +98,14 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://adelinebdq.github.io/sportbar-france/" },
-      { "@type": "ListItem", "position": 2, "name": "Villes", "item": "https://adelinebdq.github.io/sportbar-france/villes/" },
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://oumater.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Villes", "item": "https://oumater.fr/villes/" },
       { "@type": "ListItem", "position": 3, "name": "Lille" }
     ]
   }
   </script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -121,13 +122,26 @@
       padding: 0 24px; height: 58px;
       display: flex; align-items: center; gap: 16px;
     }
-    .logo { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
-    .logo-icon {
-      width: 36px; height: 36px; background: #c62828; border-radius: 9px;
-      display: flex; align-items: center; justify-content: center; font-size: 18px;
+        /* === LOGO OùMater === */
+    .logo-link { text-decoration: none; display: inline-block; cursor: pointer; }
+    .logo { display: flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1; }
+    .logo-eyes { font-size: 28px; line-height: 1; display: inline-block; transform-origin: center; transition: transform 0.1s ease; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.5px; line-height: 1; }
+    .logo-text-ou { color: #F39C12; }
+    .logo-text-mater { color: #16A085; }
+    .logo-link:hover .logo-eyes { animation: lookAround 0.8s ease-in-out; }
+    @keyframes lookAround {
+      0%   { transform: translateX(0); }
+      20%  { transform: translateX(-4px); }
+      40%  { transform: translateX(4px); }
+      60%  { transform: translateX(-3px); }
+      80%  { transform: translateX(3px); }
+      100% { transform: translateX(0); }
     }
-    .logo-text strong { font-size: 17px; font-weight: 700; display: block; line-height: 1.1; }
-    .logo-text span   { font-size: 10px; color: #aaa; letter-spacing: .4px; text-transform: uppercase; }
+    @media (max-width: 600px) {
+      .logo-eyes { font-size: 22px; }
+      .logo-text  { font-size: 22px; }
+    }
 
     /* Breadcrumb */
     .breadcrumb {
@@ -233,11 +247,10 @@
 <body>
 
 <header>
-  <a class="logo" href="../">
-    <div class="logo-icon">⚽</div>
-    <div class="logo-text">
-      <strong>SportBar France</strong>
-      <span>Trouvez où regarder vos matchs</span>
+  <a href="../" class="logo-link" aria-label="Retour à l'accueil OùMater">
+    <div class="logo">
+      <div class="logo-eyes">👀</div>
+      <div class="logo-text"><span class="logo-text-ou">Où</span><span class="logo-text-mater">Mater</span></div>
     </div>
   </a>
 </header>
@@ -460,7 +473,7 @@
 
 <footer>
   <p>
-    <a href="../">SportBar France</a> — Trouvez où regarder vos matchs en France ·
+    <a href="../">OùMater</a> — Où regarder un match près de chez moi ? en France ·
     <a href="../villes/marquette-lez-lille.html">Marquette-lez-Lille</a>
   </p>
 </footer>

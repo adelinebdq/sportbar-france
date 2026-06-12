@@ -3,23 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SportBar France — Trouvez où regarder vos matchs en France</title>
-  <meta name="description" content="Carte interactive des bars sport en France pour la Coupe du Monde 2026. Trouvez où regarder les matchs de l'équipe de France en direct, avec adresses et navigation GPS." />
+  <title>OùMater — Où regarder un match près de chez moi ? Coupe du Monde 2026 &amp; F1</title>
+  <meta name="description" content="Trouvez en un clic le bar le plus proche qui diffuse votre match. Coupe du Monde 2026, Grand Prix F1, Top 14, Ligue 1. 89+ bars en France." />
+  <meta name="keywords" content="où regarder le match, bar coupe du monde 2026, bar grand prix F1, bar sportif france, diffusion match, bar foot, bar rugby, bar formule 1" />
 
   <!-- CONFIG: mettre à jour l'URL ci-dessous quand vous changez de domaine (voir /config.js) -->
-  <link rel="canonical" href="https://adelinebdq.github.io/sportbar-france/" />
+  <link rel="canonical" href="https://oumater.fr/" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="SportBar France — Trouvez où regarder vos matchs" />
-  <meta property="og:description" content="Carte interactive des bars sport en France pour la Coupe du Monde 2026. Adresses, GPS et ambiance garantie." />
-  <meta property="og:url"         content="https://adelinebdq.github.io/sportbar-france/" />
-  <meta property="og:image"       content="https://adelinebdq.github.io/sportbar-france/og-default.svg" />
-  <meta property="og:site_name"   content="SportBar France" />
+  <meta property="og:title"       content="OùMater — Où regarder un match près de chez moi ?" />
+  <meta property="og:description" content="Le guide des bars sportifs en France. Coupe du Monde 2026, F1, Top 14, Ligue 1. Trouvez votre bar en un clic." />
+  <meta property="og:url"         content="https://oumater.fr/" />
+  <meta property="og:image"       content="https://oumater.fr/og-default.svg" />
+  <meta property="og:site_name"   content="OùMater" />
   <meta property="og:locale"      content="fr_FR" />
   <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title"      content="OùMater — Où regarder un match près de chez moi ?" />
+  <meta name="twitter:description" content="Coupe du Monde 2026 &amp; F1 dans les meilleurs bars de France" />
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -167,16 +171,26 @@
       z-index: 1000;
     }
 
-    .logo { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
-    .logo-icon {
-      width: 36px; height: 36px;
-      background: #c62828;
-      border-radius: 9px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px;
+        /* === LOGO OùMater === */
+    .logo-link { text-decoration: none; display: inline-block; cursor: pointer; }
+    .logo { display: flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1; }
+    .logo-eyes { font-size: 28px; line-height: 1; display: inline-block; transform-origin: center; transition: transform 0.1s ease; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.5px; line-height: 1; }
+    .logo-text-ou { color: #F39C12; }
+    .logo-text-mater { color: #16A085; }
+    .logo-link:hover .logo-eyes { animation: lookAround 0.8s ease-in-out; }
+    @keyframes lookAround {
+      0%   { transform: translateX(0); }
+      20%  { transform: translateX(-4px); }
+      40%  { transform: translateX(4px); }
+      60%  { transform: translateX(-3px); }
+      80%  { transform: translateX(3px); }
+      100% { transform: translateX(0); }
     }
-    .logo-text strong { font-size: 17px; font-weight: 700; display: block; line-height: 1.1; }
-    .logo-text span   { font-size: 10px; color: #aaa; letter-spacing: .4px; text-transform: uppercase; }
+    @media (max-width: 600px) {
+      .logo-eyes { font-size: 22px; }
+      .logo-text  { font-size: 22px; }
+    }
 
     .search-wrap {
       flex: 1; max-width: 380px;
@@ -680,9 +694,6 @@
     @media (max-width: 680px) {
       /* Header compact */
       header { height: 50px; padding: 0 12px; gap: 10px; }
-      .logo-text span { display: none; }
-      .logo-text strong { font-size: 15px; }
-      .logo-icon { width: 30px; height: 30px; font-size: 15px; border-radius: 7px; }
       .header-right { display: none; }
       .search-wrap { max-width: none; }
 
@@ -780,11 +791,10 @@
 <body>
 
 <header>
-  <a class="logo" href="#">
-    <div class="logo-icon">⚽</div>
-    <div class="logo-text">
-      <strong>SportBar France</strong>
-      <span>Trouvez où regarder vos matchs</span>
+  <a href="/" class="logo-link" aria-label="Retour à l'accueil OùMater">
+    <div class="logo">
+      <div class="logo-eyes">👀</div>
+      <div class="logo-text"><span class="logo-text-ou">Où</span><span class="logo-text-mater">Mater</span></div>
     </div>
   </a>
   <div class="search-wrap">

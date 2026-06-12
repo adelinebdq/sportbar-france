@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Compositions des équipes — Coupe du Monde 2026 | SportBar France</title>
+  <title>Compositions des équipes — Coupe du Monde 2026 | OùMater</title>
   <meta name="description" content="Compositions et effectifs des équipes de la Coupe du Monde 2026. Retrouvez les 26 joueurs de l'équipe de France sélectionnés par Didier Deschamps, leurs clubs, leurs postes et la dernière composition sur le terrain." />
 
-  <link rel="canonical" href="https://adelinebdq.github.io/sportbar-france/compositions.html" />
+  <link rel="canonical" href="https://oumater.fr/compositions.html" />
 
   <meta property="og:type"        content="website" />
   <meta property="og:title"       content="Compositions équipes — Coupe du Monde 2026" />
   <meta property="og:description" content="Effectifs complets et compositions tactiques des équipes de la Coupe du Monde 2026 : France, Sénégal, Irak, Norvège." />
-  <meta property="og:url"         content="https://adelinebdq.github.io/sportbar-france/compositions.html" />
-  <meta property="og:image"       content="https://adelinebdq.github.io/sportbar-france/og-default.svg" />
-  <meta property="og:site_name"   content="SportBar France" />
+  <meta property="og:url"         content="https://oumater.fr/compositions.html" />
+  <meta property="og:image"       content="https://oumater.fr/og-default.svg" />
+  <meta property="og:site_name"   content="OùMater" />
   <meta property="og:locale"      content="fr_FR" />
   <meta name="twitter:card"       content="summary_large_image" />
 
@@ -24,32 +24,33 @@
     "@type": "CollectionPage",
     "name": "Compositions des équipes — Coupe du Monde 2026",
     "description": "Effectifs et compositions tactiques des équipes de la Coupe du Monde 2026",
-    "url": "https://adelinebdq.github.io/sportbar-france/compositions.html",
+    "url": "https://oumater.fr/compositions.html",
     "hasPart": [
       {
         "@type": "WebPage",
         "name": "Composition Équipe de France — Coupe du Monde 2026",
-        "url": "https://adelinebdq.github.io/sportbar-france/compositions/france.html"
+        "url": "https://oumater.fr/compositions/france.html"
       },
       {
         "@type": "WebPage",
         "name": "Composition Sénégal — Coupe du Monde 2026",
-        "url": "https://adelinebdq.github.io/sportbar-france/compositions/senegal.html"
+        "url": "https://oumater.fr/compositions/senegal.html"
       },
       {
         "@type": "WebPage",
         "name": "Composition Irak — Coupe du Monde 2026",
-        "url": "https://adelinebdq.github.io/sportbar-france/compositions/irak.html"
+        "url": "https://oumater.fr/compositions/irak.html"
       },
       {
         "@type": "WebPage",
         "name": "Composition Norvège — Coupe du Monde 2026",
-        "url": "https://adelinebdq.github.io/sportbar-france/compositions/norvege.html"
+        "url": "https://oumater.fr/compositions/norvege.html"
       }
     ]
   }
   </script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -66,10 +67,26 @@
       padding: 0 24px; height: 58px;
       display: flex; align-items: center; gap: 16px;
     }
-    .logo { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
-    .logo-icon { width: 36px; height: 36px; background: #c62828; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
-    .logo-text strong { font-size: 17px; font-weight: 700; display: block; line-height: 1.1; }
-    .logo-text span { font-size: 10px; color: #aaa; letter-spacing: .4px; text-transform: uppercase; }
+        /* === LOGO OùMater === */
+    .logo-link { text-decoration: none; display: inline-block; cursor: pointer; }
+    .logo { display: flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1; }
+    .logo-eyes { font-size: 28px; line-height: 1; display: inline-block; transform-origin: center; transition: transform 0.1s ease; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.5px; line-height: 1; }
+    .logo-text-ou { color: #F39C12; }
+    .logo-text-mater { color: #16A085; }
+    .logo-link:hover .logo-eyes { animation: lookAround 0.8s ease-in-out; }
+    @keyframes lookAround {
+      0%   { transform: translateX(0); }
+      20%  { transform: translateX(-4px); }
+      40%  { transform: translateX(4px); }
+      60%  { transform: translateX(-3px); }
+      80%  { transform: translateX(3px); }
+      100% { transform: translateX(0); }
+    }
+    @media (max-width: 600px) {
+      .logo-eyes { font-size: 22px; }
+      .logo-text  { font-size: 22px; }
+    }
     .header-nav { margin-left: auto; display: flex; align-items: center; gap: 20px; font-size: 13px; }
     .header-nav a { color: rgba(255,255,255,.7); text-decoration: none; font-weight: 600; transition: color .15s; }
     .header-nav a:hover, .header-nav a.active { color: #fff; }
@@ -218,11 +235,10 @@
 <body>
 
 <header>
-  <a class="logo" href="./">
-    <div class="logo-icon">⚽</div>
-    <div class="logo-text">
-      <strong>SportBar France</strong>
-      <span>Trouvez où regarder vos matchs</span>
+  <a href="./" class="logo-link" aria-label="Retour à l'accueil OùMater">
+    <div class="logo">
+      <div class="logo-eyes">👀</div>
+      <div class="logo-text"><span class="logo-text-ou">Où</span><span class="logo-text-mater">Mater</span></div>
     </div>
   </a>
   <nav class="header-nav">
@@ -309,7 +325,7 @@
 
 <footer>
   <p>
-    <a href="./">SportBar France</a> — Trouvez où regarder vos matchs ·
+    <a href="./">OùMater</a> — Où regarder un match près de chez moi ? ·
     <a href="villes/lille.html">Bars à Lille</a> ·
     <a href="matchs/france-senegal.html">France — Sénégal</a>
   </p>

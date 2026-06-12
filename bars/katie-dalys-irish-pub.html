@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Katie Daly's Irish Pub Bayonne — Rugby foot Place de la Liberté CDM 2026 | SportBar France</title>
+  <title>Katie Daly's Irish Pub Bayonne — Rugby foot Place de la Liberté CDM 2026 | OùMater</title>
   <meta name="description" content="Katie Daly's Irish Pub, authentique pub irlandais en face de la mairie de Bayonne. Retransmissions rugby et football quotidiennes. 3 Place de la Liberté, 64100 Bayonne. CDM 2026." />
-  <link rel="canonical" href="https://adelinebdq.github.io/sportbar-france/bars/katie-dalys-irish-pub.html" />
+  <link rel="canonical" href="https://oumater.fr/bars/katie-dalys-irish-pub.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Katie Daly's Irish Pub Bayonne — Matchs rugby foot · Place de la Liberté" />
   <meta property="og:description" content="Pub irlandais en face de la mairie de Bayonne. Matchs de rugby et foot quotidiens. Concerts live, irish music, fléchettes. Bières, whisky, gin, rhum." />
-  <meta property="og:url" content="https://adelinebdq.github.io/sportbar-france/bars/katie-dalys-irish-pub.html" />
-  <meta property="og:image" content="https://adelinebdq.github.io/sportbar-france/og-default.svg" />
-  <meta property="og:site_name" content="SportBar France" />
+  <meta property="og:url" content="https://oumater.fr/bars/katie-dalys-irish-pub.html" />
+  <meta property="og:image" content="https://oumater.fr/og-default.svg" />
+  <meta property="og:site_name" content="OùMater" />
   <meta property="og:locale" content="fr_FR" />
   <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">
@@ -31,21 +31,38 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://adelinebdq.github.io/sportbar-france/" },
-      { "@type": "ListItem", "position": 2, "name": "Bayonne", "item": "https://adelinebdq.github.io/sportbar-france/villes/bayonne.html" },
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://oumater.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Bayonne", "item": "https://oumater.fr/villes/bayonne.html" },
       { "@type": "ListItem", "position": 3, "name": "Katie Daly's Irish Pub" }
     ]
   }
   </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --darker:#12121f; --blue:#1971c2; --wc:#1565c0; --text:#1a1a1a; --muted:#555; --border:#e0e0e0; --bg:#f5f7fa; --card:#fff; --radius:10px; }
     body { font-family:'Segoe UI',system-ui,sans-serif; background:var(--bg); color:var(--text); }
     header { background:var(--darker); color:#fff; padding:0 24px; height:58px; display:flex; align-items:center; gap:16px; }
-    .logo { display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; }
-    .logo-icon { width:36px; height:36px; background:#c62828; border-radius:9px; display:flex; align-items:center; justify-content:center; font-size:18px; }
-    .logo-text strong { font-size:17px; font-weight:700; display:block; line-height:1.1; }
-    .logo-text span { font-size:10px; color:#aaa; letter-spacing:.4px; text-transform:uppercase; }
+        /* === LOGO OùMater === */
+    .logo-link { text-decoration: none; display: inline-block; cursor: pointer; }
+    .logo { display: flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1; }
+    .logo-eyes { font-size: 28px; line-height: 1; display: inline-block; transform-origin: center; transition: transform 0.1s ease; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.5px; line-height: 1; }
+    .logo-text-ou { color: #F39C12; }
+    .logo-text-mater { color: #16A085; }
+    .logo-link:hover .logo-eyes { animation: lookAround 0.8s ease-in-out; }
+    @keyframes lookAround {
+      0%   { transform: translateX(0); }
+      20%  { transform: translateX(-4px); }
+      40%  { transform: translateX(4px); }
+      60%  { transform: translateX(-3px); }
+      80%  { transform: translateX(3px); }
+      100% { transform: translateX(0); }
+    }
+    @media (max-width: 600px) {
+      .logo-eyes { font-size: 22px; }
+      .logo-text  { font-size: 22px; }
+    }
     .breadcrumb { background:var(--card); border-bottom:1px solid var(--border); padding:10px 24px; font-size:13px; color:var(--muted); display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
     .breadcrumb a { color:var(--blue); text-decoration:none; }
     .breadcrumb a:hover { text-decoration:underline; }
@@ -83,7 +100,12 @@
 </head>
 <body>
 <header>
-  <a class="logo" href="../"><div class="logo-icon">⚽</div><div class="logo-text"><strong>SportBar France</strong><span>Trouvez où regarder vos matchs</span></div></a>
+  <a href="../" class="logo-link" aria-label="Retour à l'accueil OùMater">
+    <div class="logo">
+      <div class="logo-eyes">👀</div>
+      <div class="logo-text"><span class="logo-text-ou">Où</span><span class="logo-text-mater">Mater</span></div>
+    </div>
+  </a>
 </header>
 <nav class="breadcrumb" aria-label="Fil d'Ariane">
   <a href="../">Accueil</a> <span>›</span> <a href="../villes/bayonne.html">Bayonne</a> <span>›</span> <strong>Katie Daly's Irish Pub</strong>
@@ -132,6 +154,6 @@
   </div>
   <p class="source-note">Information collectée via l'Office de Tourisme de Bayonne — source officielle (visitbayonne.com).</p>
 </main>
-<footer><p><a href="../">SportBar France</a> · <a href="../villes/bayonne.html">Bayonne</a></p></footer>
+<footer><p><a href="../">OùMater</a> · <a href="../villes/bayonne.html">Bayonne</a></p></footer>
 </body>
 </html>
