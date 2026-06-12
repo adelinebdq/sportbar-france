@@ -4,10 +4,10 @@
 // dans chaque fichier HTML de villes/, matchs/ et bars/.
 
 const CONFIG = {
-  baseUrl:  'https://adelinebdq.github.io/sportbar-france',
-  ogImage:  'https://adelinebdq.github.io/sportbar-france/og-default.svg',
-  siteName: 'SportBar France',
-  tagline:  'Trouvez où regarder vos matchs',
+  baseUrl:  'https://oumater.fr',
+  ogImage:  'https://oumater.fr/og-default.svg',
+  siteName: 'OùMater',
+  tagline:  'Où regarder un match près de chez moi ?',
 };
 
 // Slugs → identifiants internes (pour le routage par paramètre URL)

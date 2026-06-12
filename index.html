@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OùMater — Où regarder un match près de chez moi ? Coupe du Monde 2026 &amp; F1</title>
-  <meta name="description" content="Trouvez en un clic le bar le plus proche qui diffuse votre match. Coupe du Monde 2026, Grand Prix F1, Top 14, Ligue 1. 89+ bars en France." />
-  <meta name="keywords" content="où regarder le match, bar coupe du monde 2026, bar grand prix F1, bar sportif france, diffusion match, bar foot, bar rugby, bar formule 1" />
+  <title>OùMater — Où regarder un match près de chez moi ? Coupe du Monde de la FIFA 2026 &amp; F1</title>
+  <meta name="description" content="Trouvez en un clic le bar le plus proche pour la Coupe du Monde de la FIFA 2026 : matchs France, calendrier complet, dates. 114 bars sur 37 villes." />
+  <meta name="keywords" content="coupe du monde de la fifa 2026 france, coupe du monde de la fifa 2026 match, coupe du monde de la fifa 2026 calendrier, coupe du monde de la fifa 2026 date, joueurs de coupe du monde, où regarder un match, bar coupe du monde, bar sportif france" />
 
   <!-- CONFIG: mettre à jour l'URL ci-dessous quand vous changez de domaine (voir /config.js) -->
   <link rel="canonical" href="https://oumater.fr/" />
@@ -803,6 +803,7 @@
   </div>
   <div class="header-right">
     <a href="compositions.html" style="color:rgba(255,255,255,.75);text-decoration:none;font-size:13px;font-weight:600;display:flex;align-items:center;gap:5px;transition:color .15s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.75)'">📋 Compos</a>
+    <a href="/calendrier.html" style="color:rgba(255,255,255,.75);text-decoration:none;font-size:13px;font-weight:600;display:flex;align-items:center;gap:5px;transition:color .15s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.75)'">📅 Calendrier</a>
     <div><strong id="statTotal">0</strong>bars</div>
     <div><strong id="statCities">0</strong>villes</div>
     <button class="theme-toggle" id="themeToggle"
@@ -2624,6 +2625,12 @@ function nearestCity(lat, lng) {
 // ─────────────────────────────────────────────
 // CITY SEARCH
 // ─────────────────────────────────────────────
+function showCityPlaceholder() {
+  const dropdown = document.getElementById('cityDropdown');
+  dropdown.innerHTML = '<li class="lb-no-result">Tapez une lettre pour filtrer…</li>';
+  dropdown.classList.add('open');
+}
+
 function buildDropdown(query = '') {
   const dropdown = document.getElementById('cityDropdown');
   const q = query.toLowerCase();
@@ -3127,8 +3134,20 @@ const cityInput  = document.getElementById('cityInput');
 const lbClear    = document.getElementById('lbClear');
 const geoBtn     = document.getElementById('geoBtn');
 
-cityInput.addEventListener('focus', () => buildDropdown(cityInput.value));
-cityInput.addEventListener('input', () => buildDropdown(cityInput.value));
+cityInput.addEventListener('focus', () => {
+  if (cityInput.value.trim().length === 0) {
+    showCityPlaceholder();
+  } else {
+    buildDropdown(cityInput.value);
+  }
+});
+cityInput.addEventListener('input', () => {
+  if (cityInput.value.trim().length === 0) {
+    showCityPlaceholder();
+  } else {
+    buildDropdown(cityInput.value);
+  }
+});
 cityInput.addEventListener('keydown', e => {
   if (e.key === 'Escape') document.getElementById('cityDropdown').classList.remove('open');
 });
@@ -3271,5 +3290,45 @@ updateMobileUI();
   }
 })();
 </script>
+
+<section class="seo-content" aria-label="À propos de OùMater et la Coupe du Monde 2026">
+  <h2>OùMater : votre guide pour la Coupe du Monde de la FIFA 2026 en France</h2>
+  <p>
+    La Coupe du Monde de la FIFA 2026 se déroule du 11 juin au 19 juillet 2026 aux États-Unis,
+    au Canada et au Mexique. Avec ses 48 équipes participantes et ses 104 matchs, c'est l'événement
+    sportif majeur de l'année. OùMater vous aide à
+    <strong>trouver le bar idéal pour regarder chaque match de la Coupe du Monde 2026</strong>
+    près de chez vous, partout en France.
+  </p>
+  <h3>Calendrier de la Coupe du Monde FIFA 2026</h3>
+  <p>
+    Retrouvez le <a href="/calendrier.html">calendrier complet de la Coupe du Monde 2026</a>
+    avec toutes les dates et les matchs de l'équipe de France. Premier match : France - Sénégal
+    le 16 juin 2026.
+  </p>
+  <h3>Joueurs de la Coupe du Monde côté français</h3>
+  <p>
+    Suivez les performances des joueurs de la Coupe du Monde sélectionnés par Didier Deschamps.
+    Consultez les <a href="/compositions/france.html">compositions de l'équipe de France</a>
+    match par match.
+  </p>
+</section>
+
+<style>
+  .seo-content {
+    padding: 24px 28px;
+    background: var(--bg-secondary, #1a1f2e);
+    color: var(--text-secondary, #9aa0a6);
+    font-size: 13px;
+    line-height: 1.7;
+    border-top: 1px solid var(--border-color, #2d3548);
+  }
+  .seo-content h2 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--text-secondary, #9aa0a6); }
+  .seo-content h3 { font-size: 13px; font-weight: 700; margin: 14px 0 4px; color: var(--text-secondary, #9aa0a6); }
+  .seo-content p  { margin-bottom: 8px; }
+  .seo-content a  { color: var(--link-color, #74c0fc); text-decoration: none; }
+  .seo-content a:hover { text-decoration: underline; }
+  .seo-content strong { color: var(--text-secondary, #9aa0a6); font-weight: 600; }
+</style>
 </body>
 </html>

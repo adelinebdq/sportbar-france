@@ -3,15 +3,23 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/</loc>
+    <loc>https://oumater.fr/</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- Calendrier CDM 2026 -->
+  <url>
+    <loc>https://oumater.fr/calendrier.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Compositions -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/compositions.html</loc>
+    <loc>https://oumater.fr/compositions.html</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -19,49 +27,49 @@
 
   <!-- Pages villes -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/courseulles-sur-mer.html</loc>
+    <loc>https://oumater.fr/villes/courseulles-sur-mer.html</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/luc-sur-mer.html</loc>
+    <loc>https://oumater.fr/villes/luc-sur-mer.html</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/saint-aubin-sur-mer.html</loc>
+    <loc>https://oumater.fr/villes/saint-aubin-sur-mer.html</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/langrune-sur-mer.html</loc>
+    <loc>https://oumater.fr/villes/langrune-sur-mer.html</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/douvres-la-delivrande.html</loc>
+    <loc>https://oumater.fr/villes/douvres-la-delivrande.html</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/caen.html</loc>
+    <loc>https://oumater.fr/villes/caen.html</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/lille.html</loc>
+    <loc>https://oumater.fr/villes/lille.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/marquette-lez-lille.html</loc>
+    <loc>https://oumater.fr/villes/marquette-lez-lille.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -69,7 +77,7 @@
 
   <!-- Compositions équipes -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/compositions/france.html</loc>
+    <loc>https://oumater.fr/compositions/france.html</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -77,43 +85,43 @@
 
   <!-- Pages matchs -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-senegal.html</loc>
+    <loc>https://oumater.fr/matchs/france-senegal.html</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-irak.html</loc>
+    <loc>https://oumater.fr/matchs/france-irak.html</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-norvege.html</loc>
+    <loc>https://oumater.fr/matchs/france-norvege.html</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-32e-de-finale.html</loc>
+    <loc>https://oumater.fr/matchs/france-32e-de-finale.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-quart-de-finale.html</loc>
+    <loc>https://oumater.fr/matchs/france-quart-de-finale.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/matchs/france-demi-finale.html</loc>
+    <loc>https://oumater.fr/matchs/france-demi-finale.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/matchs/finale-coupe-du-monde-2026.html</loc>
+    <loc>https://oumater.fr/matchs/finale-coupe-du-monde-2026.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -121,298 +129,298 @@
 
   <!-- Pages bars -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/bars/aux-enfants-terribles.html</loc>
+    <loc>https://oumater.fr/bars/aux-enfants-terribles.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/bars/le-comptoir-des-copains.html</loc>
+    <loc>https://oumater.fr/bars/le-comptoir-des-copains.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/bars/la-guinguette-de-la-marine.html</loc>
+    <loc>https://oumater.fr/bars/la-guinguette-de-la-marine.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/bars/chez-oit.html</loc>
+    <loc>https://oumater.fr/bars/chez-oit.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/bars/den-artiest.html</loc>
+    <loc>https://oumater.fr/bars/den-artiest.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/bars/au-bar-bu.html</loc>
+    <loc>https://oumater.fr/bars/au-bar-bu.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/bars/kanaal-cafe.html</loc>
+    <loc>https://oumater.fr/bars/kanaal-cafe.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/bars/brasserie-fives-cail.html</loc>
+    <loc>https://oumater.fr/bars/brasserie-fives-cail.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Bars Côte de Nacre (source : Office de Tourisme Cœur de Nacre) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/la-maison-bleue.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/la-spiaggia.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/coffee-and-tea.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-bowling-de-la-mer.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/chez-celia.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/la-causerie.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/l-imprevu.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/l-hyppocampe.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/les-terrasses-du-mini-golf.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/casino-tranchant.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/o-little-luc.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-week-end.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-longchamp.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/la-maison-bleue.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/la-spiaggia.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/coffee-and-tea.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-bowling-de-la-mer.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/chez-celia.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/la-causerie.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/l-imprevu.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/l-hyppocampe.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/les-terrasses-du-mini-golf.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/casino-tranchant.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/o-little-luc.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-week-end.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-longchamp.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <!-- Fan-zone dans le sitemap avec priorité 0.8 -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/fan-zone-hippodrome-caen.html</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/fan-zone-hippodrome-caen.html</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Cherbourg-en-Cotentin (CDM 2026) -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/cherbourg-en-cotentin.html</loc>
+    <loc>https://oumater.fr/villes/cherbourg-en-cotentin.html</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-bayou.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/black-dog-cafe.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/kilbeggans-irish-pub.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/v-and-b-tourlaville.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-bayou.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/black-dog-cafe.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/kilbeggans-irish-pub.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/v-and-b-tourlaville.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Le Havre (CDM 2026) -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/le-havre.html</loc>
+    <loc>https://oumater.fr/villes/le-havre.html</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/paradox-le-havre.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-city-le-havre.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/art-sport-cafe.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/mac-daids.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/paradox-le-havre.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-city-le-havre.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/art-sport-cafe.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/mac-daids.html</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Reims / Grand Est (CDM 2026) -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/reims.html</loc>
+    <loc>https://oumater.fr/villes/reims.html</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/delirium-cafe-reims.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-reims.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-killberry.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/pub-lescale.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/mr-foggs-pub.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-five-reims.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/delirium-cafe-reims.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/au-bureau-reims.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-killberry.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/pub-lescale.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/mr-foggs-pub.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-five-reims.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Rouen / Normandie (CDM 2026) -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/rouen.html</loc>
+    <loc>https://oumater.fr/villes/rouen.html</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-novicks-stadium.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-rouen.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/okallaghans.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/obrother-rouen.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-five-rouen.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-novicks-stadium.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/au-bureau-rouen.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/okallaghans.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/obrother-rouen.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-five-rouen.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Brest / Bretagne (CDM 2026) -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/brest.html</loc>
+    <loc>https://oumater.fr/villes/brest.html</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/klub-house-brest.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-dubliners.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-blind-piper.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/offside-bay.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/ty-kall.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/klub-house-brest.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-dubliners.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-blind-piper.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/offside-bay.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/ty-kall.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Arcachon / Nouvelle-Aquitaine (CDM 2026) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/arcachon.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/bar-de-loubli.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/lily-bowl-bar.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/arcachon.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/bar-de-loubli.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/lily-bowl-bar.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Biarritz / Côte Basque (CDM 2026) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/biarritz.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/mollys-pub.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-georges.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/biarritz.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/mollys-pub.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-georges.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Saint-Jean-de-Luz / Côte Basque (CDM 2026) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/saint-jean-de-luz.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/bizipoz-bar.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/saint-jean-de-luz.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/bizipoz-bar.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Soorts-Hossegor / Landes (CDM 2026) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/soorts-hossegor.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-players.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/soorts-hossegor.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/the-players.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Arras / Hauts-de-France (CDM 2026) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/arras.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-arras.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-melting-pub.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-glanworth.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/arras.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/au-bureau-arras.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-melting-pub.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-glanworth.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Boulogne-sur-Mer / Hauts-de-France (CDM 2026) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/boulogne-sur-mer.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/l-alcazar.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/l-irish-pub-boulogne.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/l-happy.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/boulogne-sur-mer.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/l-alcazar.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/l-irish-pub-boulogne.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/l-happy.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Dunkerque / Hauts-de-France (CDM 2026) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/dunkerque.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/dunk-bar.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/dunkerque.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/dunk-bar.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Valenciennes / Hauts-de-France (CDM 2026) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/valenciennes.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/l-envers-valenciennes.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/val-en-game.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/valenciennes.html</loc><lastmod>2026-06-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/l-envers-valenciennes.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/val-en-game.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- La Rochelle / Nouvelle-Aquitaine (CDM 2026) -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/la-rochelle.html</loc>
+    <loc>https://oumater.fr/villes/la-rochelle.html</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-jolly-sailor.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-general-humberts.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/mac-ewans-pub.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-famous-pub.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/mc-nultys-irish-bar.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/pub-the-queen-victoria.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-jolly-sailor.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-general-humberts.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/mac-ewans-pub.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-famous-pub.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/mc-nultys-irish-bar.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/pub-the-queen-victoria.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Le Mans + Sablé-sur-Sarthe / Pays de la Loire (CDM 2026) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/le-mans.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-lodge-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-elephant-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-saint-saturnin.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-cafe-creme.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/sable-sur-sarthe.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/pub-elysee.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/le-mans.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/the-lodge-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-elephant-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/au-bureau-saint-saturnin.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-cafe-creme.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/sable-sur-sarthe.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/pub-elysee.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Marseille + Nice + Toulon + Avignon / PACA (CDM 2026) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/marseille.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-queen-victoria.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/o-bradys-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-red-lion.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/bar-de-la-plaine.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/nice.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/ma-nolans-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/waynes-bar.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/master-home.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/toulon.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/bota-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-toulon.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/l-amalgame.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/avignon.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/3-brasseurs-avignon.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/bar-cafe-thiers.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-gambrinus.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/marseille.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/the-queen-victoria.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/o-bradys-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-red-lion.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/bar-de-la-plaine.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/nice.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/ma-nolans-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/waynes-bar.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/master-home.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/toulon.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/bota-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/au-bureau-toulon.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/l-amalgame.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/avignon.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/3-brasseurs-avignon.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/bar-cafe-thiers.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-gambrinus.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Pau + Bayonne / Sud-Ouest rugby (CDM 2026) -->
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/pau.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/babette-beer-house.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-pau.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/la-canopee.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/villes/bayonne.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/katie-dalys-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/hirusta-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-ptit-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/pau.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/babette-beer-house.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/au-bureau-pau.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/la-canopee.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/villes/bayonne.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oumater.fr/bars/katie-dalys-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/hirusta-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-ptit-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Bayeux / Normandie (CDM 2026) -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/bayeux.html</loc>
+    <loc>https://oumater.fr/villes/bayeux.html</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-conquerant.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/v-and-b-bayeux.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/la-gitane-irish-bar.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-conquerant.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/v-and-b-bayeux.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/la-gitane-irish-bar.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 
   <!-- Angers / Pays de la Loire (CDM 2026) -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/angers.html</loc>
+    <loc>https://oumater.fr/villes/angers.html</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/dublins-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/matt-murphys.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/bigwood-bar.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/bar-lirlandais.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/west-indies-kfe.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/larbitre.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/dublins-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/matt-murphys.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/bigwood-bar.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/bar-lirlandais.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/west-indies-kfe.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/larbitre.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Tours + Orléans / Centre-Val de Loire (CDM 2026) — 1ère région CVL -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/tours.html</loc>
+    <loc>https://oumater.fr/villes/tours.html</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/the-pale-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/mc-cools-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/irish-company.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-tours-nord.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-pale-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/mc-cools-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/irish-company.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/au-bureau-tours-nord.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/orleans.html</loc>
+    <loc>https://oumater.fr/villes/orleans.html</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/walls-end-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-orleans.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/lintermede.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/walls-end-irish-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/au-bureau-orleans.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/lintermede.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Mulhouse + Colmar / Alsace Sud + Belfort / Bourgogne-Franche-Comté (CDM 2026) -->
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/mulhouse.html</loc>
+    <loc>https://oumater.fr/villes/mulhouse.html</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-shamrock-pub.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/pub-murphys-mulhouse.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-marco-polo.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-mulhouse.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-shamrock-pub.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/pub-murphys-mulhouse.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-marco-polo.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/au-bureau-mulhouse.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/colmar.html</loc>
+    <loc>https://oumater.fr/villes/colmar.html</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-murphys-colmar.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-murphys-colmar.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url>
-    <loc>https://adelinebdq.github.io/sportbar-france/villes/belfort.html</loc>
+    <loc>https://oumater.fr/villes/belfort.html</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/le-finnegans-irish-pub.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adelinebdq.github.io/sportbar-france/bars/au-bureau-belfort.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-finnegans-irish-pub.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/au-bureau-belfort.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 </urlset>

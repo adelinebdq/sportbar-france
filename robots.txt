@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adelinebdq.github.io/sportbar-france/sitemap.xml
+Sitemap: https://oumater.fr/sitemap.xml

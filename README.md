@@ -1,4 +1,4 @@
-# SportBar France 🍺⚽
+# OùMater 🍺⚽
 
 > Trouvez facilement les bars et restaurants qui diffusent des matchs sportifs en France.
 

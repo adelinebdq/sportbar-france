@@ -20,7 +20,7 @@ Le site est ensuite accessible sur `http://localhost:8080`.
 
 ## Déploiement
 
-Push sur `main` → GitHub Actions déploie automatiquement sur GitHub Pages (`https://adelinebdq.github.io/sportbar-france/`). Voir `.github/workflows/deploy.yml`.
+Push sur `main` → GitHub Actions déploie automatiquement sur GitHub Pages (`https://oumater.fr/`). Voir `.github/workflows/deploy.yml`.
 
 ## Architecture
 
