@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>À propos d'OùMater — Guide des bars Coupe du Monde de la FIFA 2026 en France</title>
+  <meta name="description" content="OùMater est votre guide pour trouver le bar idéal et regarder la Coupe du Monde de la FIFA 2026, la F1, le Top 14 et la Ligue 1. 114 bars sélectionnés dans 37 villes en France." />
+  <meta name="keywords" content="oumater, coupe du monde de la fifa 2026 france, où regarder un match, bar sportif france, joueurs de coupe du monde, calendrier coupe du monde 2026" />
+
+  <link rel="canonical" href="https://oumater.fr/a-propos.html" />
+
+  <meta property="og:title"       content="À propos d'OùMater — Guide bars CDM 2026" />
+  <meta property="og:description" content="Le guide des bars sportifs en France pour la Coupe du Monde de la FIFA 2026 et la F1." />
+  <meta property="og:url"         content="https://oumater.fr/a-propos.html" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="https://oumater.fr/og-default.svg" />
+  <meta property="og:site_name"   content="OùMater" />
+  <meta property="og:locale"      content="fr_FR" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #f5f7fa;
+      --card:    #ffffff;
+      --darker:  #12121f;
+      --text:    #1a1a1a;
+      --muted:   #555555;
+      --border:  #e0e0e0;
+      --shadow:  0 2px 10px rgba(0,0,0,.08);
+      --blue:    #1971c2;
+      --orange:  #F39C12;
+      --green:   #16A085;
+      --radius:  10px;
+      --link-color: #1971c2;
+    }
+
+    [data-theme="dark"] {
+      --bg:      #0f1419;
+      --card:    #1e2535;
+      --text:    #e8eaed;
+      --muted:   #9aa0a6;
+      --border:  #2d3548;
+      --shadow:  0 2px 10px rgba(0,0,0,.4);
+      --link-color: #74c0fc;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--darker);
+      color: #fff;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 58px;
+    }
+
+    .logo-link { text-decoration: none; display: inline-block; }
+    .logo { display: flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1; }
+    .logo-eyes { font-size: 28px; line-height: 1; display: inline-block; transition: transform .1s; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.5px; }
+    .logo-text-ou { color: #F39C12; }
+    .logo-text-mater { color: #16A085; }
+    .logo-link:hover .logo-eyes { animation: lookAround .8s ease-in-out; }
+    @keyframes lookAround {
+      0%  { transform: translateX(0); }
+      20% { transform: translateX(-4px); }
+      40% { transform: translateX(4px); }
+      60% { transform: translateX(-3px); }
+      80% { transform: translateX(3px); }
+      100%{ transform: translateX(0); }
+    }
+
+    .header-nav {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .header-nav a {
+      color: rgba(255,255,255,.75);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color .15s;
+    }
+    .header-nav a:hover  { color: #fff; }
+    .header-nav a.active { color: #fff; }
+
+    .theme-toggle {
+      background: rgba(255,255,255,.12);
+      border: 1.5px solid rgba(255,255,255,.25);
+      border-radius: 8px;
+      width: 34px; height: 34px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+    }
+    .theme-toggle:hover { background: rgba(255,255,255,.24); }
+
+    /* ── MAIN ── */
+    .a-propos-page {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    .a-propos-page h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: clamp(28px, 5vw, 36px);
+      color: var(--orange);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .a-propos-page h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(18px, 3vw, 24px);
+      color: var(--green);
+      margin-top: 36px;
+      margin-bottom: 14px;
+    }
+
+    .a-propos-page p {
+      font-size: 16px;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .a-propos-page p.lead {
+      font-size: 17px;
+      color: var(--text);
+      line-height: 1.7;
+      padding: 16px 20px;
+      background: var(--card);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    .a-propos-page a {
+      color: var(--link-color);
+      text-decoration: underline;
+    }
+
+    .a-propos-page strong { font-weight: 700; }
+
+    .a-propos-page ul,
+    .a-propos-page ol {
+      padding-left: 0;
+      margin-bottom: 14px;
+    }
+
+    .a-propos-page ul.sports-list { list-style: none; }
+    .a-propos-page ul.sports-list li {
+      font-size: 15px;
+      color: var(--text);
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.5;
+    }
+    .a-propos-page ul.sports-list li:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .a-propos-page ol { list-style: none; counter-reset: steps; }
+    .a-propos-page ol li {
+      counter-increment: steps;
+      font-size: 16px;
+      color: var(--text);
+      padding: 12px 14px 12px 52px;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.6;
+      position: relative;
+    }
+    .a-propos-page ol li:first-child { border-top: 1px solid var(--border); }
+    .a-propos-page ol li::before {
+      content: counter(steps);
+      position: absolute;
+      left: 14px;
+      top: 50%; transform: translateY(-50%);
+      width: 26px; height: 26px;
+      background: var(--orange);
+      color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 13px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      margin: 28px 0;
+      flex-wrap: wrap;
+    }
+
+    .cta-primary, .cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none !important;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      transition: opacity .15s, transform .1s;
+    }
+    .cta-primary:hover, .cta-secondary:hover {
+      opacity: .9; transform: translateY(-1px);
+    }
+    .cta-primary  { background: var(--orange); color: #fff !important; }
+    .cta-secondary{ background: var(--green);  color: #fff !important; }
+
+    /* ── STATS ROW ── */
+    .stats-row {
+      display: flex;
+      gap: 16px;
+      margin: 24px 0;
+      flex-wrap: wrap;
+    }
+    .stat-card {
+      flex: 1;
+      min-width: 120px;
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1.5px solid var(--border);
+      padding: 16px 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .stat-number {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 32px;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 600px) {
+      header { height: 50px; padding: 0 12px; }
+      .logo-eyes { font-size: 22px; }
+      .logo-text  { font-size: 22px; }
+      .header-nav { gap: 12px; }
+      .header-nav a { font-size: 12px; }
+      .cta-buttons { flex-direction: column; }
+      .cta-primary, .cta-secondary { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo-link" aria-label="Retour à l'accueil OùMater">
+    <div class="logo">
+      <div class="logo-eyes">👀</div>
+      <div class="logo-text"><span class="logo-text-ou">Où</span><span class="logo-text-mater">Mater</span></div>
+    </div>
+  </a>
+  <nav class="header-nav">
+    <a href="/compositions.html">📋 Compos</a>
+    <a href="/calendrier.html">📅 Calendrier</a>
+    <a href="/a-propos.html" class="active">ℹ️ À propos</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème" title="Changer de thème">
+      <span id="themeIcon">🌙</span>
+    </button>
+  </nav>
+</header>
+
+<main class="a-propos-page">
+  <h1>À propos d'OùMater</h1>
+
+  <p class="lead">
+    <strong>OùMater est votre guide pour la Coupe du Monde de la FIFA 2026 en France.</strong>
+    Nous référençons les meilleurs bars pour regarder les matchs avec une ambiance conviviale,
+    des écrans de qualité et des horaires adaptés.
+  </p>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-number">114</div>
+      <div class="stat-label">bars référencés</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">37</div>
+      <div class="stat-label">villes couvertes</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">7</div>
+      <div class="stat-label">matchs France CDM</div>
+    </div>
+  </div>
+
+  <div class="cta-buttons">
+    <a href="/" class="cta-primary">🗺️ Voir la carte des bars</a>
+    <a href="/calendrier.html" class="cta-secondary">📅 Calendrier complet</a>
+  </div>
+
+  <h2>La Coupe du Monde de la FIFA 2026</h2>
+  <p>
+    La Coupe du Monde de la FIFA 2026 se déroule du 11 juin au 19 juillet 2026 aux États-Unis,
+    au Canada et au Mexique. Avec ses 48 équipes participantes et ses 104 matchs, c'est l'événement
+    sportif majeur de l'année.
+  </p>
+  <p>
+    OùMater vous aide à <strong>trouver le bar idéal pour regarder chaque match de la Coupe du
+    Monde 2026</strong> près de chez vous, partout en France.
+  </p>
+
+  <h2>Calendrier de la Coupe du Monde FIFA 2026</h2>
+  <p>
+    Retrouvez le <a href="/calendrier.html">calendrier complet de la Coupe du Monde 2026</a>
+    avec toutes les dates et les matchs de l'équipe de France.
+    Premier match : <strong>France — Sénégal le 16 juin 2026</strong>.
+  </p>
+
+  <h2>Joueurs de la Coupe du Monde côté français</h2>
+  <p>
+    Suivez les performances des joueurs de la Coupe du Monde sélectionnés par Didier Deschamps.
+    Consultez les <a href="/compositions/france.html">compositions de l'équipe de France</a>
+    match par match.
+  </p>
+
+  <h2>Notre sélection : 114 bars dans 37 villes</h2>
+  <p>
+    Nous référençons des bars sportifs partout en France : du Nord (Lille, Arras, Dunkerque)
+    au Sud (Marseille, Nice, Toulon, Avignon), de la Bretagne (Brest) à l'Alsace (Mulhouse, Colmar),
+    en passant par la Normandie (Caen, Rouen, Le Havre, Cherbourg, Bayeux), le Pays Basque
+    (Pau, Bayonne) et la Côte Atlantique (Arcachon, Biarritz, La Rochelle).
+  </p>
+  <p>
+    Chaque bar est sélectionné avec rigueur : <strong>sources officielles d'offices de tourisme,
+    sites des bars, médias locaux</strong>. Aucun bar fictif, aucune donnée approximative.
+  </p>
+
+  <h2>Sports diffusés</h2>
+  <ul class="sports-list">
+    <li>⚽ Football — Coupe du Monde FIFA 2026, Ligue 1, Champions League, Premier League, Liga</li>
+    <li>🏎️ Formule 1 — Grands Prix 2026 (24 dates dans l'année)</li>
+    <li>🏉 Rugby — Top 14, Champions Cup, Six Nations</li>
+    <li>🎾 Tennis — Grands Chelems, Coupe Davis</li>
+    <li>🥊 Boxe / MMA / UFC — grands événements</li>
+  </ul>
+
+  <h2>Comment ça marche ?</h2>
+  <ol>
+    <li><strong>Trouvez votre ville</strong> sur la carte ou via la barre de recherche</li>
+    <li><strong>Découvrez les bars</strong> qui diffusent le match qui vous intéresse</li>
+    <li><strong>Réservez ou rendez-vous sur place</strong> avec Google Maps ou Waze</li>
+  </ol>
+
+  <div class="cta-buttons">
+    <a href="/" class="cta-primary">🗺️ Trouver mon bar</a>
+  </div>
+</main>
+
+<script>
+const THEME_KEY = 'sportbar-theme';
+function getInitialTheme() {
+  const s = localStorage.getItem(THEME_KEY);
+  if (s === 'dark' || s === 'light') return s;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+function applyTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  document.getElementById('themeIcon').textContent = t === 'dark' ? '☀️' : '🌙';
+  document.getElementById('themeToggle').setAttribute('aria-label',
+    t === 'dark' ? 'Activer le mode clair' : 'Activer le mode sombre');
+}
+applyTheme(getInitialTheme());
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  localStorage.setItem(THEME_KEY, next);
+  applyTheme(next);
+});
+</script>
+</body>
+</html>
