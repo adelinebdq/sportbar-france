@@ -687,6 +687,20 @@
 
     .lb-sep { margin-left: auto; font-size: 13px; color: var(--muted); }
 
+    /* ── NEXT MATCH BANNER ── */
+    .next-match-banner {
+      background: #FFF3E0;
+      border-bottom: 1px solid #FFE0B2;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: #e65100;
+      flex-shrink: 0;
+    }
+    .next-match-banner a { color: inherit; text-decoration: none; }
+    .next-match-banner a:hover { text-decoration: underline; }
+
     /* ── BOTTOM SHEET HANDLE (mobile only, hidden on desktop) ── */
     .bs-handle { display: none; }
 
@@ -814,6 +828,11 @@
     </button>
   </div>
 </header>
+
+<!-- NEXT MATCH BANNER -->
+<div id="nextMatchBanner" class="next-match-banner" style="display:none">
+  <a href="/calendrier.html" id="nextMatchLink"></a>
+</div>
 
 <!-- MATCH BAR -->
 <div class="match-bar">
@@ -3288,6 +3307,49 @@ updateMobileUI();
   if (barParam) {
     const bar = BARS.find(b => slugify(b.nom) === barParam.toLowerCase());
     if (bar) { selectBar(bar.id, true); }
+  }
+})();
+</script>
+
+<script>
+(function() {
+  const WC = [
+    { label: 'France — Sénégal',        date: '2026-06-16' },
+    { label: 'France — Irak',            date: '2026-06-22' },
+    { label: 'France — Norvège',          date: '2026-06-26' },
+    { label: 'France — 32e de finale',   date: '2026-07-02' },
+    { label: 'France — Quart de finale', date: '2026-07-07' },
+    { label: 'France — Demi-finale',     date: '2026-07-14' },
+    { label: 'Finale CDM 2026',           date: '2026-07-19' }
+  ];
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  let next = null;
+  for (const m of WC) {
+    const d = new Date(m.date + 'T12:00:00');
+    d.setHours(0, 0, 0, 0);
+    const diff = Math.round((d - today) / 864e5);
+    if (diff >= 0) { next = { ...m, days: diff }; break; }
+  }
+
+  if (!next) return;
+
+  let text;
+  if (next.days === 0) {
+    text = `🔴 ${next.label} — EN COURS ce soir`;
+  } else if (next.days === 1) {
+    text = `⚽ Prochain match France : ${next.label} — Demain`;
+  } else {
+    text = `⚽ Prochain match France : ${next.label} — Dans ${next.days} jours`;
+  }
+
+  const link   = document.getElementById('nextMatchLink');
+  const banner = document.getElementById('nextMatchBanner');
+  if (link && banner) {
+    link.textContent  = text;
+    banner.style.display = 'block';
   }
 })();
 </script>

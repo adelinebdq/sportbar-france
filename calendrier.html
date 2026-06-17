@@ -312,6 +312,13 @@
     }
     .placeholder-card .big-icon { font-size: 36px; margin-bottom: 10px; display: block; }
 
+    /* ── COUNTDOWN BADGE ── */
+    .match-countdown {
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
     /* ── MOBILE ── */
     @media (max-width: 600px) {
       header { height: 50px; padding: 0 12px; }
@@ -426,6 +433,7 @@ function buildMatchCards() {
           <div class="match-meta">
             <span>📅 ${formatDateFR(m.date)}</span>
             <span>🕘 ${m.time} CEST</span>
+            <span class="match-countdown" id="cd-${m.id}"></span>
           </div>
         </div>
         <span class="match-phase-badge">${m.phase}</span>
@@ -436,7 +444,30 @@ function buildMatchCards() {
   }).join('');
 }
 
+function getCountdown(dateStr) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const d = new Date(dateStr + 'T12:00:00');
+  d.setHours(0, 0, 0, 0);
+  const diff = Math.round((d - today) / 864e5);
+  if (diff < 0)  return { text: '✓ Match joué', color: '#999' };
+  if (diff === 0) return { text: '🔴 EN COURS',  color: '#E74C3C' };
+  if (diff === 1) return { text: 'Demain',        color: '#F39C12' };
+  return { text: `Dans ${diff} jours`, color: '#16A085' };
+}
+
+function updateCountdowns() {
+  FR_MATCHES.forEach(m => {
+    const el = document.getElementById('cd-' + m.id);
+    if (!el) return;
+    const { text, color } = getCountdown(m.date);
+    el.textContent = text;
+    el.style.color = color;
+  });
+}
+
 buildMatchCards();
+updateCountdowns();
 
 // Thème
 const THEME_KEY = 'sportbar-theme';
