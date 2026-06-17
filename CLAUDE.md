@@ -66,7 +66,7 @@ Les données sont indicatives (coupure connaissance août 2025) — toujours vé
 
 ### Ajouter un bar
 
-Prochain ID disponible : **139**
+Prochain ID disponible : **153**
 
 Dans le tableau `BARS` de `index.html` :
 
@@ -103,11 +103,11 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 ---
 
-## État du projet — 9 juin 2026
+## État du projet — 17 juin 2026
 
-### Dernier commit : Ajout 13 lieux à Lille (dont fan zone Chaud Bouillon) + renommage La Canopée Pau
+### Dernier commit : Ajout 14 bars Métropole de Lille (Villeneuve d'Ascq, Tourcoing, Wattrelos, etc.) + nouvelle page ville
 
-### Inventaire actuel : 127 bars · 37 villes couvertes
+### Inventaire actuel : 141 bars · 38 villes couvertes
 
 | Ville | Bars | Page `/villes/` |
 |-------|------|-----------------|
@@ -149,7 +149,7 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 | Saint-Jean-de-Luz | 1 | ✅ `saint-jean-de-luz.html` |
 | Soorts-Hossegor | 1 | ✅ `soorts-hossegor.html` |
 
-**Hauts-de-France : 6 villes** — Lille · Marquette-lez-Lille · Arras · Boulogne-sur-Mer · Dunkerque · Valenciennes
+**Hauts-de-France : 7 villes** — Lille · Métropole de Lille · Marquette-lez-Lille · Arras · Boulogne-sur-Mer · Dunkerque · Valenciennes
 **Nouvelle-Aquitaine : 6 villes** — Arcachon · Biarritz · Saint-Jean-de-Luz · Soorts-Hossegor · Pau · Bayonne
 **PACA : 4 villes** — Marseille · Nice · Toulon · Avignon
 **Pays de la Loire : 3 villes** — Le Mans · Sablé-sur-Sarthe · Angers
@@ -157,7 +157,7 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 **Grand Est (Alsace Sud) : 2 villes** — Mulhouse · Colmar
 **Bourgogne-Franche-Comté : 1 ville** ⭐ Ouverture juin 2026 — Belfort
 
-**IDs utilisés** : 8, 13–138 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
+**IDs utilisés** : 8, 13–152 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
 
 ### Matchs France CDM 2026 configurés
 - `wc1` France — Sénégal · 16 juin 21h

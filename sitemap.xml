@@ -444,4 +444,26 @@
   <url><loc>https://oumater.fr/bars/noao.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://oumater.fr/bars/nu-lille.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://oumater.fr/bars/la-canopee-lille.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Métropole de Lille — ajout 17 juin 2026 -->
+  <url>
+    <loc>https://oumater.fr/villes/metropole-de-lille.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://oumater.fr/bars/bowtown.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/cageot.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/hall-u-need.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/la-friche.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/hopopop.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/barrel.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/v-and-b-villeneuve-ascq.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/ninkasi-villeneuve-ascq.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/la-goguette.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/wam-club.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/la-guinguette-de-bondues.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/la-guinguette-de-wattrelos.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-chagnot.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/hoppiness-craft-beer.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
