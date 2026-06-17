@@ -66,7 +66,7 @@ Les données sont indicatives (coupure connaissance août 2025) — toujours vé
 
 ### Ajouter un bar
 
-Prochain ID disponible : **126**
+Prochain ID disponible : **139**
 
 Dans le tableau `BARS` de `index.html` :
 
@@ -105,13 +105,13 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 ## État du projet — 9 juin 2026
 
-### Dernier commit : Ajout 7 bars Mulhouse + Colmar + Belfort (CDM 2026) — Alsace Sud + Bourgogne-Franche-Comté
+### Dernier commit : Ajout 13 lieux à Lille (dont fan zone Chaud Bouillon) + renommage La Canopée Pau
 
-### Inventaire actuel : 114 bars · 37 villes couvertes
+### Inventaire actuel : 127 bars · 37 villes couvertes
 
 | Ville | Bars | Page `/villes/` |
 |-------|------|-----------------|
-| Lille | 7 | ✅ `lille.html` |
+| Lille | 20 | ✅ `lille.html` |
 | La Rochelle | 6 | ✅ `la-rochelle.html` |
 | Reims | 6 | ✅ `reims.html` |
 | Courseulles-sur-Mer | 6 | ✅ `courseulles-sur-mer.html` |
@@ -157,7 +157,7 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 **Grand Est (Alsace Sud) : 2 villes** — Mulhouse · Colmar
 **Bourgogne-Franche-Comté : 1 ville** ⭐ Ouverture juin 2026 — Belfort
 
-**IDs utilisés** : 8, 13–125 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
+**IDs utilisés** : 8, 13–138 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
 
 ### Matchs France CDM 2026 configurés
 - `wc1` France — Sénégal · 16 juin 21h
