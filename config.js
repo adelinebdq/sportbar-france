@@ -57,4 +57,5 @@ CONFIG.citySlugs = {
   'toulon':                  'Toulon',
   'avignon':                 'Avignon',
   'asnelles':                'Asnelles',
+  'montreal':                'Montréal',
 };

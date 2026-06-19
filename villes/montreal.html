@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Montréal - Bars CDM 2026 pour expats français | OùMater</title>
+  <meta name="description" content="Vous êtes expat français à Montréal ? Découvrez 7 bars emblématiques pour regarder les matchs de la Coupe du Monde de la FIFA 2026 entre Français. Maison de France, L'Barouf, Chez Ernest et plus." />
+  <link rel="canonical" href="https://oumater.fr/villes/montreal.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bars pour expats français à Montréal — CDM 2026" />
+  <meta property="og:description" content="7 bars pour mater la CDM 2026 entre Français à Montréal : Maison de France, L'Barouf (Plateau), Chez Ernest (Rosemont), Monsieur Ricard (Mile End), Café Olimpico et plus." />
+  <meta property="og:url" content="https://oumater.fr/villes/montreal.html" />
+  <meta property="og:image" content="https://oumater.fr/og-default.svg" />
+  <meta property="og:site_name" content="OùMater" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": "Bars pour expats français à Montréal — CDM 2026",
+    "description": "Sélection de 7 bars pour la communauté française de Montréal afin de regarder la Coupe du Monde de la FIFA 2026.",
+    "url": "https://oumater.fr/villes/montreal.html",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Montréal",
+      "addressRegion": "Québec",
+      "addressCountry": "CA"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Bars pour expats français à Montréal — CDM 2026",
+    "url": "https://oumater.fr/villes/montreal.html",
+    "numberOfItems": 7,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": { "@type": "BarOrPub", "name": "Maison de France", "address": { "@type": "PostalAddress", "streetAddress": "429 avenue Viger Est", "addressLocality": "Montréal", "addressRegion": "Québec", "postalCode": "H2L 2N9", "addressCountry": "CA" } } },
+      { "@type": "ListItem", "position": 2, "item": { "@type": "BarOrPub", "name": "Double Menton et Saucisson", "address": { "@type": "PostalAddress", "streetAddress": "6653 rue St-Hubert", "addressLocality": "Montréal", "addressRegion": "Québec", "postalCode": "H2S 2M5", "addressCountry": "CA" } } },
+      { "@type": "ListItem", "position": 3, "item": { "@type": "BarOrPub", "name": "Champions Room", "address": { "@type": "PostalAddress", "streetAddress": "680 Sainte-Catherine Ouest", "addressLocality": "Montréal", "addressRegion": "Québec", "postalCode": "H3B 1B7", "addressCountry": "CA" } } },
+      { "@type": "ListItem", "position": 4, "item": { "@type": "BarOrPub", "name": "Monsieur Ricard", "address": { "@type": "PostalAddress", "streetAddress": "4543 avenue du Parc", "addressLocality": "Montréal", "addressRegion": "Québec", "postalCode": "H2V 4E4", "addressCountry": "CA" } } },
+      { "@type": "ListItem", "position": 5, "item": { "@type": "BarOrPub", "name": "L'Barouf", "address": { "@type": "PostalAddress", "streetAddress": "4171 rue Saint-Denis", "addressLocality": "Montréal", "addressRegion": "Québec", "postalCode": "H2W 2M7", "addressCountry": "CA" } } },
+      { "@type": "ListItem", "position": 6, "item": { "@type": "BarOrPub", "name": "Chez Ernest", "address": { "@type": "PostalAddress", "streetAddress": "6596 rue St-Hubert", "addressLocality": "Montréal", "addressRegion": "Québec", "postalCode": "H2S 2M3", "addressCountry": "CA" } } },
+      { "@type": "ListItem", "position": 7, "item": { "@type": "BarOrPub", "name": "Café Olimpico", "address": { "@type": "PostalAddress", "streetAddress": "124 rue Saint-Viateur Ouest", "addressLocality": "Montréal", "addressRegion": "Québec", "postalCode": "H2T 2L1", "addressCountry": "CA" } } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://oumater.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Villes", "item": "https://oumater.fr/villes/" },
+      { "@type": "ListItem", "position": 3, "name": "Montréal" }
+    ]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --darker: #12121f; --blue: #1971c2; --text: #1a1a1a; --muted: #555; --border: #e0e0e0; --bg: #f5f7fa; --card: #ffffff; --radius: 10px; --wc: #1565c0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    header { background: var(--darker); color: #fff; padding: 0 24px; height: 58px; display: flex; align-items: center; gap: 16px; }
+    .logo-link { text-decoration: none; display: inline-block; cursor: pointer; }
+    .logo { display: flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1; }
+    .logo-eyes { font-size: 28px; line-height: 1; display: inline-block; transform-origin: center; transition: transform 0.1s ease; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.5px; line-height: 1; }
+    .logo-text-ou { color: #F39C12; }
+    .logo-text-mater { color: #16A085; }
+    .logo-link:hover .logo-eyes { animation: lookAround 0.8s ease-in-out; }
+    @keyframes lookAround {
+      0%   { transform: translateX(0); }
+      20%  { transform: translateX(-4px); }
+      40%  { transform: translateX(4px); }
+      60%  { transform: translateX(-3px); }
+      80%  { transform: translateX(3px); }
+      100% { transform: translateX(0); }
+    }
+    @media (max-width: 600px) {
+      .logo-eyes { font-size: 22px; }
+      .logo-text  { font-size: 22px; }
+    }
+    .breadcrumb { background: var(--card); border-bottom: 1px solid var(--border); padding: 10px 24px; font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+    .breadcrumb a { color: var(--blue); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    main { max-width: 820px; margin: 0 auto; padding: 36px 24px 60px; }
+    h1 { font-size: 30px; font-weight: 800; line-height: 1.2; margin-bottom: 6px; }
+    .page-subtitle { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+    .intro { font-size: 15px; line-height: 1.75; color: #444; margin-bottom: 32px; max-width: 700px; border-left: 3px solid var(--wc); padding-left: 16px; }
+    .intro p { margin-bottom: 12px; }
+    .intro p:last-child { margin-bottom: 0; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--wc); color: #fff; text-decoration: none; padding: 14px 26px; border-radius: 10px; font-size: 15px; font-weight: 700; margin-bottom: 44px; transition: background .15s; box-shadow: 0 3px 12px rgba(21,101,192,.25); }
+    .cta-btn:hover { background: #0d47a1; }
+    .cta-btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--wc); text-decoration: none; padding: 14px 26px; border-radius: 10px; font-size: 15px; font-weight: 700; margin-bottom: 44px; margin-left: 12px; border: 2px solid var(--wc); transition: background .15s; }
+    .cta-btn-secondary:hover { background: #e8f0fe; }
+    h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; margin-top: 40px; }
+    .bars-grid { display: flex; flex-direction: column; gap: 14px; }
+    .bar-card { background: var(--card); border-radius: var(--radius); padding: 18px 20px; border: 1.5px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+    .bar-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+    .bar-name { font-size: 17px; font-weight: 700; }
+    .bar-tag { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 12px; background: #d3f9d8; color: #2b8a3e; white-space: nowrap; flex-shrink: 0; text-transform: uppercase; letter-spacing: .3px; }
+    .bar-tag.ca { background: #fff0f0; color: #c0392b; }
+    .bar-addr { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+    .bar-links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .bar-link { display: inline-flex; align-items: center; gap: 5px; padding: 6px 14px; border-radius: 7px; font-size: 12px; font-weight: 600; text-decoration: none; border: 1.5px solid; transition: background .12s, color .12s; }
+    .bar-link.gmaps { color: #1a73e8; border-color: #bbdefb; background: #e8f0fe; }
+    .bar-link.gmaps:hover { background: #1a73e8; color: #fff; border-color: #1a73e8; }
+    .bar-link.page { color: #2b8a3e; border-color: #a5d6a7; background: #e8f5e9; }
+    .bar-link.page:hover { background: #2b8a3e; color: #fff; border-color: #2b8a3e; }
+    #map { width: 100%; height: 380px; border-radius: var(--radius); border: 1.5px solid var(--border); margin-bottom: 40px; }
+    .horaire-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 32px; }
+    .horaire-table th { background: var(--wc); color: #fff; padding: 10px 14px; text-align: left; font-weight: 700; }
+    .horaire-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); background: var(--card); }
+    .horaire-table tr:last-child td { border-bottom: none; }
+    .horaire-table .flag { font-size: 18px; }
+    .match-links { display: flex; flex-direction: column; gap: 8px; }
+    .match-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--card); border: 1.5px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600; transition: border-color .12s, box-shadow .12s; }
+    .match-link:hover { border-color: var(--wc); box-shadow: 0 2px 10px rgba(21,101,192,.12); }
+    .match-date { font-size: 12px; color: var(--muted); margin-left: auto; font-weight: 400; }
+    .match-phase { font-size: 11px; color: var(--muted); font-weight: 400; display: block; margin-top: 2px; }
+    .info-box { background: #e8f0fe; border-left: 4px solid var(--wc); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 32px; font-size: 14px; color: #1a1a1a; line-height: 1.65; }
+    .info-box strong { color: var(--wc); }
+    .back-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 40px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; border: 1.5px solid; transition: background .12s; }
+    .back-link.home { color: var(--blue); border-color: #bbdefb; background: #e8f0fe; }
+    .back-link.home:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .back-link.france { color: #2b8a3e; border-color: #a5d6a7; background: #e8f5e9; }
+    .back-link.france:hover { background: #2b8a3e; color: #fff; border-color: #2b8a3e; }
+    footer { background: var(--darker); color: rgba(255,255,255,.55); text-align: center; padding: 22px 24px; font-size: 13px; margin-top: 60px; }
+    footer a { color: rgba(255,255,255,.8); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 600px) { h1 { font-size: 24px; } main { padding: 24px 16px 48px; } header { padding: 0 16px; } .cta-btn-secondary { margin-left: 0; } }
+  </style>
+</head>
+<body>
+<header>
+  <a href="../" class="logo-link" aria-label="Retour à l'accueil OùMater">
+    <div class="logo">
+      <div class="logo-eyes">👀</div>
+      <div class="logo-text"><span class="logo-text-ou">Où</span><span class="logo-text-mater">Mater</span></div>
+    </div>
+  </a>
+</header>
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="../">Accueil</a> <span>›</span> Villes <span>›</span> <strong>Montréal 🇨🇦</strong>
+</nav>
+<main>
+  <h1>Bars pour expats français à Montréal — CDM 2026</h1>
+  <p class="page-subtitle">🇨🇦 Coupe du Monde 2026 · 7 établissements · Centre-ville · Plateau · Mile End · Rosemont</p>
+
+  <div class="intro">
+    <p>
+      Montréal est le premier foyer de la communauté française hors de France : plus de
+      <strong>120 000 Français</strong> y vivent, concentrés dans les quartiers du Plateau-Mont-Royal,
+      du Mile End et de Rosemont. Pour la Coupe du Monde de la FIFA 2026, qui se dispute à quelques
+      heures de route — notamment à Toronto, Boston et New York —, la ville vibre d'un enthousiasme
+      particulier. Ces 7 adresses sont les points de rassemblement naturels de la communauté
+      française pour chaque match des Bleus.
+    </p>
+    <p>
+      Le <strong>décalage horaire</strong> joue en votre faveur à Montréal : Montréal est en UTC-4 (EDT)
+      en été, soit <strong>6 heures de moins que la France</strong> (UTC+2 CEST). Un match à 21h en France
+      commence à <strong>15h à Montréal</strong> — l'heure idéale pour une après-midi en terrasse ou
+      en sport bar. Le match France-Irak (23h CEST) sera à 17h EDT, parfait pour une soirée en semaine.
+    </p>
+    <p>
+      Du bistro français traditionnel au sport bar nord-américain, de la rue Saint-Denis au
+      Mile End cosmopolite, ces 7 lieux partagent une atmosphère familière pour les expats : on
+      parle français, on commande en français, et on chante <em>La Marseillaise</em> ensemble.
+    </p>
+  </div>
+
+  <div class="info-box">
+    <strong>Décalage horaire France → Montréal (EDT) en été :</strong> France CEST = UTC+2 · Montréal EDT = UTC-4 · <strong>Différence : -6 heures</strong><br>
+    Match à 21h en France = <strong>15h à Montréal</strong> · Match à 23h en France = <strong>17h à Montréal</strong>
+  </div>
+
+  <h2>Calendrier des matchs France — heure Montréal (EDT)</h2>
+  <table class="horaire-table">
+    <thead>
+      <tr>
+        <th>Match</th>
+        <th>Date</th>
+        <th>Heure France (CEST)</th>
+        <th>Heure Montréal (EDT)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="flag">🇫🇷</span> France — <span class="flag">🇸🇳</span> Sénégal</td>
+        <td>16 juin 2026</td>
+        <td>21h00</td>
+        <td><strong>15h00</strong></td>
+      </tr>
+      <tr>
+        <td><span class="flag">🇫🇷</span> France — <span class="flag">🇮🇶</span> Irak</td>
+        <td>22 juin 2026</td>
+        <td>23h00</td>
+        <td><strong>17h00</strong></td>
+      </tr>
+      <tr>
+        <td><span class="flag">🇫🇷</span> France — <span class="flag">🇳🇴</span> Norvège</td>
+        <td>26 juin 2026</td>
+        <td>21h00</td>
+        <td><strong>15h00</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Carte interactive — 7 bars pour expats français</h2>
+  <div id="map"></div>
+
+  <h2>Centre-ville de Montréal</h2>
+  <div class="bars-grid">
+    <div class="bar-card">
+      <div class="bar-top"><div class="bar-name">Maison de France</div><span class="bar-tag ca">🇫🇷 Communauté française</span></div>
+      <div class="bar-addr">📍 429 avenue Viger Est, Montréal, QC H2L 2N9 · Centre-ville · Institution incontournable de la communauté française à Montréal, point de rendez-vous pour les grands événements sportifs.</div>
+      <div class="bar-links">
+        <a class="bar-link gmaps" href="https://www.google.com/maps/dir/?api=1&destination=45.5122719,-73.5555483" target="_blank" rel="noopener">🗺️ Google Maps</a>
+        <a class="bar-link page" href="../bars/maison-de-france.html">📄 Fiche →</a>
+      </div>
+    </div>
+    <div class="bar-card">
+      <div class="bar-top"><div class="bar-name">Champions Room</div><span class="bar-tag">🏆 Sport bar · Downtown</span></div>
+      <div class="bar-addr">📍 680 Sainte-Catherine Ouest, Montréal, QC H3B 1B7 · Downtown · Vrai sport bar nord-américain au cœur de Montréal.</div>
+      <div class="bar-links">
+        <a class="bar-link gmaps" href="https://www.google.com/maps/dir/?api=1&destination=45.5028180,-73.5697944" target="_blank" rel="noopener">🗺️ Google Maps</a>
+        <a class="bar-link page" href="../bars/champions-room-montreal.html">📄 Fiche →</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>Plateau-Mont-Royal</h2>
+  <div class="bars-grid">
+    <div class="bar-card">
+      <div class="bar-top"><div class="bar-name">L'Barouf</div><span class="bar-tag ca">🇫🇷 Bistro français · Plateau</span></div>
+      <div class="bar-addr">📍 4171 rue Saint-Denis, Montréal, QC H2W 2M7 · Plateau-Mont-Royal · Bistro français iconique du Plateau, ambiance authentique "bistrot de quartier".</div>
+      <div class="bar-links">
+        <a class="bar-link gmaps" href="https://www.google.com/maps/dir/?api=1&destination=45.5217838,-73.5778032" target="_blank" rel="noopener">🗺️ Google Maps</a>
+        <a class="bar-link page" href="../bars/l-barouf.html">📄 Fiche →</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>Mile End</h2>
+  <div class="bars-grid">
+    <div class="bar-card">
+      <div class="bar-top"><div class="bar-name">Monsieur Ricard</div><span class="bar-tag ca">🇫🇷 Sud de France · Pastis</span></div>
+      <div class="bar-addr">📍 4543 avenue du Parc, Montréal, QC H2V 4E4 · Mile End · Restaurant-bar inspiré du sud de la France, atmosphère pastis-pétanque.</div>
+      <div class="bar-links">
+        <a class="bar-link gmaps" href="https://www.google.com/maps/dir/?api=1&destination=45.5173782,-73.5901452" target="_blank" rel="noopener">🗺️ Google Maps</a>
+        <a class="bar-link page" href="../bars/monsieur-ricard.html">📄 Fiche →</a>
+      </div>
+    </div>
+    <div class="bar-card">
+      <div class="bar-top"><div class="bar-name">Café Olimpico</div><span class="bar-tag">☕ International · Mile End</span></div>
+      <div class="bar-addr">📍 124 rue Saint-Viateur Ouest, Montréal, QC H2T 2L1 · Mile End · Café italien iconique du Mile End, ambiance internationale parfaite pour les matchs.</div>
+      <div class="bar-links">
+        <a class="bar-link gmaps" href="https://www.google.com/maps/dir/?api=1&destination=45.5240841,-73.6002605" target="_blank" rel="noopener">🗺️ Google Maps</a>
+        <a class="bar-link page" href="../bars/cafe-olimpico.html">📄 Fiche →</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>Rosemont / La Petite-Patrie (rue St-Hubert)</h2>
+  <div class="bars-grid">
+    <div class="bar-card">
+      <div class="bar-top"><div class="bar-name">Double Menton et Saucisson</div><span class="bar-tag ca">🇫🇷 Bistro · Rosemont</span></div>
+      <div class="bar-addr">📍 6653 rue St-Hubert, Montréal, QC H2S 2M5 · Rosemont / La Petite-Patrie · Bistro français de quartier avec une carte 100% hexagonale.</div>
+      <div class="bar-links">
+        <a class="bar-link gmaps" href="https://www.google.com/maps/dir/?api=1&destination=45.5374572,-73.6056447" target="_blank" rel="noopener">🗺️ Google Maps</a>
+        <a class="bar-link page" href="../bars/double-menton-et-saucisson.html">📄 Fiche →</a>
+      </div>
+    </div>
+    <div class="bar-card">
+      <div class="bar-top"><div class="bar-name">Chez Ernest</div><span class="bar-tag ca">🇫🇷 Tabac-bar · Rosemont</span></div>
+      <div class="bar-addr">📍 6596 rue St-Hubert, Montréal, QC H2S 2M3 · Rosemont / La Petite-Patrie · Tabac-bar français traditionnel, repaire d'habitués depuis des décennies.</div>
+      <div class="bar-links">
+        <a class="bar-link gmaps" href="https://www.google.com/maps/dir/?api=1&destination=45.5368392,-73.6050522" target="_blank" rel="noopener">🗺️ Google Maps</a>
+        <a class="bar-link page" href="../bars/chez-ernest.html">📄 Fiche →</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>🏆 Matchs de la France à la Coupe du Monde 2026</h2>
+  <div class="match-links">
+    <a class="match-link" href="../matchs/france-senegal.html"><span>🇫🇷 🆚 🇸🇳</span><span>France — Sénégal <span class="match-phase">Phase de groupes · Groupe I</span></span><span class="match-date">16 juin · 21h CEST / 15h EDT</span></a>
+    <a class="match-link" href="../matchs/france-irak.html"><span>🇫🇷 🆚 🇮🇶</span><span>France — Irak <span class="match-phase">Phase de groupes · Groupe I</span></span><span class="match-date">22 juin · 23h CEST / 17h EDT</span></a>
+    <a class="match-link" href="../matchs/france-norvege.html"><span>🇫🇷 🆚 🇳🇴</span><span>France — Norvège <span class="match-phase">Phase de groupes · Groupe I</span></span><span class="match-date">26 juin · 21h CEST / 15h EDT</span></a>
+    <a class="match-link" href="../matchs/france-32e-de-finale.html"><span>🇫🇷 🆚 ❓</span><span>France — 32e de finale <span class="match-phase">32es de finale</span></span><span class="match-date">2 juillet</span></a>
+    <a class="match-link" href="../matchs/france-quart-de-finale.html"><span>🇫🇷 🆚 ❓</span><span>France — Quart de finale <span class="match-phase">Quarts de finale</span></span><span class="match-date">7 juillet</span></a>
+    <a class="match-link" href="../matchs/france-demi-finale.html"><span>🇫🇷 🆚 ❓</span><span>France — Demi-finale <span class="match-phase">Demi-finales</span></span><span class="match-date">14 juillet</span></a>
+    <a class="match-link" href="../matchs/finale-coupe-du-monde-2026.html"><span>🏆</span><span>Finale — Coupe du Monde 2026 <span class="match-phase">Finale · MetLife Stadium</span></span><span class="match-date">19 juillet</span></a>
+  </div>
+
+  <div class="back-links">
+    <a href="../" class="back-link home">🏠 Retour à l'accueil OùMater</a>
+    <a href="../?ville=marseille" class="back-link france">🇫🇷 Tu cherches un bar en France ? →</a>
+  </div>
+</main>
+<footer><p><a href="../">OùMater</a> — Bars pour expats français · Montréal 🇨🇦 · Coupe du Monde 2026</p></footer>
+
+<script>
+  const map = L.map('map').setView([45.5150, -73.5780], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 19
+  }).addTo(map);
+
+  const bars = [
+    { name: "Maison de France", lat: 45.5122719, lng: -73.5555483, slug: "maison-de-france", quartier: "Centre-ville" },
+    { name: "Double Menton et Saucisson", lat: 45.5374572, lng: -73.6056447, slug: "double-menton-et-saucisson", quartier: "Rosemont" },
+    { name: "Champions Room", lat: 45.5028180, lng: -73.5697944, slug: "champions-room-montreal", quartier: "Downtown" },
+    { name: "Monsieur Ricard", lat: 45.5173782, lng: -73.5901452, slug: "monsieur-ricard", quartier: "Mile End" },
+    { name: "L'Barouf", lat: 45.5217838, lng: -73.5778032, slug: "l-barouf", quartier: "Plateau" },
+    { name: "Chez Ernest", lat: 45.5368392, lng: -73.6050522, slug: "chez-ernest", quartier: "Rosemont" },
+    { name: "Café Olimpico", lat: 45.5240841, lng: -73.6002605, slug: "cafe-olimpico", quartier: "Mile End" }
+  ];
+
+  bars.forEach(b => {
+    L.marker([b.lat, b.lng])
+      .addTo(map)
+      .bindPopup(`<strong>${b.name}</strong><br>${b.quartier}<br><a href="../bars/${b.slug}.html">Voir la fiche →</a>`);
+  });
+</script>
+</body>
+</html>

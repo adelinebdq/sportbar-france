@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OùMater — Où regarder un match près de chez moi ? Coupe du Monde de la FIFA 2026 &amp; F1</title>
-  <meta name="description" content="Trouvez en un clic le bar le plus proche pour la Coupe du Monde de la FIFA 2026 : matchs France, calendrier complet, dates. 153 bars sur 39 villes." />
+  <meta name="description" content="Trouvez en un clic le bar le plus proche pour la Coupe du Monde de la FIFA 2026 : matchs France, calendrier complet, dates. 160 bars sur 40 villes en France et à Montréal." />
   <meta name="keywords" content="coupe du monde de la fifa 2026 france, coupe du monde de la fifa 2026 match, coupe du monde de la fifa 2026 calendrier, coupe du monde de la fifa 2026 date, joueurs de coupe du monde, où regarder un match, bar coupe du monde, bar sportif france" />
 
   <!-- CONFIG: mettre à jour l'URL ci-dessous quand vous changez de domaine (voir /config.js) -->
@@ -955,6 +955,9 @@
   </div>
   <button class="lb-geo-btn" id="geoBtn">
     <span>🎯</span><span id="geoBtnLabel">Me géolocaliser</span>
+  </button>
+  <button class="lb-geo-btn" id="montrealBtn" onclick="map.flyTo([45.5017, -73.5673], 13)" style="border-color:#c0392b;color:#c0392b;" title="Voir les bars à Montréal">
+    <span>🇨🇦</span><span>Voir Montréal</span>
   </button>
   <span class="lb-sep" id="lbSep"></span>
 </div>
@@ -3205,6 +3208,97 @@ const BARS = [
     source: "Source : oumater.fr / Nominatim OSM",
     lat: 49.3397437,
     lng: -0.5849360,
+    events: ['wc1','wc2','wc3']
+  },
+  {
+    id: 165,
+    nom: "Maison de France",
+    ville: "Montréal",
+    adresse: "429 avenue Viger Est, Montréal, QC H2L 2N9",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : oumater.fr / Nominatim OSM",
+    lat: 45.5122719,
+    lng: -73.5555483,
+    events: ['wc1','wc2','wc3']
+  },
+  {
+    id: 166,
+    nom: "Double Menton et Saucisson",
+    ville: "Montréal",
+    adresse: "6653 rue St-Hubert, Montréal, QC H2S 2M5",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : oumater.fr / Nominatim OSM",
+    lat: 45.5374572,
+    lng: -73.6056447,
+    events: ['wc1','wc2','wc3']
+  },
+  {
+    id: 167,
+    nom: "Champions Room",
+    ville: "Montréal",
+    adresse: "680 Sainte-Catherine Ouest, Montréal, QC H3B 1B7",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : oumater.fr / Nominatim OSM",
+    lat: 45.5028180,
+    lng: -73.5697944,
+    events: ['wc1','wc2','wc3']
+  },
+  {
+    id: 168,
+    nom: "Monsieur Ricard",
+    ville: "Montréal",
+    adresse: "4543 avenue du Parc, Montréal, QC H2V 4E4",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : oumater.fr / Nominatim OSM",
+    lat: 45.5173782,
+    lng: -73.5901452,
+    events: ['wc1','wc2','wc3']
+  },
+  {
+    id: 169,
+    nom: "L'Barouf",
+    ville: "Montréal",
+    adresse: "4171 rue Saint-Denis, Montréal, QC H2W 2M7",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : oumater.fr / Nominatim OSM",
+    lat: 45.5217838,
+    lng: -73.5778032,
+    events: ['wc1','wc2','wc3']
+  },
+  {
+    id: 170,
+    nom: "Chez Ernest",
+    ville: "Montréal",
+    adresse: "6596 rue St-Hubert, Montréal, QC H2S 2M3",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : oumater.fr / Nominatim OSM",
+    lat: 45.5368392,
+    lng: -73.6050522,
+    events: ['wc1','wc2','wc3']
+  },
+  {
+    id: 171,
+    nom: "Café Olimpico",
+    ville: "Montréal",
+    adresse: "124 rue Saint-Viateur Ouest, Montréal, QC H2T 2L1",
+    sports: ["Football"],
+    note: null, avis: null, ecrans: null,
+    horaires: "Voir établissement",
+    source: "Source : oumater.fr / Nominatim OSM",
+    lat: 45.5240841,
+    lng: -73.6002605,
     events: ['wc1','wc2','wc3']
   }
 ];

@@ -66,7 +66,7 @@ Les données sont indicatives (coupure connaissance août 2025) — toujours vé
 
 ### Ajouter un bar
 
-Prochain ID disponible : **165**
+Prochain ID disponible : **172**
 
 Dans le tableau `BARS` de `index.html` :
 
@@ -105,9 +105,9 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 ## État du projet — 19 juin 2026
 
-### Dernier commit : Ajout 12 bars Marseille (8 arrondissements) + L'Overlord Asnelles + maj 4 bars Marseille existants
+### Dernier commit : Première ville internationale — Montréal (7 bars pour expats français CDM 2026)
 
-### Inventaire actuel : 153 bars · 39 villes couvertes
+### Inventaire actuel : 160 bars · 40 villes couvertes (dont 1 internationale : Montréal 🇨🇦)
 
 | Ville | Bars | Page `/villes/` |
 |-------|------|-----------------|
@@ -149,6 +149,7 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 | Saint-Jean-de-Luz | 1 | ✅ `saint-jean-de-luz.html` |
 | Soorts-Hossegor | 1 | ✅ `soorts-hossegor.html` |
 | Asnelles | 1 | ✅ `asnelles.html` |
+| **Montréal** 🇨🇦 | **7** | ✅ `montreal.html` |
 
 **Hauts-de-France : 7 villes** — Lille · Métropole de Lille · Marquette-lez-Lille · Arras · Boulogne-sur-Mer · Dunkerque · Valenciennes
 **Nouvelle-Aquitaine : 6 villes** — Arcachon · Biarritz · Saint-Jean-de-Luz · Soorts-Hossegor · Pau · Bayonne
@@ -157,8 +158,9 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 **Centre-Val de Loire : 2 villes** ⭐ Ouverture juin 2026 — Tours · Orléans
 **Grand Est (Alsace Sud) : 2 villes** — Mulhouse · Colmar
 **Bourgogne-Franche-Comté : 1 ville** ⭐ Ouverture juin 2026 — Belfort
+**International : 1 ville** 🇨🇦 Ouverture juin 2026 — Montréal (expats français CDM 2026)
 
-**IDs utilisés** : 8, 13–164 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
+**IDs utilisés** : 8, 13–171 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
 
 ### Matchs France CDM 2026 configurés
 - `wc1` France — Sénégal · 16 juin 21h
