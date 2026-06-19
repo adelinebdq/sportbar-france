@@ -330,7 +330,7 @@
 
   <!-- Marseille + Nice + Toulon + Avignon / PACA (CDM 2026) -->
   <url><loc>https://oumater.fr/villes/marseille.html</loc><lastmod>2026-06-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://oumater.fr/bars/the-queen-victoria.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-queen-victoria.html</loc><lastmod>2026-06-19</lastmod><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://oumater.fr/bars/o-bradys-pub.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://oumater.fr/bars/the-red-lion.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://oumater.fr/bars/bar-de-la-plaine.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -466,4 +466,24 @@
   <url><loc>https://oumater.fr/bars/la-guinguette-de-wattrelos.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://oumater.fr/bars/le-chagnot.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://oumater.fr/bars/hoppiness-craft-beer.html</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Marseille 12 nouveaux bars + Asnelles — ajout 19 juin 2026 -->
+  <url>
+    <loc>https://oumater.fr/villes/asnelles.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://oumater.fr/bars/rookies-sport-bar.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/marseille-comedy-club.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/le-meteor-vieux-port.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/rockypop-marseille.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/donkey-kong-marseille.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/morrisons-marseille.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/the-shamrock-marseille.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/brasserie-du-stade.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/casa-di-meco.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/keg-and-can.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/au-bureau-la-valentine.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oumater.fr/bars/l-overlord.html</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

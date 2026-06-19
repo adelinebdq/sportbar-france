@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asnelles - Bars CDM 2026 (Côte de Nacre, Normandie) | OùMater</title>
+  <meta name="description" content="Découvrez où regarder la Coupe du Monde 2026 à Asnelles, petite ville de la Côte de Nacre en Normandie, à côté de Courseulles-sur-Mer." />
+  <link rel="canonical" href="https://oumater.fr/villes/asnelles.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bars sport à Asnelles — Coupe du Monde 2026 · Côte de Nacre" />
+  <meta property="og:description" content="Bar L'Overlord à Asnelles (Normandie) pour la CDM 2026. Village de la Côte de Nacre, Calvados." />
+  <meta property="og:url" content="https://oumater.fr/villes/asnelles.html" />
+  <meta property="og:image" content="https://oumater.fr/og-default.svg" />
+  <meta property="og:site_name" content="OùMater" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Asnelles",
+    "description": "Village balnéaire de la Côte de Nacre en Normandie, Calvados, à proximité des plages du Débarquement.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Asnelles", "postalCode": "14960", "addressCountry": "FR" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 49.3397437, "longitude": -0.5849360 }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Bars sport à Asnelles pour la Coupe du Monde 2026",
+    "url": "https://oumater.fr/villes/asnelles.html",
+    "numberOfItems": 1,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": { "@type": "BarOrPub", "name": "L'Overlord", "address": { "@type": "PostalAddress", "streetAddress": "2 avenue Maurice Schumann", "addressLocality": "Asnelles", "postalCode": "14960", "addressCountry": "FR" } } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://oumater.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Villes", "item": "https://oumater.fr/villes/" },
+      { "@type": "ListItem", "position": 3, "name": "Asnelles" }
+    ]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --darker: #12121f; --blue: #1971c2; --text: #1a1a1a; --muted: #555; --border: #e0e0e0; --bg: #f5f7fa; --card: #ffffff; --radius: 10px; --wc: #1565c0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    header { background: var(--darker); color: #fff; padding: 0 24px; height: 58px; display: flex; align-items: center; gap: 16px; }
+    .logo-link { text-decoration: none; display: inline-block; cursor: pointer; }
+    .logo { display: flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1; }
+    .logo-eyes { font-size: 28px; line-height: 1; display: inline-block; transform-origin: center; transition: transform 0.1s ease; }
+    .logo-text { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.5px; line-height: 1; }
+    .logo-text-ou { color: #F39C12; }
+    .logo-text-mater { color: #16A085; }
+    .logo-link:hover .logo-eyes { animation: lookAround 0.8s ease-in-out; }
+    @keyframes lookAround { 0%{transform:translateX(0);} 20%{transform:translateX(-4px);} 40%{transform:translateX(4px);} 60%{transform:translateX(-3px);} 80%{transform:translateX(3px);} 100%{transform:translateX(0);} }
+    @media (max-width: 600px) { .logo-eyes{font-size:22px;} .logo-text{font-size:22px;} }
+    .breadcrumb { background: var(--card); border-bottom: 1px solid var(--border); padding: 10px 24px; font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+    .breadcrumb a { color: var(--blue); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    main { max-width: 820px; margin: 0 auto; padding: 36px 24px 60px; }
+    h1 { font-size: 30px; font-weight: 800; line-height: 1.2; margin-bottom: 6px; }
+    .page-subtitle { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+    .intro { font-size: 15px; line-height: 1.75; color: #444; margin-bottom: 32px; max-width: 700px; border-left: 3px solid var(--wc); padding-left: 16px; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--wc); color: #fff; text-decoration: none; padding: 14px 26px; border-radius: 10px; font-size: 15px; font-weight: 700; margin-bottom: 44px; transition: background .15s; box-shadow: 0 3px 12px rgba(21,101,192,.25); }
+    .cta-btn:hover { background: #0d47a1; }
+    h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; margin-top: 40px; }
+    .bars-list { display: flex; flex-direction: column; gap: 12px; }
+    .bar-card { background: var(--card); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 18px 20px; text-decoration: none; color: var(--text); display: flex; flex-direction: column; gap: 5px; transition: border-color .12s, box-shadow .12s; }
+    .bar-card:hover { border-color: var(--wc); box-shadow: 0 3px 14px rgba(21,101,192,.12); }
+    .bar-card-name { font-size: 17px; font-weight: 700; }
+    .bar-card-addr { font-size: 13px; color: var(--muted); }
+    .bar-card-arrow { font-size: 13px; color: var(--blue); font-weight: 600; margin-top: 4px; }
+    #map { height: 320px; border-radius: var(--radius); border: 1.5px solid var(--border); margin-bottom: 40px; }
+    .nearby-links { display: flex; flex-direction: column; gap: 8px; }
+    .nearby-link { display: flex; align-items: center; gap: 10px; padding: 11px 14px; background: var(--card); border: 1.5px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text); font-size: 13px; font-weight: 600; transition: border-color .12s; }
+    .nearby-link:hover { border-color: var(--blue); }
+    .source-note { font-size: 12px; color: var(--muted); margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border); }
+    footer { background: var(--darker); color: rgba(255,255,255,.55); text-align: center; padding: 22px 24px; font-size: 13px; margin-top: 60px; }
+    footer a { color: rgba(255,255,255,.8); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 600px) { h1 { font-size: 24px; } main { padding: 24px 16px 48px; } header { padding: 0 16px; } }
+  </style>
+</head>
+<body>
+<header>
+  <a href="../" class="logo-link" aria-label="Retour à l'accueil OùMater">
+    <div class="logo">
+      <div class="logo-eyes">👀</div>
+      <div class="logo-text"><span class="logo-text-ou">Où</span><span class="logo-text-mater">Mater</span></div>
+    </div>
+  </a>
+</header>
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="../">Accueil</a> <span>›</span> Villes <span>›</span> <strong>Asnelles</strong>
+</nav>
+<main>
+  <h1>Bars à Asnelles pour la CDM 2026</h1>
+  <p class="page-subtitle">🏆 Coupe du Monde 2026 · 1 établissement vérifié · Côte de Nacre · Normandie</p>
+  <p class="intro">
+    Asnelles est un charmant village balnéaire de la Côte de Nacre dans le Calvados normand,
+    situé à une dizaine de kilomètres de Courseulles-sur-Mer et à proximité immédiate des
+    célèbres plages du Débarquement de juin 1944. Ce village paisible, niché entre mer et
+    bocage normand, attire chaque été des vacanciers venus se ressourcer sur la côte.
+    Pour la Coupe du Monde 2026, L'Overlord — dont le nom rend hommage à l'Opération
+    Overlord — est l'adresse incontournable pour suivre les matchs des Bleus à Asnelles,
+    sur la Côte de Nacre en Normandie.
+  </p>
+  <a class="cta-btn" href="../?ville=asnelles">🗺️ Voir sur la carte interactive →</a>
+  <h2>Le bar sport d'Asnelles</h2>
+  <div class="bars-list">
+    <a class="bar-card" href="../bars/l-overlord.html">
+      <div class="bar-card-name">L'Overlord</div>
+      <div class="bar-card-addr">📍 2 avenue Maurice Schumann · Côte de Nacre · CDM 2026</div>
+      <div class="bar-card-arrow">Voir la fiche →</div>
+    </a>
+  </div>
+  <h2>🗺️ Carte — Asnelles</h2>
+  <div id="map"></div>
+  <h2>Villages voisins — Côte de Nacre</h2>
+  <div class="nearby-links">
+    <a class="nearby-link" href="courseulles-sur-mer.html">⚓ Courseulles-sur-Mer — 6 bars sport · Port et plages du Débarquement</a>
+    <a class="nearby-link" href="saint-aubin-sur-mer.html">🌊 Saint-Aubin-sur-Mer — 1 bar sport · L'Imprévu</a>
+    <a class="nearby-link" href="luc-sur-mer.html">🏖️ Luc-sur-Mer — 4 bars sport · Bord de mer normand</a>
+  </div>
+  <p class="source-note">Source : oumater.fr / Nominatim OSM — Mis à jour le 19 juin 2026</p>
+</main>
+<footer><p><a href="../">OùMater</a> — Où regarder un match près de chez moi ? · <a href="../matchs/france-senegal.html">France — Sénégal · 16 juin</a></p></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([49.3397437, -0.5849360], 14);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
+  }).addTo(map);
+  L.marker([49.3397437, -0.5849360])
+    .addTo(map)
+    .bindPopup("<b>L'Overlord</b><br>2 avenue Maurice Schumann<br>14960 Asnelles")
+    .openPopup();
+</script>
+</body>
+</html>

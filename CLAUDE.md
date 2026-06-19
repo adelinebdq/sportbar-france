@@ -66,7 +66,7 @@ Les données sont indicatives (coupure connaissance août 2025) — toujours vé
 
 ### Ajouter un bar
 
-Prochain ID disponible : **153**
+Prochain ID disponible : **165**
 
 Dans le tableau `BARS` de `index.html` :
 
@@ -103,11 +103,11 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 
 ---
 
-## État du projet — 17 juin 2026
+## État du projet — 19 juin 2026
 
-### Dernier commit : Ajout 14 bars Métropole de Lille (Villeneuve d'Ascq, Tourcoing, Wattrelos, etc.) + nouvelle page ville
+### Dernier commit : Ajout 12 bars Marseille (8 arrondissements) + L'Overlord Asnelles + maj 4 bars Marseille existants
 
-### Inventaire actuel : 141 bars · 38 villes couvertes
+### Inventaire actuel : 153 bars · 39 villes couvertes
 
 | Ville | Bars | Page `/villes/` |
 |-------|------|-----------------|
@@ -131,7 +131,7 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 | Mulhouse | 4 | ✅ `mulhouse.html` |
 | Colmar | 1 | ✅ `colmar.html` |
 | Belfort | 2 | ✅ `belfort.html` |
-| Marseille | 4 | ✅ `marseille.html` |
+| Marseille | 15 | ✅ `marseille.html` |
 | Nice | 3 | ✅ `nice.html` |
 | Toulon | 3 | ✅ `toulon.html` |
 | Avignon | 3 | ✅ `avignon.html` |
@@ -148,6 +148,7 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 | Saint-Aubin-sur-Mer | 1 | ✅ `saint-aubin-sur-mer.html` |
 | Saint-Jean-de-Luz | 1 | ✅ `saint-jean-de-luz.html` |
 | Soorts-Hossegor | 1 | ✅ `soorts-hossegor.html` |
+| Asnelles | 1 | ✅ `asnelles.html` |
 
 **Hauts-de-France : 7 villes** — Lille · Métropole de Lille · Marquette-lez-Lille · Arras · Boulogne-sur-Mer · Dunkerque · Valenciennes
 **Nouvelle-Aquitaine : 6 villes** — Arcachon · Biarritz · Saint-Jean-de-Luz · Soorts-Hossegor · Pau · Bayonne
@@ -157,7 +158,7 @@ Créer aussi une page `bars/<slug>.html` et ajouter le slug dans `config.js` (`c
 **Grand Est (Alsace Sud) : 2 villes** — Mulhouse · Colmar
 **Bourgogne-Franche-Comté : 1 ville** ⭐ Ouverture juin 2026 — Belfort
 
-**IDs utilisés** : 8, 13–152 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
+**IDs utilisés** : 8, 13–164 (gaps 1–7 et 9–12 = anciens bars fictifs supprimés)
 
 ### Matchs France CDM 2026 configurés
 - `wc1` France — Sénégal · 16 juin 21h
